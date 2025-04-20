@@ -64,12 +64,27 @@ async function loadPage(pageNum) {
 
   if (overlayContainer) overlayContainer.remove();
   overlayContainer = document.createElement('div');
-  overlayContainer.style.position = 'absolute';
+  overlayContainer.id = 'overlay-container';
+  // Don't set position: absolute inline, let CSS handle it with position: relative
   overlayContainer.style.top  = img.offsetTop + 'px';
   overlayContainer.style.left = img.offsetLeft + 'px';
   overlayContainer.style.width  = img.width  + 'px';
   overlayContainer.style.height = img.height + 'px';
   overlayContainer.style.pointerEvents = 'auto';
+  // Log overlay container position for debugging
+  console.log('Overlay container created with position:', {
+    top: overlayContainer.style.top,
+    left: overlayContainer.style.left,
+    width: overlayContainer.style.width,
+    height: overlayContainer.style.height,
+    offsetTop: img.offsetTop,
+    offsetLeft: img.offsetLeft,
+    computedStyle: {
+      position: window.getComputedStyle(overlayContainer).position,
+      top: window.getComputedStyle(overlayContainer).top,
+      left: window.getComputedStyle(overlayContainer).left
+    }
+  });
 
   // Force image container to be visible again
   const imageContainer = document.getElementById('image-container');
