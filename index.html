@@ -26,6 +26,18 @@
       transform: translateY(-5px);
       box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     }
+    .document-content {
+      display: flex;
+      align-items: flex-start;
+    }
+    .document-icon {
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+    .document-icon img {
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
     .document-card h2 {
       margin-top: 0;
       color: #DC143C;
@@ -52,13 +64,13 @@
     <h1>Выберите документ</h1>
 
     <div class="document-card">
-      <h2>Медицинский документ 1</h2>
-      <a href="med1/index.html">Открыть документ</a>
-    </div>
-
-    <div class="document-card">
-      <h2>Медицинский документ 2</h2>
-      <a href="med2/index.html">Открыть документ</a>
+      <div class="document-content">
+      <div class="document-icon">
+        <img src="medinsky11klass/cover.png" alt="История России. 11 класс. Базовый уровень" width="150">
+      </div>
+        <h2>История России. 11 класс. Базовый уровень</h2>
+        <a href="medinsky11klass/index.html">Открыть документ</a>
+      </div>
     </div>
 
   </div>
