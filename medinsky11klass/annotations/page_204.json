@@ -5,7 +5,7 @@
     "annType": "main",
     "coords": [
       650,
-      400
+      440
     ]
   },
   {
@@ -14,7 +14,7 @@
     "annType": "main",
     "coords": [
       150,
-      600
+      520
     ]
   },
   {
@@ -32,7 +32,7 @@
     "annType": "main",
     "coords": [
       150,
-      600
+      670
     ]
   },
   {
@@ -41,7 +41,7 @@
     "annType": "main",
     "coords": [
       650,
-      800
+      890
     ]
   }
 ]
