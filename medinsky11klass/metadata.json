@@ -15,7 +15,7 @@
     { "id": "pageA1", "name": "Обложка", "physicalPage": 1 }
   ],
 
-  "pageNumbering": { "physicalStart": 2, "logicalStart": 1 },
+  "pageNumbering": { "physicalStart": 1, "logicalStart": 1 },
   "totalPages": 448,
 
   "chapters": [
