@@ -124,10 +124,10 @@ async function loadPage(pageNum) {
 
   let globalContent = '';
   if (generalAnns.length) {
-    globalContent += generalAnns.map(a => `<p>${a.text}</p>`).join('');
+    globalContent += generalAnns.map(a => `<p>${formatCommentText(a.text)}</p>`).join('');
   }
   if (mainAnns.length) {
-    globalContent += mainAnns.map((a,i) => `<p><strong>${i+1}.</strong> ${a.text}</p>`).join('');
+    globalContent += mainAnns.map((a,i) => `<p><strong>${i+1}.</strong> ${formatCommentText(a.text)}</p>`).join('');
   }
   globalDiv.innerHTML = globalContent || 'Нет общего комментария.';
 

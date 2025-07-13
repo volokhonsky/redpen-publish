@@ -132,30 +132,10 @@ function repositionAnnotations() {
         // Use only this comment's text
         let commentText = a.text;
 
-        // Create popup for desktop hover
-        const popup = document.createElement('div');
-        popup.className = 'comment-popup';
-        // Add unique ID to popup based on annotation ID or generate one using sequential counter
-        popup.id = (a.id || `ann-${currentPageId}-${annotationCounter}`);
-        popup.innerHTML = `
-          <div class="comment-popup-title">Комментарий ${i + 1}</div>
-          <div>${commentText}</div>
-        `;
-        // Center the popup under the circle
-        popup.style.left = cx + 'px';  // Now using translateX in CSS for centering
-        popup.style.top = (cy + d / 2 + 10) + 'px';
-        // Ensure transform property is not overridden
-        popup.style.transform = 'translateX(-50%)';
-        // Initialize dataset attributes for tracking hover and click states
-        popup.dataset.hoverShown = 'false';
-        popup.dataset.clickShown = 'false';
+        // Create popup for desktop hover using the comment-content.js function
+        const popup = createCommentPopup(a, i, cx, cy, d);
         overlayContainer.appendChild(popup);
         console.log(`  Popup created with ID: ${popup.id}`);
-
-        // Prevent popup from closing when clicking on it
-        popup.addEventListener('click', (e) => {
-          e.stopPropagation();
-        });
 
         // Desktop: Show popup on hover
         if (!isMobile) {
@@ -183,12 +163,8 @@ function repositionAnnotations() {
             // Use the combined text that includes general comments
             showMobileComment(i, commentText);
           } else {
-            // Desktop: Update sidebar list and show popup
-            const listUl = document.getElementById('comment-list');
-            listUl.innerHTML = '';
-            const li = document.createElement('li');
-            li.innerHTML = '<strong>' + (i + 1) + '.</strong> ' + commentText;
-            listUl.appendChild(li);
+            // Desktop: Update sidebar list and show popup using the comment-content.js function
+            updateCommentSidebar(i, commentText);
 
             // Reset all popups' click-shown state
             document.querySelectorAll('.comment-popup').forEach(p => {
