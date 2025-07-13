@@ -47,6 +47,14 @@
   border-color: transparent transparent #DC143C transparent;
 }
 
+/* Arrow pointing down for popups positioned above the annotation */
+.comment-popup.above::before {
+  top: auto; /* Remove top positioning */
+  bottom: -10px; /* Position at the bottom */
+  border-width: 10px 10px 0 10px; /* Flip the triangle */
+  border-color: #DC143C transparent transparent transparent; /* Change border colors */
+}
+
 .comment-popup-title {
   color: #DC143C;
   font-weight: bold;

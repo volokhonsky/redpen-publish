@@ -150,6 +150,25 @@ function repositionAnnotations() {
           circle.addEventListener('mouseleave', () => {
             // Only hide on mouse leave if it was shown by hover, not by click
             if (popup.dataset.hoverShown === 'true' && popup.dataset.clickShown !== 'true') {
+              // Use setTimeout to allow time for mouseenter on popup
+              setTimeout(() => {
+                if (popup.dataset.popupHover !== 'true') {
+                  popup.style.display = 'none';
+                  popup.dataset.hoverShown = 'false';
+                }
+              }, 50);
+            }
+          });
+
+          // Add mouseenter/mouseleave events to popup itself
+          popup.addEventListener('mouseenter', () => {
+            popup.dataset.popupHover = 'true';
+          });
+
+          popup.addEventListener('mouseleave', () => {
+            popup.dataset.popupHover = 'false';
+            // Only hide if it was shown by hover, not by click
+            if (popup.dataset.hoverShown === 'true' && popup.dataset.clickShown !== 'true') {
               popup.style.display = 'none';
               popup.dataset.hoverShown = 'false';
             }
@@ -238,11 +257,76 @@ function repositionAnnotations() {
             `;
             popup.style.left = cx + 'px';
             popup.style.top = (cy + d / 2 + 10) + 'px';
+            popup.style.visibility = 'hidden'; // Hide initially to measure
+            popup.style.display = 'block';
             popup.dataset.hoverShown = 'false';
             popup.dataset.clickShown = 'false';
 
+            // Append to DOM temporarily to get dimensions
+            document.body.appendChild(popup);
+
+            // Check if popup extends beyond viewport bottom
+            const popupRect = popup.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // If popup extends beyond viewport bottom, position it above the annotation
+            if (popupRect.bottom > viewportHeight) {
+              // Position above the annotation circle instead of below
+              popup.style.top = (cy - d / 2 - popup.offsetHeight - 10) + 'px';
+              // Add class to flip the arrow direction
+              popup.classList.add('above');
+            } else {
+              // Keep original position below the annotation
+              popup.style.top = (cy + d / 2 + 10) + 'px';
+              // Remove the above class if it exists
+              popup.classList.remove('above');
+            }
+
+            // Remove from body - it will be added to the proper container later
+            document.body.removeChild(popup);
+            popup.style.visibility = 'visible';
+            popup.style.display = 'none'; // Reset display to none (will be shown on hover/click)
+
             overlayContainer.appendChild(popup);
             overlayContainer.appendChild(circle);
+
+            // Desktop: Show popup on hover
+            if (!isMobile) {
+              circle.addEventListener('mouseenter', () => {
+                // Only show on hover if not already shown by click
+                if (popup.dataset.clickShown !== 'true') {
+                  popup.style.display = 'block';
+                  popup.dataset.hoverShown = 'true';
+                }
+              });
+
+              circle.addEventListener('mouseleave', () => {
+                // Only hide on mouse leave if it was shown by hover, not by click
+                if (popup.dataset.hoverShown === 'true' && popup.dataset.clickShown !== 'true') {
+                  // Use setTimeout to allow time for mouseenter on popup
+                  setTimeout(() => {
+                    if (popup.dataset.popupHover !== 'true') {
+                      popup.style.display = 'none';
+                      popup.dataset.hoverShown = 'false';
+                    }
+                  }, 50);
+                }
+              });
+
+              // Add mouseenter/mouseleave events to popup itself
+              popup.addEventListener('mouseenter', () => {
+                popup.dataset.popupHover = 'true';
+              });
+
+              popup.addEventListener('mouseleave', () => {
+                popup.dataset.popupHover = 'false';
+                // Only hide if it was shown by hover, not by click
+                if (popup.dataset.hoverShown === 'true' && popup.dataset.clickShown !== 'true') {
+                  popup.style.display = 'none';
+                  popup.dataset.hoverShown = 'false';
+                }
+              });
+            }
 
             // Add click event handler for mobile
             circle.addEventListener('click', (e) => {

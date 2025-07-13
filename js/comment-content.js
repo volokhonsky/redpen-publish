@@ -68,9 +68,11 @@ function createCommentPopup(annotation, index, cx, cy, diameter) {
   popup.id = (annotation.id || `ann-${currentPageId}-${index + 1}`);
   popup.innerHTML = renderCommentContent(index, annotation.text);
 
-  // Position the popup
+  // Set initial position to measure dimensions
   popup.style.left = cx + 'px';
   popup.style.top = (cy + diameter / 2 + 10) + 'px';
+  popup.style.visibility = 'hidden'; // Hide initially to measure
+  popup.style.display = 'block';
 
   // Initialize dataset attributes for tracking hover and click states
   popup.dataset.hoverShown = 'false';
@@ -80,6 +82,31 @@ function createCommentPopup(annotation, index, cx, cy, diameter) {
   popup.addEventListener('click', (e) => {
     e.stopPropagation();
   });
+
+  // Append to DOM temporarily to get dimensions
+  document.body.appendChild(popup);
+
+  // Check if popup extends beyond viewport bottom
+  const popupRect = popup.getBoundingClientRect();
+  const viewportHeight = window.innerHeight;
+
+  // If popup extends beyond viewport bottom, position it above the annotation
+  if (popupRect.bottom > viewportHeight) {
+    // Position above the annotation circle instead of below
+    popup.style.top = (cy - diameter / 2 - popup.offsetHeight - 10) + 'px';
+    // Add class to flip the arrow direction
+    popup.classList.add('above');
+  } else {
+    // Keep original position below the annotation
+    popup.style.top = (cy + diameter / 2 + 10) + 'px';
+    // Remove the above class if it exists
+    popup.classList.remove('above');
+  }
+
+  // Remove from body - it will be added to the proper container later
+  document.body.removeChild(popup);
+  popup.style.visibility = 'visible';
+  popup.style.display = 'none'; // Reset display to none (will be shown on hover/click)
 
   return popup;
 }
