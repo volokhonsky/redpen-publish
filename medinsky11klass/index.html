@@ -37,7 +37,7 @@
 </head>
 <body>
   <a href="../index.html" class="home-button" title="Вернуться к выбору документов">⌂</a>
-  <header>RedPen — Красной ручкой <span id="timestamp" style="font-size: 0.7rem; font-weight: normal; opacity: 0.8;">Последнее обновление: 14.07.2025 01:10</span></header>
+  <header>RedPen — Красной ручкой <span id="timestamp" style="font-size: 0.7rem; font-weight: normal; opacity: 0.8;">Последнее обновление: 14.07.2025 02:33</span></header>
   <nav id="pagination">
     <a href="#" class="pagination-btn" id="prev-page" onclick="prevPage();return false;">« Назад</a>
     <div id="page-numbers" class="page-numbers">
@@ -135,12 +135,6 @@
     <div id="mobile-next-button" class="mobile-nav-button next" onclick="nextPage()">›</div>
   </div>
 
-  <!-- Mobile bottom pagination -->
-  <div id="mobile-pagination" class="mobile-pagination">
-    <span class="page-info">Страница: <span id="current-page-number">1</span> из <span id="total-pages-number">1</span></span>
-    <input type="number" id="mobile-page-input" min="1" placeholder="Стр." aria-label="Номер страницы">
-    <button id="mobile-go-to-page-btn" onclick="goToMobilePage()">Перейти</button>
-  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="../js/layout.js"></script>
