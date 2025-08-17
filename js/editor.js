@@ -8,10 +8,14 @@
 
   function isEditorMode() {
     try {
-      const usp = new URLSearchParams(g.location ? g.location.search : '');
+      const search = g.location ? g.location.search : '';
+      const hash = g.location ? g.location.hash : '';
+      const usp = new URLSearchParams(search);
+      const hsp = new URLSearchParams(hash.startsWith('#') ? hash.substring(1) : hash);
       const qp = usp.get('editor');
-      const qOn = qp === '1' || qp === 'true';
-      return Boolean(qOn || g.REDPEN_EDITOR === true);
+      const hp = hsp.get('editor');
+      const on = (qp === '1' || qp === 'true') || (hp === '1' || hp === 'true');
+      return Boolean(on || g.REDPEN_EDITOR === true);
     } catch(e) {
       return g.REDPEN_EDITOR === true;
     }
