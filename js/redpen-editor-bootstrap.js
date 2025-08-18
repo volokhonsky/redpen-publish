@@ -196,6 +196,7 @@
     });
     if (window.RedPenEditorPanel && window.RedPenEditorPanel.setDraft) {
       window.RedPenEditorPanel.setDraft(window.RedPenEditor.state.draft);
+      if (window.RedPenEditorPanel.revalidate) try { window.RedPenEditorPanel.revalidate(); } catch(e) {}
     }
     try {
       var typeEl = document.getElementById('redpen-type');
@@ -280,8 +281,8 @@
     // Helper: snapshot and dirty check
     function snapshotFromDraft(d){
       if (!d) d = {};
-      var id = (d.id || '').trim();
-      id = id === '' ? undefined : id;
+      var id = (d.id || '').trim ? (d.id || '').trim() : d.id;
+      id = (id === '' || typeof id === 'undefined') ? undefined : id;
       var res = { id: id, annType: d.annType || 'comment', content: typeof d.content === 'string' ? d.content : '' };
       if (Array.isArray(d.coords) && d.coords.length === 2 && Number.isFinite(d.coords[0]) && Number.isFinite(d.coords[1])) {
         res.coords = [d.coords[0], d.coords[1]];
@@ -315,6 +316,65 @@
       window.RedPenEditor.state.baseline = snap;
       window.RedPenEditor.state.flags.allowCoordChangeWithoutPrompt = true;
     }
+
+    // Expose helpers for panel
+    window.RedPenEditor._isDirty = isDirty;
+    window.RedPenEditor._snapshot = snapshotFromDraft;
+
+    // Save/Cancel API for panel
+    window.RedPenEditor.onSave = function(){
+      try {
+        var draft = (window.RedPenEditorPanel && window.RedPenEditorPanel.getDraft) ? window.RedPenEditorPanel.getDraft() : window.RedPenEditor.state.draft;
+        // Validate via panel
+        var v = window.RedPenEditorPanel && typeof window.RedPenEditorPanel.validate === 'function' ? window.RedPenEditorPanel.validate(draft) : { valid: true, errors: {} };
+        if (!v.valid) {
+          if (window.RedPenEditorPanel && window.RedPenEditorPanel.showErrors) window.RedPenEditorPanel.showErrors(v.errors || {});
+          return;
+        }
+        // Sync state.draft from form
+        window.RedPenEditor.state.draft = Object.assign({}, window.RedPenEditor.state.draft, draft);
+        // Update baseline and mode
+        var snap = snapshotFromDraft(window.RedPenEditor.state.draft);
+        window.RedPenEditor.state.baseline = snap;
+        if (snap && snap.id) {
+          window.RedPenEditor.state.editing.mode = 'existing';
+          window.RedPenEditor.state.flags.allowCoordChangeWithoutPrompt = false;
+        } else {
+          window.RedPenEditor.state.editing.mode = 'new';
+          window.RedPenEditor.state.flags.allowCoordChangeWithoutPrompt = true;
+        }
+        // Disable Save until next change
+        if (window.RedPenEditorPanel && window.RedPenEditorPanel.setSaveEnabled) window.RedPenEditorPanel.setSaveEnabled(false);
+        if (window.RedPenEditorPanel && window.RedPenEditorPanel.revalidate) window.RedPenEditorPanel.revalidate();
+        // MVP toast
+        try { window.alert('Сохранено'); } catch(e) { /* noop */ }
+      } catch(e){ /* noop */ }
+    };
+
+    window.RedPenEditor.onCancel = function(){
+      try {
+        var state = window.RedPenEditor.state;
+        var current = (window.RedPenEditorPanel && window.RedPenEditorPanel.getDraft) ? window.RedPenEditorPanel.getDraft() : state.draft;
+        var base = state.baseline;
+        if (!base) {
+          // nothing to revert to
+          if (window.RedPenEditorPanel && window.RedPenEditorPanel.revalidate) window.RedPenEditorPanel.revalidate();
+          return;
+        }
+        if (isDirty(current, base)) {
+          if (!confirmLoseChanges()) return;
+        }
+        // Revert to baseline
+        var revert = { id: base.id, annType: base.annType, content: base.content, coords: base.coords };
+        state.draft = Object.assign({}, state.draft, revert);
+        if (window.RedPenEditorPanel && window.RedPenEditorPanel.setDraft) window.RedPenEditorPanel.setDraft(state.draft);
+        // Clear selection if baseline is general or new without id/coords
+        if (base.annType === 'general' || !base.id || (typeof base.id === 'undefined' && !base.coords)) {
+          try { clearSelection(); } catch(e) { /* noop */ }
+        }
+        if (window.RedPenEditorPanel && window.RedPenEditorPanel.revalidate) window.RedPenEditorPanel.revalidate();
+      } catch(e){ /* noop */ }
+    };
 
     function handleMarkerClick(marker, event){
       if (event && event.stopPropagation) event.stopPropagation();
@@ -360,6 +420,7 @@
       selectMarker(marker);
       if (window.RedPenEditorPanel && window.RedPenEditorPanel.setDraft) {
         window.RedPenEditorPanel.setDraft(window.RedPenEditor.state.draft);
+        if (window.RedPenEditorPanel.revalidate) try { window.RedPenEditorPanel.revalidate(); } catch(e) {}
       }
       // Ensure coord input enabled when not general and sync type select
       try {
@@ -414,6 +475,7 @@
 
       if (window.RedPenEditorPanel && window.RedPenEditorPanel.setDraft) {
         window.RedPenEditorPanel.setDraft(window.RedPenEditor.state.draft);
+        if (window.RedPenEditorPanel.revalidate) try { window.RedPenEditorPanel.revalidate(); } catch(e) {}
       }
     }
   }
@@ -437,7 +499,10 @@
         var newDraft = { id: gen.id, annType: 'general', content: gen.content, coords: undefined };
         window.RedPenEditor.state.draft = Object.assign({}, window.RedPenEditor.state.draft, newDraft);
         if (typeof beginEditingExisting === 'function') { beginEditingExisting(newDraft); }
-        if (window.RedPenEditorPanel && window.RedPenEditorPanel.setDraft) window.RedPenEditorPanel.setDraft(window.RedPenEditor.state.draft);
+        if (window.RedPenEditorPanel && window.RedPenEditorPanel.setDraft) {
+          window.RedPenEditorPanel.setDraft(window.RedPenEditor.state.draft);
+          if (window.RedPenEditorPanel.revalidate) try { window.RedPenEditorPanel.revalidate(); } catch(e) {}
+        }
         if (window.RedPenEditor.state && window.RedPenEditor.state.ui) window.RedPenEditor.state.ui.lastAutoGeneralContent = gen.content;
       }
     } catch(e){ /* noop */ }

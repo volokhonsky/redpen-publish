@@ -17,14 +17,17 @@
           '<option value="comment">comment</option>'+
           '<option value="general">general</option>'+
         '</select>'+
+        '<div id="redpen-type-error" class="redpen-error" style="color:#DC143C;font-size:12px;margin-top:4px;"></div>'+
       '</div>'+
       '<div class="redpen-editor-row" id="redpen-coord-row" style="margin-top:10px;">'+
         '<label for="redpen-coord" style="display:block;margin-bottom:4px;">Координаты</label>'+
         '<input id="redpen-coord" type="text" placeholder="кликните по странице" readonly />'+
+        '<div id="redpen-coord-error" class="redpen-error" style="color:#DC143C;font-size:12px;margin-top:4px;"></div>'+
       '</div>'+
       '<div class="redpen-editor-row" style="margin-top:10px;">'+
         '<label for="redpen-content" style="display:block;margin-bottom:4px;">Текст</label>'+
         '<textarea id="redpen-content" rows="6" style="width:100%;"></textarea>'+
+        '<div id="redpen-content-error" class="redpen-error" style="color:#DC143C;font-size:12px;margin-top:4px;"></div>'+
       '</div>'+
       '<div class="redpen-editor-actions" style="margin-top:10px;display:flex;gap:8px;">'+
         '<button id="redpen-save" disabled>Сохранить</button>'+
@@ -47,12 +50,44 @@
             // revert UI selection
             typeEl.value = prevVal;
             toggleCoordVisibilityByType(prevVal);
+            revalidate();
             return;
           }
         }
         // Reflect coord visibility for resulting type
         var finalType = (window.RedPenEditor && window.RedPenEditor.state && window.RedPenEditor.state.draft && window.RedPenEditor.state.draft.annType) || newVal;
         toggleCoordVisibilityByType(finalType);
+        revalidate();
+      });
+    }
+
+    // Bind input handler for content
+    var contentEl = document.getElementById('redpen-content');
+    if (contentEl) {
+      contentEl.addEventListener('input', function(){
+        if (window.RedPenEditor && window.RedPenEditor.state) {
+          var st = window.RedPenEditor.state;
+          st.draft = Object.assign({}, st.draft, { content: contentEl.value });
+        }
+        revalidate();
+      });
+    }
+
+    // Bind Save/Cancel
+    var saveBtn = document.getElementById('redpen-save');
+    var cancelBtn = document.getElementById('redpen-cancel');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', function(){
+        if (window.RedPenEditor && typeof window.RedPenEditor.onSave === 'function') {
+          window.RedPenEditor.onSave();
+        }
+      });
+    }
+    if (cancelBtn) {
+      cancelBtn.addEventListener('click', function(){
+        if (window.RedPenEditor && typeof window.RedPenEditor.onCancel === 'function') {
+          window.RedPenEditor.onCancel();
+        }
       });
     }
   }
@@ -121,11 +156,68 @@
     return res;
   }
 
+  // Validation API
+  function validate(draft){
+    var errors = {};
+    var typeOk = (draft.annType === 'main' || draft.annType === 'comment' || draft.annType === 'general');
+    if (!typeOk) errors.type = 'Неверный тип аннотации';
+    var contentOk = (typeof draft.content === 'string') && (draft.content.trim().length > 0);
+    if (!contentOk) errors.content = 'Текст обязателен';
+    if (draft.annType === 'general') {
+      if (typeof draft.coords !== 'undefined') errors.coord = 'Координаты не используются для general';
+    } else {
+      var coordsOk = Array.isArray(draft.coords) && draft.coords.length === 2 && Number.isInteger(draft.coords[0]) && Number.isInteger(draft.coords[1]);
+      if (!coordsOk) errors.coord = 'Укажите координаты кликом по изображению';
+    }
+    return { valid: Object.keys(errors).length === 0, errors: errors };
+  }
+
+  function showErrors(errors){
+    var typeErrEl = document.getElementById('redpen-type-error');
+    var coordErrEl = document.getElementById('redpen-coord-error');
+    var contentErrEl = document.getElementById('redpen-content-error');
+    if (typeErrEl) typeErrEl.textContent = errors && errors.type ? errors.type : '';
+    if (coordErrEl) coordErrEl.textContent = errors && errors.coord ? errors.coord : '';
+    if (contentErrEl) contentErrEl.textContent = errors && errors.content ? errors.content : '';
+  }
+
+  function setSaveEnabled(enabled){
+    var btn = document.getElementById('redpen-save');
+    if (btn) btn.disabled = !enabled;
+  }
+
+  function revalidate(){
+    var draft = getDraft();
+    var res = validate(draft);
+    showErrors(res.errors);
+    // Enable save only if valid and draft is dirty versus baseline
+    var enable = res.valid;
+    try {
+      if (window.RedPenEditor && window.RedPenEditor.state) {
+        var baseline = window.RedPenEditor.state.baseline;
+        if (baseline) {
+          if (typeof window.RedPenEditor._isDirty === 'function') {
+            enable = res.valid && window.RedPenEditor._isDirty(draft, baseline);
+          }
+        } else {
+          // If no baseline yet, require validity only
+          enable = res.valid;
+        }
+      }
+    } catch(e){ /* noop */ }
+    setSaveEnabled(enable);
+    return res;
+  }
+
   // Global export
   window.RedPenEditorPanel = {
     mount: mount,
     setDraft: setDraft,
     getDraft: getDraft,
-    parseCoords: parseCoords
+    parseCoords: parseCoords,
+    validate: validate,
+    showErrors: showErrors,
+    setSaveEnabled: setSaveEnabled,
+    revalidate: revalidate
   };
 })();
