@@ -321,6 +321,90 @@
     window.RedPenEditor._isDirty = isDirty;
     window.RedPenEditor._snapshot = snapshotFromDraft;
 
+    // Simple local markers module
+    window.RedPenEditor.markers = window.RedPenEditor.markers || (function(){
+      function ensureContainer(){
+        var host = document.getElementById('overlay-container') || document.getElementById('image-container');
+        var img = document.getElementById('page-image');
+        // initialize page info
+        try {
+          var st = window.RedPenEditor.state;
+          st.page = st.page || { pageId: undefined, origW: undefined, origH: undefined, annotations: [] };
+          if (!st.page.origW || !st.page.origH) {
+            if (img && img.naturalWidth && img.naturalHeight) {
+              st.page.origW = img.naturalWidth;
+              st.page.origH = img.naturalHeight;
+            }
+          }
+        } catch(e){ /* noop */ }
+        return { host: host, img: img };
+      }
+      function toClientOffsets(coords){
+        if (!Array.isArray(coords) || coords.length < 2) return [0,0];
+        var ctx = ensureContainer();
+        var img = ctx.img;
+        if (!img) return [coords[0], coords[1]];
+        var w = img.getBoundingClientRect ? img.getBoundingClientRect().width : img.width;
+        var h = img.getBoundingClientRect ? img.getBoundingClientRect().height : img.height;
+        var st = window.RedPenEditor.state;
+        var ow = (st.page && st.page.origW) || img.naturalWidth || w;
+        var oh = (st.page && st.page.origH) || img.naturalHeight || h;
+        var scaleX = w / (ow || 1);
+        var scaleY = h / (oh || 1);
+        return [coords[0] * scaleX, coords[1] * scaleY];
+      }
+      function upsert(ann){
+        if (!ann || !ann.id) return;
+        var ctx = ensureContainer();
+        var host = ctx.host;
+        if (!host) return;
+        var el = document.getElementById(ann.id);
+        if (!el) {
+          el = document.createElement('div');
+          el.id = ann.id;
+          el.className = (el.className ? el.className + ' ' : '') + 'circle';
+          host.appendChild(el);
+        }
+        // dataset
+        try {
+          el.dataset.annType = ann.annType || 'comment';
+          el.dataset.text = ann.text || '';
+          if (Array.isArray(ann.coords)) el.dataset.coords = JSON.stringify(ann.coords);
+        } catch(e){ /* noop */ }
+        // size and position
+        var sizeMap = { main: 100, comment: 50, small: 25 };
+        var d = sizeMap[ann.annType] || 50;
+        el.style.position = 'absolute';
+        el.style.width = d + 'px';
+        el.style.height = d + 'px';
+        el.style.borderRadius = '50%';
+        el.style.cursor = 'pointer';
+        el.style.transform = 'translateX(-50%)';
+        var color = ann.annType === 'main' ? '#DC143C' : '#0000FF';
+        el.style.background = 'radial-gradient(circle, '+color+'80 0%, '+color+'40 50%, '+color+'00 100%)';
+        var lt = [0,0];
+        if (Array.isArray(ann.coords)) {
+          lt = toClientOffsets(ann.coords);
+        }
+        el.style.left = lt[0] + 'px';
+        // center vertically around point roughly similar to viewer
+        el.style.top = (lt[1] - d/2) + 'px';
+      }
+      function selectById(id){
+        if (!id) return;
+        var el = document.getElementById(id) || document.getElementById('circle-'+id);
+        if (el) { try { selectMarker(el); } catch(e){ /* noop */ } }
+      }
+      function clearSel(){ try { clearSelection(); } catch(e){ /* noop */ } }
+      function rerenderAll(){
+        try {
+          var anns = (window.RedPenEditor.state.page && window.RedPenEditor.state.page.annotations) || [];
+          for (var i=0;i<anns.length;i++){ upsert(anns[i]); }
+        } catch(e){ /* noop */ }
+      }
+      return { ensureContainer: ensureContainer, toClientPx: toClientOffsets, upsert: upsert, selectById: selectById, clearSelection: clearSel, rerenderAll: rerenderAll };
+    })();
+
     // Save/Cancel API for panel
     window.RedPenEditor.onSave = function(){
       try {
@@ -331,22 +415,77 @@
           if (window.RedPenEditorPanel && window.RedPenEditorPanel.showErrors) window.RedPenEditorPanel.showErrors(v.errors || {});
           return;
         }
-        // Sync state.draft from form
-        window.RedPenEditor.state.draft = Object.assign({}, window.RedPenEditor.state.draft, draft);
-        // Update baseline and mode
-        var snap = snapshotFromDraft(window.RedPenEditor.state.draft);
-        window.RedPenEditor.state.baseline = snap;
-        if (snap && snap.id) {
-          window.RedPenEditor.state.editing.mode = 'existing';
-          window.RedPenEditor.state.flags.allowCoordChangeWithoutPrompt = false;
-        } else {
-          window.RedPenEditor.state.editing.mode = 'new';
-          window.RedPenEditor.state.flags.allowCoordChangeWithoutPrompt = true;
+        // Normalize id
+        var id = (draft.id && String(draft.id).trim()) ? String(draft.id).trim() : undefined;
+        var annType = draft.annType;
+        var content = draft.content || '';
+        var coords = Array.isArray(draft.coords) ? [draft.coords[0], draft.coords[1]] : undefined;
+
+        // GENERAL: update right block and cache
+        if (annType === 'general') {
+          // cache
+          if (!window.RedPenEditor.state.cache) window.RedPenEditor.state.cache = { general: null };
+          window.RedPenEditor.state.cache.general = { id: id, content: content };
+          // DOM
+          try {
+            var gc = document.getElementById('global-comment');
+            if (gc) gc.textContent = content;
+          } catch(e){ /* noop */ }
+          // update state.draft and baseline as existing general
+          window.RedPenEditor.state.draft = { id: id, annType: 'general', content: content, coords: undefined };
+          beginEditingExisting(window.RedPenEditor.state.draft);
+          // Clear marker selection for general
+          try { clearSelection(); } catch(e){ /* noop */ }
+          // Disable Save until next change
+          if (window.RedPenEditorPanel && window.RedPenEditorPanel.setSaveEnabled) window.RedPenEditorPanel.setSaveEnabled(false);
+          if (window.RedPenEditorPanel && window.RedPenEditorPanel.revalidate) window.RedPenEditorPanel.revalidate();
+          try { window.alert('Сохранено'); } catch(e) {}
+          return;
         }
-        // Disable Save until next change
+
+        // MAIN/COMMENT: local upsert into state.page.annotations and DOM
+        // Ensure page state exists
+        var st = window.RedPenEditor.state;
+        st.page = st.page || { pageId: undefined, origW: (document.getElementById('page-image')||{}).naturalWidth, origH: (document.getElementById('page-image')||{}).naturalHeight, annotations: [] };
+        var list = st.page.annotations || (st.page.annotations = []);
+
+        var created = false;
+        if (!id) {
+          // if there is an anonymous placeholder in list, remove it
+          for (var k=list.length-1;k>=0;k--) { if (!list[k].id) { list.splice(k,1); } }
+          id = 'client-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2,6);
+          var newAnn = { id: id, annType: annType, text: content, coords: coords };
+          list.push(newAnn);
+          created = true;
+          window.RedPenEditor.markers.upsert(newAnn);
+        } else {
+          // find existing
+          var found = null;
+          for (var i=0;i<list.length;i++){ if (list[i].id === id) { found = list[i]; break; } }
+          if (!found) {
+            var ann = { id: id, annType: annType, text: content, coords: coords };
+            list.push(ann);
+            created = true;
+            window.RedPenEditor.markers.upsert(ann);
+          } else {
+            found.annType = annType;
+            found.text = content;
+            if (Array.isArray(coords)) found.coords = coords;
+            window.RedPenEditor.markers.upsert(found);
+          }
+        }
+
+        // Update selection and state
+        st.ui.selectedAnnotationId = id;
+        st.draft = { id: id, annType: annType, content: content, coords: coords };
+        window.RedPenEditor.markers.selectById(id);
+
+        // Update baseline as existing
+        beginEditingExisting({ id: id, annType: annType, content: content, coords: coords });
+
+        // Disable Save until next change and revalidate
         if (window.RedPenEditorPanel && window.RedPenEditorPanel.setSaveEnabled) window.RedPenEditorPanel.setSaveEnabled(false);
         if (window.RedPenEditorPanel && window.RedPenEditorPanel.revalidate) window.RedPenEditorPanel.revalidate();
-        // MVP toast
         try { window.alert('Сохранено'); } catch(e) { /* noop */ }
       } catch(e){ /* noop */ }
     };
