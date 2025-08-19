@@ -444,39 +444,57 @@
           var popup;
           try {
             if (typeof window.createCommentPopup === 'function') {
-              // Remove old popup if present to avoid duplicates
-              if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
-              // Use the same factory as viewer
-              var annLike = { id: ann.id, text: ann.text, annType: ann.annType };
-              popup = window.createCommentPopup(annLike, 0, cx, cy + d/2, d);
-              // Ensure unique id if factory didn't set
-              if (!popup.id) popup.id = popupId;
-              popup.id = popupId; // enforce predictable id for updates
-              // Append to overlay container
-              host.appendChild(popup);
-              // Hide by default (shown on hover)
-              popup.style.display = 'none';
-              popup.dataset.hoverShown = 'false';
-              popup.dataset.clickShown = 'false';
+              // Prefer updating existing viewer popup linked to this circle
+              var popupIdLinked = el && el.dataset ? el.dataset.popupId : null;
+              if (popupIdLinked) {
+                popup = document.getElementById(popupIdLinked);
+              }
+              if (!popup && existing) popup = existing;
+              if (popup) {
+                // Update content (only text part) using viewer formatter if available
+                var htmlText = (typeof formatCommentText === 'function') ? formatCommentText(ann.text || '') : (ann.text || '');
+                var ccEl = popup.querySelector('.comment-content');
+                if (ccEl) {
+                  ccEl.innerHTML = htmlText;
+                } else {
+                  popup.innerHTML = '<div class="comment-popup-title">Комментарий</div><div class="comment-content">'+ htmlText +'</div>';
+                }
+                // Reposition near current coords
+                popup.style.left = cx + 'px';
+                popup.style.top = (cy + d/2 + 10) + 'px';
+              } else {
+                // No existing popup found: create a simple one and link it
+                popup = document.createElement('div');
+                popup.className = 'comment-popup';
+                popup.id = popupId;
+                var htmlText2 = (typeof formatCommentText === 'function') ? formatCommentText(ann.text || '') : (ann.text || '');
+                popup.innerHTML = '<div class="comment-popup-title">Комментарий</div><div class="comment-content">'+ htmlText2 +'</div>';
+                placeSimplePopup(popup);
+                host.appendChild(popup);
+                try { el.dataset.popupId = popup.id; } catch(e) { /* noop */ }
+              }
             } else {
               // Fallback simple popup
               if (!existing) {
                 popup = document.createElement('div');
                 popup.className = 'comment-popup';
                 popup.id = popupId;
-                popup.innerHTML = '<div class="comment-popup-title">Комментарий</div><div class="comment-content">'+ (ann.text || '') +'</div>';
+                var htmlText3 = (typeof formatCommentText === 'function') ? formatCommentText(ann.text || '') : (ann.text || '');
+                popup.innerHTML = '<div class="comment-popup-title">Комментарий</div><div class="comment-content">'+ htmlText3 +'</div>';
                 placeSimplePopup(popup);
                 host.appendChild(popup);
               } else {
                 popup = existing;
-                popup.querySelector('.comment-content') ? (popup.querySelector('.comment-content').innerHTML = ann.text || '') : (popup.innerHTML = '<div class="comment-popup-title">Комментарий</div><div class="comment-content">'+ (ann.text || '') +'</div>');
+                var htmlText4 = (typeof formatCommentText === 'function') ? formatCommentText(ann.text || '') : (ann.text || '');
+                var ccEl2 = popup.querySelector('.comment-content');
+                if (ccEl2) { ccEl2.innerHTML = htmlText4; } else { popup.innerHTML = '<div class="comment-popup-title">Комментарий</div><div class="comment-content">'+ htmlText4 +'</div>'; }
                 placeSimplePopup(popup);
               }
             }
           } catch(e){ /* noop */ }
 
           // Attach hover listeners (only once for new circles)
-          if (popup) attachHoverHandlers(el, popup);
+          if (popup && isNew) attachHoverHandlers(el, popup);
         }
       }
       function selectById(id){
