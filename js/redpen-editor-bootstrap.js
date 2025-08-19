@@ -494,6 +494,45 @@
       return { ensureContainer: ensureContainer, toClientPx: toClientOffsets, upsert: upsert, selectById: selectById, clearSelection: clearSel, rerenderAll: rerenderAll };
     })();
 
+    // Helper: snapshot existing DOM markers into local state annotations (single source of truth)
+    function snapshotDomMarkersToState(){
+      try {
+        var st = window.RedPenEditor.state;
+        st.page = st.page || { annotations: [], origW: undefined, origH: undefined };
+        var img = document.getElementById('page-image');
+        if (!img) return;
+        var ir = img.getBoundingClientRect();
+        var ow = st.page.origW || img.naturalWidth || ir.width;
+        var oh = st.page.origH || img.naturalHeight || ir.height;
+        var scaleX = (ir.width || img.width) / (ow || 1);
+        var scaleY = (ir.height || img.height) / (oh || 1);
+        function clientToOriginal(x, y){
+          return [ Math.round(x / (scaleX || 1)), Math.round(y / (scaleY || 1)) ];
+        }
+        var list = [];
+        var nodes = document.querySelectorAll('.circle');
+        nodes.forEach(function(el){
+          if (!el || !el.id) return;
+          var ds = el.dataset || {};
+          var annType = ds.annType || 'comment';
+          if (annType === 'general') return; // no markers for general
+          var coords = undefined;
+          if (ds.coords) {
+            coords = parseCoords(ds.coords);
+          }
+          if (!Array.isArray(coords)) {
+            // compute center relative to image, then map back to original pixels
+            var mr = el.getBoundingClientRect();
+            var cx = Math.round(mr.left + mr.width/2 - ir.left);
+            var cy = Math.round(mr.top + mr.height/2 - ir.top);
+            coords = clientToOriginal(cx, cy);
+          }
+          list.push({ id: el.id, annType: annType, text: (typeof ds.text==='string'?ds.text:''), coords: coords });
+        });
+        st.page.annotations = list;
+      } catch(e){ /* noop */ }
+    }
+
     // Preview/Submit/Cancel API for panel
     window.RedPenEditor.onPreview = function(){
       try {
@@ -645,7 +684,14 @@
           var ir = img.getBoundingClientRect();
           var cx = Math.round(mr.left + mr.width/2 - ir.left);
           var cy = Math.round(mr.top + mr.height/2 - ir.top);
-          coords = [cx, cy];
+          // map client to original pixel coords
+          var ow = (window.RedPenEditor.state.page && window.RedPenEditor.state.page.origW) || img.naturalWidth || ir.width;
+          var oh = (window.RedPenEditor.state.page && window.RedPenEditor.state.page.origH) || img.naturalHeight || ir.height;
+          var scaleX = (ir.width || img.width) / (ow || 1);
+          var scaleY = (ir.height || img.height) / (oh || 1);
+          var ox = Math.round(cx / (scaleX || 1));
+          var oy = Math.round(cy / (scaleY || 1));
+          coords = [ox, oy];
         }
       }
 
@@ -690,7 +736,14 @@
       var r = img.getBoundingClientRect();
       var x = Math.round(event.clientX - r.left);
       var y = Math.round(event.clientY - r.top);
-      var coords = [x, y];
+      // map to original pixel coords
+      var ow = (window.RedPenEditor.state.page && window.RedPenEditor.state.page.origW) || img.naturalWidth || r.width;
+      var oh = (window.RedPenEditor.state.page && window.RedPenEditor.state.page.origH) || img.naturalHeight || r.height;
+      var scaleX = (r.width || img.width) / (ow || 1);
+      var scaleY = (r.height || img.height) / (oh || 1);
+      var ox = Math.round(x / (scaleX || 1));
+      var oy = Math.round(y / (scaleY || 1));
+      var coords = [ox, oy];
 
       var mode = (window.RedPenEditor.state.editing && window.RedPenEditor.state.editing.mode) || 'none';
       var current = window.RedPenEditorPanel && window.RedPenEditorPanel.getDraft
@@ -721,6 +774,9 @@
         if (window.RedPenEditorPanel.revalidate) try { window.RedPenEditorPanel.revalidate(); } catch(e) {}
       }
     }
+
+    // As a fallback, snapshot existing markers a bit later in case hooks missed the render
+    setTimeout(function(){ try { snapshotDomMarkersToState(); } catch(e){} }, 1000);
   }
 
   // Export globals per spec
@@ -748,6 +804,9 @@
         }
         if (window.RedPenEditor.state && window.RedPenEditor.state.ui) window.RedPenEditor.state.ui.lastAutoGeneralContent = gen.content;
       }
+      // Schedule snapshot of DOM markers to build local annotation store after viewer renders them
+      setTimeout(function(){ try { snapshotDomMarkersToState(); } catch(e){} }, 150);
+      setTimeout(function(){ try { snapshotDomMarkersToState(); } catch(e){} }, 600);
     } catch(e){ /* noop */ }
   };
   window.hasEditorFlag = hasEditorFlag; // optional external use
