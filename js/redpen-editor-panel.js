@@ -30,9 +30,10 @@
         '<div id="redpen-content-error" class="redpen-error" style="color:#DC143C;font-size:12px;margin-top:4px;"></div>'+
       '</div>'+
       '<div class="redpen-editor-actions" style="margin-top:10px;display:flex;gap:8px;">'+
-        '<button id="redpen-save" disabled>Сохранить</button>'+
+        '<button id="redpen-preview" disabled>Показать</button>'+
+        '<button id="redpen-submit" disabled>Отправить</button>'+
         '<button id="redpen-cancel">Отмена</button>'+
-      '</div>'+
+      '</div>'+ 
       '<div id="redpen-login" style="display:none;"></div>';
 
     container.appendChild(editor);
@@ -73,13 +74,24 @@
       });
     }
 
-    // Bind Save/Cancel
-    var saveBtn = document.getElementById('redpen-save');
+    // Bind Preview/Submit/Cancel
+    var previewBtn = document.getElementById('redpen-preview');
+    var submitBtn = document.getElementById('redpen-submit');
     var cancelBtn = document.getElementById('redpen-cancel');
-    if (saveBtn) {
-      saveBtn.addEventListener('click', function(){
-        if (window.RedPenEditor && typeof window.RedPenEditor.onSave === 'function') {
+    if (previewBtn) {
+      previewBtn.addEventListener('click', function(){
+        if (window.RedPenEditor && typeof window.RedPenEditor.onPreview === 'function') {
+          window.RedPenEditor.onPreview();
+        } else if (window.RedPenEditor && typeof window.RedPenEditor.onSave === 'function') {
+          // backward compatibility fallback
           window.RedPenEditor.onSave();
+        }
+      });
+    }
+    if (submitBtn) {
+      submitBtn.addEventListener('click', function(){
+        if (window.RedPenEditor && typeof window.RedPenEditor.onSubmit === 'function') {
+          window.RedPenEditor.onSubmit();
         }
       });
     }
@@ -181,8 +193,8 @@
     if (contentErrEl) contentErrEl.textContent = errors && errors.content ? errors.content : '';
   }
 
-  function setSaveEnabled(enabled){
-    var btn = document.getElementById('redpen-save');
+  function setPreviewEnabled(enabled){
+    var btn = document.getElementById('redpen-preview');
     if (btn) btn.disabled = !enabled;
   }
 
@@ -190,7 +202,7 @@
     var draft = getDraft();
     var res = validate(draft);
     showErrors(res.errors);
-    // Enable save only if valid and draft is dirty versus baseline
+    // Enable preview only if valid and draft is dirty versus baseline
     var enable = res.valid;
     try {
       if (window.RedPenEditor && window.RedPenEditor.state) {
@@ -205,7 +217,7 @@
         }
       }
     } catch(e){ /* noop */ }
-    setSaveEnabled(enable);
+    setPreviewEnabled(enable);
     return res;
   }
 
@@ -217,7 +229,7 @@
     parseCoords: parseCoords,
     validate: validate,
     showErrors: showErrors,
-    setSaveEnabled: setSaveEnabled,
+    setPreviewEnabled: setPreviewEnabled,
     revalidate: revalidate
   };
 })();

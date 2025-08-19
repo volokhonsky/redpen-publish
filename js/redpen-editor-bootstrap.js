@@ -359,11 +359,13 @@
         var host = ctx.host;
         if (!host) return;
         var el = document.getElementById(ann.id);
+        var isNew = false;
         if (!el) {
           el = document.createElement('div');
           el.id = ann.id;
           el.className = (el.className ? el.className + ' ' : '') + 'circle';
           host.appendChild(el);
+          isNew = true;
         }
         // dataset
         try {
@@ -389,6 +391,93 @@
         el.style.left = lt[0] + 'px';
         // center vertically around point roughly similar to viewer
         el.style.top = (lt[1] - d/2) + 'px';
+
+        // --- Popup creation/update for hover ---
+        // general has no markers/popups
+        if (ann.annType !== 'general') {
+          var cx = lt[0];
+          var cy = lt[1];
+          var popupId = 'popup-' + ann.id;
+          var existing = document.getElementById(popupId);
+
+          function attachHoverHandlers(circleEl, popupEl){
+            if (!circleEl || !popupEl) return;
+            // Avoid duplicate listeners: remove previous if any by cloning
+            if (isNew) {
+              circleEl.addEventListener('mouseenter', function(){
+                if (popupEl.dataset.clickShown !== 'true') {
+                  popupEl.style.display = 'block';
+                  popupEl.dataset.hoverShown = 'true';
+                }
+              });
+              circleEl.addEventListener('mouseleave', function(){
+                if (popupEl.dataset.hoverShown === 'true' && popupEl.dataset.clickShown !== 'true') {
+                  setTimeout(function(){
+                    if (popupEl.dataset.popupHover !== 'true') {
+                      popupEl.style.display = 'none';
+                      popupEl.dataset.hoverShown = 'false';
+                    }
+                  }, 50);
+                }
+              });
+              popupEl.addEventListener('mouseenter', function(){ popupEl.dataset.popupHover = 'true'; });
+              popupEl.addEventListener('mouseleave', function(){
+                popupEl.dataset.popupHover = 'false';
+                if (popupEl.dataset.hoverShown === 'true' && popupEl.dataset.clickShown !== 'true') {
+                  popupEl.style.display = 'none';
+                  popupEl.dataset.hoverShown = 'false';
+                }
+              });
+            }
+          }
+
+          // Helper to place popup element under/above point
+          function placeSimplePopup(p){
+            if (!p) return;
+            p.style.left = cx + 'px';
+            p.style.top = (cy + d/2 + 10) + 'px';
+            p.style.display = 'none';
+            p.dataset.hoverShown = 'false';
+            p.dataset.clickShown = 'false';
+          }
+
+          var popup;
+          try {
+            if (typeof window.createCommentPopup === 'function') {
+              // Remove old popup if present to avoid duplicates
+              if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+              // Use the same factory as viewer
+              var annLike = { id: ann.id, text: ann.text, annType: ann.annType };
+              popup = window.createCommentPopup(annLike, 0, cx, cy + d/2, d);
+              // Ensure unique id if factory didn't set
+              if (!popup.id) popup.id = popupId;
+              popup.id = popupId; // enforce predictable id for updates
+              // Append to overlay container
+              host.appendChild(popup);
+              // Hide by default (shown on hover)
+              popup.style.display = 'none';
+              popup.dataset.hoverShown = 'false';
+              popup.dataset.clickShown = 'false';
+            } else {
+              // Fallback simple popup
+              if (!existing) {
+                popup = document.createElement('div');
+                popup.className = 'comment-popup';
+                popup.id = popupId;
+                popup.innerHTML = '<div class="comment-popup-title">Комментарий</div><div class="comment-content">'+ (ann.text || '') +'</div>';
+                placeSimplePopup(popup);
+                host.appendChild(popup);
+              } else {
+                popup = existing;
+                popup.querySelector('.comment-content') ? (popup.querySelector('.comment-content').innerHTML = ann.text || '') : (popup.innerHTML = '<div class="comment-popup-title">Комментарий</div><div class="comment-content">'+ (ann.text || '') +'</div>');
+                placeSimplePopup(popup);
+              }
+            }
+          } catch(e){ /* noop */ }
+
+          // Attach hover listeners (only once for new circles)
+          if (popup) attachHoverHandlers(el, popup);
+        }
       }
       function selectById(id){
         if (!id) return;
@@ -405,8 +494,8 @@
       return { ensureContainer: ensureContainer, toClientPx: toClientOffsets, upsert: upsert, selectById: selectById, clearSelection: clearSel, rerenderAll: rerenderAll };
     })();
 
-    // Save/Cancel API for panel
-    window.RedPenEditor.onSave = function(){
+    // Preview/Submit/Cancel API for panel
+    window.RedPenEditor.onPreview = function(){
       try {
         var draft = (window.RedPenEditorPanel && window.RedPenEditorPanel.getDraft) ? window.RedPenEditorPanel.getDraft() : window.RedPenEditor.state.draft;
         // Validate via panel
@@ -436,8 +525,8 @@
           beginEditingExisting(window.RedPenEditor.state.draft);
           // Clear marker selection for general
           try { clearSelection(); } catch(e){ /* noop */ }
-          // Disable Save until next change
-          if (window.RedPenEditorPanel && window.RedPenEditorPanel.setSaveEnabled) window.RedPenEditorPanel.setSaveEnabled(false);
+          // Disable Preview until next change
+          if (window.RedPenEditorPanel && window.RedPenEditorPanel.setPreviewEnabled) window.RedPenEditorPanel.setPreviewEnabled(false);
           if (window.RedPenEditorPanel && window.RedPenEditorPanel.revalidate) window.RedPenEditorPanel.revalidate();
           try { window.alert('Сохранено'); } catch(e) {}
           return;
@@ -483,10 +572,25 @@
         // Update baseline as existing
         beginEditingExisting({ id: id, annType: annType, content: content, coords: coords });
 
-        // Disable Save until next change and revalidate
-        if (window.RedPenEditorPanel && window.RedPenEditorPanel.setSaveEnabled) window.RedPenEditorPanel.setSaveEnabled(false);
+        // Disable Preview until next change and revalidate
+        if (window.RedPenEditorPanel && window.RedPenEditorPanel.setPreviewEnabled) window.RedPenEditorPanel.setPreviewEnabled(false);
         if (window.RedPenEditorPanel && window.RedPenEditorPanel.revalidate) window.RedPenEditorPanel.revalidate();
         try { window.alert('Сохранено'); } catch(e) { /* noop */ }
+      } catch(e){ /* noop */ }
+    };
+
+    // Backward compatibility alias
+    window.RedPenEditor.onSave = function(){ try { window.RedPenEditor.onPreview(); } catch(e) {} };
+
+    window.RedPenEditor.onSubmit = function(){
+      try {
+        var draft = (window.RedPenEditorPanel && window.RedPenEditorPanel.getDraft) ? window.RedPenEditorPanel.getDraft() : window.RedPenEditor.state.draft;
+        var v = window.RedPenEditorPanel && typeof window.RedPenEditorPanel.validate === 'function' ? window.RedPenEditorPanel.validate(draft) : { valid: true, errors: {} };
+        if (!v.valid) {
+          if (window.RedPenEditorPanel && window.RedPenEditorPanel.showErrors) window.RedPenEditorPanel.showErrors(v.errors || {});
+          return;
+        }
+        console.info('Отправка будет реализована позже', draft);
       } catch(e){ /* noop */ }
     };
 
