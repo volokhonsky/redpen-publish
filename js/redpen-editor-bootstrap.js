@@ -145,8 +145,10 @@
         cache: { general: null },
         editing: { mode: 'none' },
         baseline: null,
-        flags: { allowCoordChangeWithoutPrompt: false },
-        autoContent: { general: undefined }
+        flags: { allowCoordChangeWithoutPrompt: false, mock: (window.REDPEN_MOCKS === true) },
+        autoContent: { general: undefined },
+        auth: { isAuthenticated: false, userId: undefined, username: undefined, csrfToken: undefined },
+        page: { pageId: undefined, serverPageSha: undefined, origW: undefined, origH: undefined, annotations: [] }
       };
     } else {
       // ensure cache exists
@@ -157,8 +159,11 @@
       }
       if (!window.RedPenEditor.state.editing) window.RedPenEditor.state.editing = { mode: 'none' };
       if (!('baseline' in window.RedPenEditor.state)) window.RedPenEditor.state.baseline = null;
-      if (!window.RedPenEditor.state.flags) window.RedPenEditor.state.flags = { allowCoordChangeWithoutPrompt: false };
+      if (!window.RedPenEditor.state.flags) window.RedPenEditor.state.flags = { allowCoordChangeWithoutPrompt: false, mock: (window.REDPEN_MOCKS === true) };
+      if (typeof window.RedPenEditor.state.flags.mock === 'undefined') window.RedPenEditor.state.flags.mock = (window.REDPEN_MOCKS === true);
       if (!window.RedPenEditor.state.autoContent) window.RedPenEditor.state.autoContent = { general: undefined };
+      if (!window.RedPenEditor.state.auth) window.RedPenEditor.state.auth = { isAuthenticated: false, userId: undefined, username: undefined, csrfToken: undefined };
+      if (!window.RedPenEditor.state.page) window.RedPenEditor.state.page = { pageId: undefined, serverPageSha: undefined, origW: undefined, origH: undefined, annotations: [] };
     }
 
     // Expose utilities for panel usage
@@ -639,15 +644,231 @@
     // Backward compatibility alias
     window.RedPenEditor.onSave = function(){ try { window.RedPenEditor.onPreview(); } catch(e) {} };
 
-    window.RedPenEditor.onSubmit = function(){
+    // --- Auth / HTTP client (editorMode only) ---
+    function apiBase(path){ return path; }
+    function withJsonHeaders(headers){
+      headers = headers || {};
+      headers['Content-Type'] = 'application/json';
+      return headers;
+    }
+    async function getCsrf(){
+      var st = window.RedPenEditor.state;
+      if (st.flags && st.flags.mock === true) {
+        st.auth.csrfToken = st.auth.csrfToken || 'mock-csrf-'+Math.random().toString(36).slice(2,8);
+        return { csrfToken: st.auth.csrfToken };
+      }
+      if (st.auth.csrfToken) return { csrfToken: st.auth.csrfToken };
+      const res = await fetch(apiBase('/api/auth/csrf'), { credentials: 'include' });
+      if (!res.ok) throw new Error('csrf_failed');
+      const data = await res.json();
+      st.auth.csrfToken = data.csrfToken;
+      return data;
+    }
+    async function apiMe(){
+      var st = window.RedPenEditor.state;
+      if (st.flags && st.flags.mock === true) {
+        st.auth.isAuthenticated = true; st.auth.username = st.auth.username || 'mockuser'; st.auth.userId = st.auth.userId || 'mock-'+Math.random().toString(36).slice(2,6);
+        return { userId: st.auth.userId, username: st.auth.username };
+      }
+      const res = await fetch(apiBase('/api/auth/me'), { credentials: 'include' });
+      if (res.status === 401) { st.auth.isAuthenticated = false; return null; }
+      if (!res.ok) throw new Error('me_failed');
+      const data = await res.json();
+      st.auth.isAuthenticated = true; st.auth.userId = data.userId; st.auth.username = data.username;
+      return data;
+    }
+    async function loginWithToken(token){
+      var st = window.RedPenEditor.state;
+      if (st.flags && st.flags.mock === true) {
+        st.auth.isAuthenticated = true; st.auth.username = 'mockuser_'+token.slice(0,4); st.auth.userId = 'mock-'+Math.random().toString(36).slice(2,6);
+        return { ok: true };
+      }
+      await getCsrf();
+      const res = await fetch(apiBase('/api/auth/login'), {
+        method: 'POST',
+        headers: withJsonHeaders({ 'X-CSRF-Token': st.auth.csrfToken }),
+        body: JSON.stringify({ token: token }),
+        credentials: 'include'
+      });
+      if (!res.ok) throw new Error('login_failed');
+      await apiMe();
+      return { ok: true };
+    }
+    async function fetchPageFromServer(pageId){
+      var st = window.RedPenEditor.state;
+      if (st.flags && st.flags.mock === true) {
+        // mock: pretend we got same annotations and new sha
+        st.page.serverPageSha = 'mock-sha-'+Date.now().toString(36);
+        st.page.annotations = st.page.annotations || [];
+        window.RedPenEditor.markers.rerenderAll();
+        // also reflect general in right block if present
+        var gen = st.cache && st.cache.general ? st.cache.general : null;
+        if (gen) { var gc = document.getElementById('global-comment'); if (gc) gc.textContent = gen.content || ''; }
+        return;
+      }
+      const res = await fetch(apiBase('/api/pages/'+encodeURIComponent(pageId)), { credentials:'include' });
+      if (!res.ok) throw new Error('fetch_page_failed');
+      const data = await res.json();
+      st.page.pageId = data.pageId || pageId;
+      st.page.serverPageSha = data.serverPageSha;
+      st.page.origW = data.origW; st.page.origH = data.origH;
+      // Normalize annotations: {id, annType, text, coords}
+      st.page.annotations = Array.isArray(data.annotations) ? data.annotations.map(function(a){
+        return { id: a.id, annType: a.annType, text: a.text, coords: a.coords };
+      }) : [];
+      window.RedPenEditor.markers.rerenderAll();
+      // Update general right panel
       try {
-        var draft = (window.RedPenEditorPanel && window.RedPenEditorPanel.getDraft) ? window.RedPenEditorPanel.getDraft() : window.RedPenEditor.state.draft;
+        var g = (data.annotations || []).find(function(a){ return a.annType==='general'; });
+        if (g) {
+          st.cache.general = { id: normalizeId(g.id), content: g.text || '' };
+          var gc = document.getElementById('global-comment'); if (gc) gc.textContent = g.text || '';
+        }
+      } catch(e){ /* noop */ }
+    }
+    async function saveAnnotationToServer(draft){
+      var st = window.RedPenEditor.state;
+      if (st.flags && st.flags.mock === true) {
+        // simulate network and optimistic lock success
+        var id = (draft.id && String(draft.id).trim()) || undefined;
+        if (!id) id = 'srv-'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+        var serverPageSha = 'mock-sha-'+Date.now().toString(36);
+        return { id: id, serverPageSha: serverPageSha };
+      }
+      await getCsrf();
+      var pageId = st.page && st.page.pageId ? st.page.pageId : undefined;
+      var payload = { annType: draft.annType, text: draft.content, clientPageSha: st.page.serverPageSha };
+      if (draft.annType !== 'general') payload.coords = draft.coords;
+      var url, method;
+      if (draft.id && String(draft.id).trim()) {
+        url = apiBase('/api/pages/'+encodeURIComponent(pageId)+'/annotations/'+encodeURIComponent(String(draft.id).trim()));
+        method = 'PUT';
+      } else {
+        url = apiBase('/api/pages/'+encodeURIComponent(pageId)+'/annotations');
+        method = 'POST';
+      }
+      const res = await fetch(url, {
+        method: method,
+        headers: withJsonHeaders({ 'X-CSRF-Token': st.auth.csrfToken }),
+        body: JSON.stringify(payload),
+        credentials: 'include'
+      });
+      if (res.status === 401) { throw Object.assign(new Error('unauthorized'), { code: 401 }); }
+      if (res.status === 409) { throw Object.assign(new Error('conflict'), { code: 409 }); }
+      if (!res.ok) throw new Error('save_failed');
+      const data = await res.json();
+      return data; // { id, serverPageSha }
+    }
+
+    // Simple login modal
+    function showLoginModal(message){
+      var host = document.getElementById('redpen-login');
+      if (!host) return;
+      host.style.display = '';
+      host.style.border = '1px solid #ccc';
+      host.style.padding = '10px';
+      host.style.marginTop = '10px';
+      host.innerHTML = ''+
+        '<div style="font-weight:bold;margin-bottom:6px;">Требуется вход</div>'+
+        (message ? '<div style="color:#DC143C;margin-bottom:6px;">'+message+'</div>' : '')+
+        '<input id="redpen-login-token" type="text" placeholder="Личный токен" style="width:100%;margin-bottom:6px;" />'+
+        '<div style="display:flex;gap:8px;align-items:center;">'+
+          '<button id="redpen-login-do">Войти</button>'+
+          '<span id="redpen-login-error" style="color:#DC143C;font-size:12px;"></span>'+
+        '</div>';
+      var btn = document.getElementById('redpen-login-do');
+      if (btn) btn.onclick = async function(){
+        var inp = document.getElementById('redpen-login-token');
+        var token = inp ? String(inp.value || '').trim() : '';
+        var errEl = document.getElementById('redpen-login-error');
+        if (!token) { if (errEl) errEl.textContent = 'Введите токен'; return; }
+        try {
+          await loginWithToken(token);
+          await apiMe();
+          host.style.display = 'none';
+          // Small badge
+          try {
+            var badge = document.getElementById('redpen-login-badge');
+            if (!badge) {
+              badge = document.createElement('div'); badge.id = 'redpen-login-badge'; badge.style.marginTop='6px';
+              var actions = document.querySelector('.redpen-editor-actions');
+              if (actions && actions.parentNode) actions.parentNode.insertBefore(badge, actions.nextSibling);
+            }
+            badge.textContent = 'Вы вошли как '+(window.RedPenEditor.state.auth.username || 'user');
+          } catch(e) { /* noop */ }
+        } catch(e){ if (errEl) errEl.textContent = 'Проверьте токен'; }
+      };
+    }
+
+    window.RedPenEditor.onSubmit = async function(){
+      try {
+        var st = window.RedPenEditor.state;
+        var draft = (window.RedPenEditorPanel && window.RedPenEditorPanel.getDraft) ? window.RedPenEditorPanel.getDraft() : st.draft;
         var v = window.RedPenEditorPanel && typeof window.RedPenEditorPanel.validate === 'function' ? window.RedPenEditorPanel.validate(draft) : { valid: true, errors: {} };
-        if (!v.valid) {
-          if (window.RedPenEditorPanel && window.RedPenEditorPanel.showErrors) window.RedPenEditorPanel.showErrors(v.errors || {});
+        if (!v.valid) { if (window.RedPenEditorPanel && window.RedPenEditorPanel.showErrors) window.RedPenEditorPanel.showErrors(v.errors || {}); return; }
+        // Ensure pageId
+        try {
+          if (!st.page.pageId && typeof window.currentPageId === 'string') st.page.pageId = window.currentPageId.split('_')[1];
+        } catch(e) { /* noop */ }
+        // Check auth
+        if (!st.auth.isAuthenticated) { showLoginModal(); return; }
+        // Ensure csrf
+        await getCsrf();
+        // Compose and send
+        var result;
+        try {
+          result = await saveAnnotationToServer(draft);
+        } catch(err) {
+          if (err && err.code === 401) { showLoginModal('Сессия истекла, войдите заново'); return; }
+          if (err && err.code === 409) {
+            var agree = window.confirm('Кто-то изменил страницу. Обновить данные? Вы потеряете локальные несохранённые правки.');
+            if (agree) {
+              await fetchPageFromServer(st.page.pageId);
+              // leave draft and buttons as-is; user may retry
+            }
+            return;
+          }
+          window.alert('Не удалось отправить. Попробуйте ещё раз.');
           return;
         }
-        console.info('Отправка будет реализована позже', draft);
+        // Success
+        var serverId = result && result.id ? String(result.id) : (draft.id || undefined);
+        st.page.serverPageSha = result && result.serverPageSha ? result.serverPageSha : st.page.serverPageSha;
+        // Update local annotations and markers similar to Preview
+        var annType = draft.annType;
+        var content = draft.content || '';
+        var coords = Array.isArray(draft.coords) ? [draft.coords[0], draft.coords[1]] : undefined;
+        if (annType === 'general') {
+          // update cache and right block
+          st.cache.general = { id: serverId ? serverId : undefined, content: content };
+          try { var gc = document.getElementById('global-comment'); if (gc) gc.textContent = content; } catch(e){}
+          st.draft = { id: serverId, annType: 'general', content: content, coords: undefined };
+          beginEditingExisting(st.draft);
+          try { window.RedPenEditor.markers.clearSelection(); } catch(e){}
+        } else {
+          // insert/update annotation in single source list
+          st.page.annotations = st.page.annotations || [];
+          var oldId = draft.id && String(draft.id).trim() ? String(draft.id).trim() : undefined;
+          var idToUse = serverId || oldId;
+          if (!idToUse) idToUse = 'srv-'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+          var found = null;
+          for (var i=0;i<st.page.annotations.length;i++){ if (st.page.annotations[i].id === (serverId || oldId)) { found = st.page.annotations[i]; break; } }
+          if (!found) { st.page.annotations.push({ id: idToUse, annType: annType, text: content, coords: coords }); }
+          else { found.id = idToUse; found.annType = annType; found.text = content; if (Array.isArray(coords)) found.coords = coords; }
+          // If id changed from local client-id to server id, remove old marker
+          if (oldId && serverId && oldId !== serverId) { var oldEl = document.getElementById(oldId); if (oldEl && oldEl.parentNode) oldEl.parentNode.removeChild(oldEl); }
+          // Upsert marker and keep selection
+          window.RedPenEditor.markers.upsert({ id: idToUse, annType: annType, text: content, coords: coords });
+          window.RedPenEditor.markers.selectById(idToUse);
+          st.ui.selectedAnnotationId = idToUse;
+          st.draft = { id: idToUse, annType: annType, content: content, coords: coords };
+          beginEditingExisting(st.draft);
+        }
+        // Disable buttons and toast
+        if (window.RedPenEditorPanel && window.RedPenEditorPanel.setPreviewEnabled) window.RedPenEditorPanel.setPreviewEnabled(false);
+        if (window.RedPenEditorPanel && window.RedPenEditorPanel.setSubmitEnabled) window.RedPenEditorPanel.setSubmitEnabled(false);
+        if (window.RedPenEditorPanel && window.RedPenEditorPanel.revalidate) window.RedPenEditorPanel.revalidate();
+        try { window.alert('Отправлено'); } catch(e){}
       } catch(e){ /* noop */ }
     };
 
@@ -804,6 +1025,16 @@
   window.RedPenEditor.onAnnotationsLoaded = function(anns){
     try {
       if (!Array.isArray(anns)) return;
+      // Capture current pageId like '007' from global currentPageId 'page_007'
+      try {
+        var cpid = (typeof window.currentPageId === 'string') ? window.currentPageId : '';
+        if (cpid && cpid.indexOf('_') !== -1) {
+          var pid = cpid.split('_')[1];
+          if (window.RedPenEditor.state && window.RedPenEditor.state.page) {
+            window.RedPenEditor.state.page.pageId = pid;
+          }
+        }
+      } catch(e) { /* noop */ }
       var gen = null;
       for (var i=0;i<anns.length;i++){ var a = anns[i]; if (a && a.annType === 'general'){ gen = { id: normalizeId(a.id), content: (typeof a.text==='string'?a.text:'') }; break; } }
       if (!window.RedPenEditor.state.cache) window.RedPenEditor.state.cache = { general: null };

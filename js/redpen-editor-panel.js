@@ -197,12 +197,16 @@
     var btn = document.getElementById('redpen-preview');
     if (btn) btn.disabled = !enabled;
   }
+  function setSubmitEnabled(enabled){
+    var btn = document.getElementById('redpen-submit');
+    if (btn) btn.disabled = !enabled;
+  }
 
   function revalidate(){
     var draft = getDraft();
     var res = validate(draft);
     showErrors(res.errors);
-    // Enable preview only if valid and draft is dirty versus baseline
+    // Enable preview/submit only if valid and draft is dirty versus baseline
     var enable = res.valid;
     try {
       if (window.RedPenEditor && window.RedPenEditor.state) {
@@ -218,6 +222,7 @@
       }
     } catch(e){ /* noop */ }
     setPreviewEnabled(enable);
+    setSubmitEnabled(res.valid); // Submit enabled on valid; can be same as preview or just valid per spec
     return res;
   }
 
@@ -230,6 +235,7 @@
     validate: validate,
     showErrors: showErrors,
     setPreviewEnabled: setPreviewEnabled,
+    setSubmitEnabled: setSubmitEnabled,
     revalidate: revalidate
   };
 })();
