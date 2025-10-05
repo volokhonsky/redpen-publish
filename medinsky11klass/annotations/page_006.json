@@ -9,8 +9,8 @@
     ]
   },
   {
-    "id": "",
-    "text": "type: main\ntarget: [650,950]",
+    "id": "ann-page7-2",
+    "text": "type: main\nid: ann-page7-3\ntarget: [650,950]",
     "annType": "main",
     "coords": [
       300,
