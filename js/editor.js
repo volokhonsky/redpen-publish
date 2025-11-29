@@ -339,7 +339,17 @@
   async function ensurePageInfoLoaded(){
     // Take current page id and image url from existing viewer
     const pageId = g.currentPageId; // e.g., 'page_007'
-    if (!pageId) return;
+    
+    if (!pageId) {
+      const error = new Error(
+        'pageId is undefined! window.currentPageId is not set. ' +
+        'Check that main.js has initialized currentPageId before editor.js loads.'
+      );
+      error.name = 'MissingPageIdError';
+      console.error('[RedPen Editor]', error);
+      throw error;
+    }
+    
     state.page.pageId = pageId;
     if (isMockMode()) {
       const p = await api.getPage(pageId);
