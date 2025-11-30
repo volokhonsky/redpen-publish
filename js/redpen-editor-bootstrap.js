@@ -72,18 +72,16 @@
         flags: { allowCoordChangeWithoutPrompt: false, mock: (window.REDPEN_MOCKS === true) },
         autoContent: { general: undefined },
         auth: { isAuthenticated: false, userId: undefined, username: undefined, csrfToken: undefined },
-        page: { pageId: undefined, serverPageSha: undefined, origW: undefined, origH: undefined, annotations: [] }
+        page: { 
+          docId: window.currentDocId || null,  // ✅ Использовать из main.js
+          pageNum: undefined,
+          pageId: undefined,
+          serverPageSha: undefined, 
+          origW: undefined, 
+          origH: undefined, 
+          annotations: [] 
+        }
       };
-    } else {
-      window.RedPenEditor.state.editorMode = true;
-      if (!window.RedPenEditor.state.cache) window.RedPenEditor.state.cache = { general: null };
-      if (!window.RedPenEditor.state.ui) window.RedPenEditor.state.ui = { selectedAnnotationId: null, lastAutoGeneralContent: undefined };
-      if (!window.RedPenEditor.state.editing) window.RedPenEditor.state.editing = { mode: 'none' };
-      if (!('baseline' in window.RedPenEditor.state)) window.RedPenEditor.state.baseline = null;
-      if (!window.RedPenEditor.state.flags) window.RedPenEditor.state.flags = { allowCoordChangeWithoutPrompt: false, mock: (window.REDPEN_MOCKS === true) };
-      if (!window.RedPenEditor.state.autoContent) window.RedPenEditor.state.autoContent = { general: undefined };
-      if (!window.RedPenEditor.state.auth) window.RedPenEditor.state.auth = { isAuthenticated: false, userId: undefined, username: undefined, csrfToken: undefined };
-      if (!window.RedPenEditor.state.page) window.RedPenEditor.state.page = { pageId: undefined, serverPageSha: undefined, origW: undefined, origH: undefined, annotations: [] };
     }
 
     // ===== HELPER FUNCTIONS (NO DUPLICATES) =====
@@ -362,17 +360,22 @@
         return { id: id, serverPageSha: serverPageSha };
       }
       await getCsrf();
-      var pageId = st.page && st.page.pageId ? st.page.pageId : undefined;
+      
+      var docId = st.page && st.page.docId ? st.page.docId : 'unknown';
+      var pageNum = st.page && st.page.pageNum ? st.page.pageNum : 1;
+      
       var payload = { annType: draft.annType, text: draft.content, clientPageSha: st.page.serverPageSha };
       if (draft.annType !== 'general') payload.coords = draft.coords;
+      
       var url, method;
       if (draft.id && String(draft.id).trim()) {
-        url = apiBase('/api/pages/'+encodeURIComponent(pageId)+'/annotations/'+encodeURIComponent(String(draft.id).trim()));
+        url = apiBase('/api/editor/'+encodeURIComponent(docId)+'/'+encodeURIComponent(pageNum)+'/'+encodeURIComponent(String(draft.id).trim()));
         method = 'PUT';
       } else {
-        url = apiBase('/api/pages/'+encodeURIComponent(pageId)+'/annotations');
+        url = apiBase('/api/editor/'+encodeURIComponent(docId)+'/'+encodeURIComponent(pageNum));
         method = 'POST';
       }
+      
       const res = await fetch(url, {
         method: method,
         headers: withJsonHeaders({ 'X-CSRF-Token': st.auth.csrfToken }),

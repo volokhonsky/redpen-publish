@@ -10,6 +10,21 @@ let allAnns = [];
 let isMobile = false;
 let resizeTimeout;
 let metadata = null;
+let currentDocId = null;
+
+
+function getDocIdFromPath() {
+  try {
+    const pathParts = window.location.pathname.split('/').filter(p => p.length > 0);
+    if (pathParts.length >= 2) {
+      const docId = pathParts[pathParts.length - 2];
+      if (/^[a-zA-Z0-9_-]+$/.test(docId)) {
+        return docId;
+      }
+    }
+  } catch(e) { /* noop */ }
+  return null;
+}
 
 function isEditorMode() {
   try {
@@ -53,6 +68,10 @@ function navigateTo(targetPage) {
  * Initialize the application
  */
 async function init() {
+  // ✅ ДОБАВИТЬ В НАЧАЛО init()
+  currentDocId = getDocIdFromPath();
+  console.log('Detected docId:', currentDocId);
+
   // Set initial mobile flag
   isMobile = checkMobile();
 
