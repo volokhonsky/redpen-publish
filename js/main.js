@@ -6,11 +6,12 @@
 
 let overlayContainer;
 let currentPageId;
+let currentPageNum = undefined;  // ✅ ДОБАВИТЬ
+let currentDocId = null;
 let allAnns = [];
 let isMobile = false;
 let resizeTimeout;
 let metadata = null;
-let currentDocId = null;
 
 
 function getDocIdFromPath() {
@@ -165,9 +166,19 @@ async function loadPage(pageNum) {
   document.getElementById('image-container').style.display = 'flex';
   document.getElementById('global-comment-container').style.display = 'block';
 
+  // ✅ УСТАНОВИТЬ currentPageNum перед вычислением
+  currentPageNum = pageNum;
+
   // Compute physical page: logicalStart + pageNum - 1
   const phys = (metadata.pageNumbering.physicalStart || 1) + (pageNum - 1);
   currentPageId = 'page_' + String(phys).padStart(3, '0');
+  
+  // ✅ ОБНОВИТЬ состояние редактора, если он присутствует
+  if (window.RedPenEditor && window.RedPenEditor.state) {
+    window.RedPenEditor.state.page.pageNum = currentPageNum;
+    window.RedPenEditor.state.page.docId = currentDocId;
+  }
+  
   const img = document.getElementById('page-image');
   img.src = 'images/' + currentPageId + '.png';
 

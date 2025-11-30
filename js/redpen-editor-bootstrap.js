@@ -73,8 +73,8 @@
         autoContent: { general: undefined },
         auth: { isAuthenticated: false, userId: undefined, username: undefined, csrfToken: undefined },
         page: { 
-          docId: window.currentDocId || null,  // ✅ Использовать из main.js
-          pageNum: undefined,
+          docId: window.currentDocId || null,
+          pageNum: window.currentPageNum || undefined,
           pageId: undefined,
           serverPageSha: undefined, 
           origW: undefined, 
