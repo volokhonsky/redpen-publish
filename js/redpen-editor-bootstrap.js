@@ -378,10 +378,14 @@
       if (draft.annType !== 'general') payload.coords = draft.coords;
       
       var url, method;
-      if (draft.id && String(draft.id).trim()) {
+      // ✅ ТОЛЬКО ДЛЯ ОБНОВЛЕНИЯ СУЩЕСТВУЮЩИХ АННОТАЦИЙ (не client-*)
+      var isExistingServerAnnotation = draft.id && String(draft.id).trim() && !String(draft.id).startsWith('client-');
+      
+      if (isExistingServerAnnotation) {
         url = apiBase('/api/editor/'+encodeURIComponent(docId)+'/'+encodeURIComponent(pageNum)+'/'+encodeURIComponent(String(draft.id).trim()));
         method = 'PUT';
       } else {
+        // Новая аннотация — отправляем POST БЕЗ ID в URL
         url = apiBase('/api/editor/'+encodeURIComponent(docId)+'/'+encodeURIComponent(pageNum));
         method = 'POST';
       }
