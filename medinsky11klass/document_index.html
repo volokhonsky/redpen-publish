@@ -38,7 +38,7 @@
 </head>
 <body>
   <a href="../index.html" class="home-button" title="Вернуться к выбору документов">⌂</a>
-  <header>RedPen — Красной ручкой <span id="timestamp" style="font-size: 0.7rem; font-weight: normal; opacity: 0.8;">Последнее обновление: 05.10.2025 18:56</span></header>
+  <header>RedPen — Красной ручкой <span id="timestamp" style="font-size: 0.7rem; font-weight: normal; opacity: 0.8;">Последнее обновление: 08.07.2026 23:00</span></header>
   <nav id="pagination">
     <a href="#" class="pagination-btn" id="prev-page" onclick="prevPage();return false;">« Назад</a>
     <div id="page-numbers" class="page-numbers">
@@ -137,6 +137,10 @@
   </div>
 
 
+  <script>
+    window.REDPEN_API_BASE = window.REDPEN_API_BASE || 'https://api.medinsky.net';
+    window.REDPEN_GOOGLE_CLIENT_ID = window.REDPEN_GOOGLE_CLIENT_ID || '679121872329-tl9fk0aq6i1rjf6jgdb1460p0pvn50md.apps.googleusercontent.com';
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="../js/layout.js"></script>
   <script src="../js/comment-content.js"></script>

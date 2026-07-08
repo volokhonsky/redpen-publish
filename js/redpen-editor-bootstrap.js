@@ -277,7 +277,8 @@
         st.auth.isAuthenticated = true;
         st.auth.username = st.auth.username || 'mockuser';
         st.auth.userId = st.auth.userId || 'mock-'+Math.random().toString(36).slice(2,6);
-        return { userId: st.auth.userId, username: st.auth.username };
+        st.auth.role = st.auth.role || 'editor';
+        return { userId: st.auth.userId, username: st.auth.username, role: st.auth.role };
       }
       try {
         const res = await fetch(apiBase('/api/auth/me'), { credentials: 'include' });
@@ -290,10 +291,78 @@
         st.auth.isAuthenticated = true;
         st.auth.userId = data.userId;
         st.auth.username = data.username;
+        st.auth.email = data.email;
+        st.auth.name = data.name;
+        st.auth.picture = data.picture;
+        st.auth.role = data.role;
         return data;
       } catch (error) {
         console.error('[RedPen Editor] Auth error:', error);
         throw error;
+      }
+    }
+
+    // Fetch /api/auth/me (401 is a normal "not logged in", not an error) and
+    // reflect the result in the panel's auth-status header.
+    async function refreshAuthUi(){
+      var data = null;
+      try { data = await apiMe(); } catch (error) { data = null; }
+      if (window.RedPenEditorPanel && window.RedPenEditorPanel.setAuthState) {
+        window.RedPenEditorPanel.setAuthState(data);
+      }
+      return data;
+    }
+
+    var _gisLoadPromise = null;
+    function loadGoogleIdentityServices(){
+      if (_gisLoadPromise) return _gisLoadPromise;
+      _gisLoadPromise = new Promise(function(resolve){
+        if (window.google && window.google.accounts && window.google.accounts.id) { resolve(); return; }
+        var script = document.createElement('script');
+        script.src = 'https://accounts.google.com/gsi/client';
+        script.async = true;
+        script.defer = true;
+        script.onload = function(){ resolve(); };
+        script.onerror = function(){
+          console.error('[RedPen Editor] Failed to load Google Identity Services');
+          resolve();
+        };
+        document.head.appendChild(script);
+      });
+      return _gisLoadPromise;
+    }
+
+    async function onGoogleCredential(credentialResponse){
+      var errEl = document.getElementById('redpen-login-error');
+      try {
+        const res = await fetch(apiBase('/api/auth/google'), {
+          method: 'POST',
+          headers: withJsonHeaders(),
+          body: JSON.stringify({ credential: credentialResponse.credential }),
+          credentials: 'include'
+        });
+        if (!res.ok) throw new Error('google_login_failed');
+        await refreshAuthUi();
+        var host = document.getElementById('redpen-login');
+        if (host) host.style.display = 'none';
+      } catch (error) {
+        console.error('[RedPen Editor] Google login error:', error);
+        if (errEl) errEl.textContent = 'Не удалось войти через Google';
+      }
+    }
+
+    function renderGoogleButton(){
+      try {
+        if (!window.google || !window.google.accounts || !window.google.accounts.id) return;
+        var el = document.getElementById('redpen-google-btn');
+        if (!el) return;
+        window.google.accounts.id.initialize({
+          client_id: window.REDPEN_GOOGLE_CLIENT_ID,
+          callback: onGoogleCredential
+        });
+        window.google.accounts.id.renderButton(el, { theme: 'outline', size: 'medium' });
+      } catch (error) {
+        console.error('[RedPen Editor] Google button error:', error);
       }
     }
 
@@ -306,10 +375,11 @@
         return { ok: true };
       }
       try {
-        await getCsrf();
+        // No session exists yet, so /api/auth/csrf would 401 here; login is
+        // protected by the token itself + SameSite=Lax instead of CSRF.
         const res = await fetch(apiBase('/api/auth/login'), {
           method: 'POST',
-          headers: withJsonHeaders({ 'X-CSRF-Token': st.auth.csrfToken }),
+          headers: withJsonHeaders(),
           body: JSON.stringify({ token: token }),
           credentials: 'include'
         });
@@ -351,65 +421,76 @@
       } catch(e){ /* noop */ }
     }
 
+    // Lightweight variant of fetchPageFromServer: only learns serverPageSha
+    // so the first save can send a real clientPageSha, without touching the
+    // DOM markers/general comment (those come from the normal page load).
+    async function syncServerPageSha(){
+      var st = window.RedPenEditor.state;
+      if (st.flags && st.flags.mock === true) {
+        st.page.serverPageSha = st.page.serverPageSha || ('mock-sha-'+Date.now().toString(36));
+        return;
+      }
+      var docId = st.page && st.page.docId;
+      var pageNum = st.page && st.page.pageNum;
+      if (!docId || !pageNum) return;
+      try {
+        const res = await fetch(apiBase('/api/editor/'+encodeURIComponent(docId)+'/'+encodeURIComponent(pageNum)), { credentials: 'include' });
+        if (!res.ok) return;
+        const data = await res.json();
+        st.page.serverPageSha = data.serverPageSha;
+      } catch (error) {
+        console.error('[RedPen Editor] Failed to sync serverPageSha:', error);
+      }
+    }
+
     async function saveAnnotationToServer(draft){
       var st = window.RedPenEditor.state;
-      
-      console.log('[saveAnnotationToServer] Starting...'); // ✅ ЛОГ A
-      console.log('[saveAnnotationToServer] Draft:', draft); // ✅ ЛОГ B
-      console.log('[saveAnnotationToServer] State.page:', st.page); // ✅ ЛОГ C
-      
+
       if (st.flags && st.flags.mock === true) {
-        console.log('[saveAnnotationToServer] Mock mode enabled'); // ✅ ЛОГ D
         var id = (draft.id && String(draft.id).trim()) || undefined;
         if (!id) id = 'srv-'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
         var serverPageSha = 'mock-sha-'+Date.now().toString(36);
         return { id: id, serverPageSha: serverPageSha };
       }
-      
+
       await getCsrf();
-      
+
       var docId = st.page && st.page.docId ? st.page.docId : 'unknown';
       var pageNum = st.page && st.page.pageNum ? st.page.pageNum : 1;
-      
-      console.log('[saveAnnotationToServer] docId:', docId); // ✅ ЛОГ E
-      console.log('[saveAnnotationToServer] pageNum:', pageNum); // ✅ ЛОГ F
-      
+
       var payload = { annType: draft.annType, text: draft.content, clientPageSha: st.page.serverPageSha };
       if (draft.annType !== 'general') payload.coords = draft.coords;
-      
+
       var url, method;
-      // ✅ ТОЛЬКО ДЛЯ ОБНОВЛЕНИЯ СУЩЕСТВУЮЩИХ АННОТАЦИЙ (не client-*)
+      // Только для обновления существующих аннотаций (не client-*)
       var isExistingServerAnnotation = draft.id && String(draft.id).trim() && !String(draft.id).startsWith('client-');
-      
+
       if (isExistingServerAnnotation) {
         url = apiBase('/api/editor/'+encodeURIComponent(docId)+'/'+encodeURIComponent(pageNum)+'/'+encodeURIComponent(String(draft.id).trim()));
         method = 'PUT';
       } else {
-        // Новая аннотация — отправляем POST БЕЗ ID в URL
+        // Новая аннотация — отправляем POST без id в URL
         url = apiBase('/api/editor/'+encodeURIComponent(docId)+'/'+encodeURIComponent(pageNum));
         method = 'POST';
       }
-      
-      console.log('[saveAnnotationToServer] URL:', url); // ✅ ЛОГ G
-      console.log('[saveAnnotationToServer] Method:', method); // ✅ ЛОГ H
-      console.log('[saveAnnotationToServer] Payload:', payload); // ✅ ЛОГ I
-      
+
       const res = await fetch(url, {
         method: method,
         headers: withJsonHeaders({ 'X-CSRF-Token': st.auth.csrfToken }),
         body: JSON.stringify(payload),
         credentials: 'include'
       });
-      
-      console.log('[saveAnnotationToServer] Response status:', res.status); // ✅ ЛОГ J
-      
+
       if (res.status === 401) { throw Object.assign(new Error('unauthorized'), { code: 401 }); }
+      if (res.status === 403) {
+        var forbiddenDetail;
+        try { forbiddenDetail = (await res.json()).detail; } catch (e) { forbiddenDetail = undefined; }
+        throw Object.assign(new Error('forbidden'), { code: 403, detail: forbiddenDetail });
+      }
       if (res.status === 409) { throw Object.assign(new Error('conflict'), { code: 409 }); }
       if (!res.ok) throw new Error('save_failed');
       const data = await res.json();
-      
-      console.log('[saveAnnotationToServer] Response data:', data); // ✅ ЛОГ K
-      
+
       return data;
     }
 
@@ -417,13 +498,24 @@
       var host = document.getElementById('redpen-login');
       if (!host) return;
       host.style.display = '';
-      host.innerHTML = '<div style="font-weight:bold;margin-bottom:6px;">Требуется вход</div>'+
+
+      var html = '<div style="font-weight:bold;margin-bottom:6px;">Требуется вход</div>'+
         (message ? '<div style="color:#DC143C;margin-bottom:6px;">'+message+'</div>' : '')+
-        '<input id="redpen-login-token" type="text" placeholder="Личный токен" style="width:100%;margin-bottom:6px;" />'+
-        '<div style="display:flex;gap:8px;">'+
-          '<button id="redpen-login-do">Войти</button>'+
-          '<span id="redpen-login-error" style="color:#DC143C;font-size:12px;"></span>'+
+        '<div id="redpen-google-btn" style="margin-bottom:8px;"></div>'+
+        '<span id="redpen-login-error" style="color:#DC143C;font-size:12px;"></span>';
+      if (window.REDPEN_DEV_TOKEN_LOGIN === true) {
+        html += '<div style="margin-top:8px;">'+
+          '<input id="redpen-login-token" type="text" placeholder="Личный токен" style="width:100%;margin-bottom:6px;" />'+
+          '<button id="redpen-login-do">Войти токеном</button>'+
         '</div>';
+      }
+      host.innerHTML = html;
+
+      // Renders as soon as GIS is available; if it's still loading, the
+      // .then() fires once it is (loadGoogleIdentityServices resolves once
+      // and is cached, so repeated calls here are cheap).
+      loadGoogleIdentityServices().then(renderGoogleButton);
+
       var btn = document.getElementById('redpen-login-do');
       if (btn) btn.onclick = async function(){
         var inp = document.getElementById('redpen-login-token');
@@ -432,7 +524,7 @@
         if (!token) { if (errEl) errEl.textContent = 'Введите токен'; return; }
         try {
           await loginWithToken(token);
-          await apiMe();
+          await refreshAuthUi();
           host.style.display = 'none';
         } catch(e){ if (errEl) errEl.textContent = 'Проверьте токен'; }
       };
@@ -744,50 +836,55 @@
 
     window.RedPenEditor.onSubmit = async function(){
       try {
-        console.log('[RedPen Editor] onSubmit called'); // ✅ ЛОГ 1
-        
         var st = window.RedPenEditor.state;
         var draft = (window.RedPenEditorPanel && window.RedPenEditorPanel.getDraft) ? window.RedPenEditorPanel.getDraft() : st.draft;
-        
-        console.log('[RedPen Editor] Draft:', draft); // ✅ ЛОГ 2
-        console.log('[RedPen Editor] State.page:', st.page); // ✅ ЛОГ 3
-        
+
         var v = window.RedPenEditorPanel && typeof window.RedPenEditorPanel.validate === 'function' ? window.RedPenEditorPanel.validate(draft) : { valid: true, errors: {} };
-        
-        console.log('[RedPen Editor] Validation result:', v); // ✅ ЛОГ 4
-        
-        if (!v.valid) { 
-          console.warn('[RedPen Editor] Validation failed, errors:', v.errors); // ✅ ЛОГ 5
-          if (window.RedPenEditorPanel && window.RedPenEditorPanel.showErrors) window.RedPenEditorPanel.showErrors(v.errors || {}); 
-          return; 
+
+        if (!v.valid) {
+          if (window.RedPenEditorPanel && window.RedPenEditorPanel.showErrors) window.RedPenEditorPanel.showErrors(v.errors || {});
+          return;
         }
-        
+
         try { if (!st.page.pageId && typeof window.currentPageId === 'string') st.page.pageId = window.currentPageId.split('_')[1]; } catch(e) { /* noop */ }
-        
-        if (!st.auth.isAuthenticated) { 
-          console.warn('[RedPen Editor] Not authenticated, showing login modal'); // ✅ ЛОГ 6
-          showLoginModal(); 
-          return; 
+
+        if (!st.auth.isAuthenticated) {
+          showLoginModal();
+          return;
         }
-        
-        console.log('[RedPen Editor] Getting CSRF token...'); // ✅ ЛОГ 7
+
         await getCsrf();
-        
+
         var result;
         try {
-          console.log('[RedPen Editor] Calling saveAnnotationToServer with draft:', draft); // ✅ ЛОГ 8
           result = await saveAnnotationToServer(draft);
-          console.log('[RedPen Editor] Save result:', result); // ✅ ЛОГ 9
         } catch(err) {
-          console.error('[RedPen Editor] Save error:', err); // ✅ ЛОГ 10
+          console.error('[RedPen Editor] Save error:', err);
           if (err && err.code === 401) { showLoginModal('Сессия истекла, войдите заново'); return; }
-          if (err && err.code === 409) {
+          if (err && err.code === 403 && err.detail && err.detail.indexOf('role required') !== -1) {
+            // Authenticated but insufficient role (viewer) — not a login problem.
+            window.alert('Недостаточно прав, обратитесь к администратору');
+            return;
+          }
+          if (err && err.code === 403) {
+            // CSRF token stale/rejected: drop it, fetch a fresh one, retry once.
+            st.auth.csrfToken = undefined;
+            try {
+              await getCsrf();
+              result = await saveAnnotationToServer(draft);
+            } catch (err2) {
+              console.error('[RedPen Editor] Retry after CSRF 403 failed:', err2);
+              window.alert('Не удалось отправить. Попробуйте ещё раз.');
+              return;
+            }
+          } else if (err && err.code === 409) {
             var agree = window.confirm('Кто-то изменил страницу. Обновить данные?');
             if (agree) { await fetchPageFromServer(st.page.pageId); }
             return;
+          } else {
+            window.alert('Не удалось отправить. Попробуйте ещё раз.');
+            return;
           }
-          window.alert('Не удалось отправить. Попробуйте ещё раз.');
-          return;
         }
         
         var serverId = result && result.id ? String(result.id) : (draft.id || undefined);
@@ -819,7 +916,6 @@
           beginEditingExisting(st.draft);
         }
         
-        console.log('[RedPen Editor] Submit completed successfully'); // ✅ ЛОГ 11
         if (window.RedPenEditorPanel && window.RedPenEditorPanel.setPreviewEnabled) window.RedPenEditorPanel.setPreviewEnabled(false);
         if (window.RedPenEditorPanel && window.RedPenEditorPanel.setSubmitEnabled) window.RedPenEditorPanel.setSubmitEnabled(false);
         if (window.RedPenEditorPanel && window.RedPenEditorPanel.revalidate) window.RedPenEditorPanel.revalidate();
@@ -844,7 +940,28 @@
       } catch(e){ console.error('[RedPen Editor] Cancel error:', e); }
     };
 
+    window.RedPenEditor.onLoginClick = function(){
+      showLoginModal();
+    };
+
+    window.RedPenEditor.onLogoutClick = async function(){
+      var st = window.RedPenEditor.state;
+      try {
+        await fetch(apiBase('/api/auth/logout'), { method: 'POST', credentials: 'include' });
+      } catch (error) {
+        console.error('[RedPen Editor] Logout error:', error);
+      }
+      st.auth = { isAuthenticated: false, userId: undefined, username: undefined, csrfToken: undefined,
+        email: undefined, name: undefined, picture: undefined, role: undefined };
+      if (window.RedPenEditorPanel && window.RedPenEditorPanel.setAuthState) {
+        window.RedPenEditorPanel.setAuthState(null);
+      }
+    };
+
     setTimeout(function(){ try { snapshotDomMarkersToState(); } catch(e){} }, 1000);
+    syncServerPageSha();
+    loadGoogleIdentityServices();
+    refreshAuthUi();
   }
 
   window.RedPenEditor = window.RedPenEditor || {};
