@@ -852,6 +852,10 @@
   window.RedPenEditor.onAnnotationsLoaded = function(anns){
     try {
       if (!Array.isArray(anns)) return;
+      // Editor state is only initialized in editor mode (?editor=1). In the
+      // plain viewer main.js still calls this hook, so bail out before touching
+      // state.* to avoid a caught-but-noisy TypeError on every page load.
+      if (!window.RedPenEditor.state) return;
       try {
         var cpid = (typeof window.currentPageId === 'string') ? window.currentPageId : '';
         if (cpid && cpid.indexOf('_') !== -1) {
