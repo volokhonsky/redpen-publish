@@ -38,14 +38,14 @@
 </head>
 <body>
   <a href="../index.html" class="home-button" title="Вернуться к выбору документов">⌂</a>
-  <header>RedPen — Красной ручкой <span id="timestamp" style="font-size: 0.7rem; font-weight: normal; opacity: 0.8;">Последнее обновление: 08.07.2026 23:00</span></header>
+  <header>RedPen — Красной ручкой <span id="timestamp" style="font-size: 0.7rem; font-weight: normal; opacity: 0.8;">Последнее обновление: 09.07.2026 12:59</span></header>
   <nav id="pagination">
     <a href="#" class="pagination-btn" id="prev-page" onclick="prevPage();return false;">« Назад</a>
     <div id="page-numbers" class="page-numbers">
       <!-- Page numbers will be generated dynamically -->
     </div>
     <div class="page-input-container">
-      <input type="number" id="page-input" min="1" placeholder="Стр." aria-label="Номер страницы" onkeypress="if(event.key === 'Enter') { goToPage(); return false; }">
+      <input type="text" inputmode="text" id="page-input" placeholder="Стр." aria-label="Номер или метка страницы" onkeypress="if(event.key === 'Enter') { goToPage(); return false; }">
       <button id="go-to-page-btn" class="pagination-btn" onclick="goToPage()">Перейти</button>
     </div>
     <a href="#" class="pagination-btn" id="next-page" onclick="nextPage();return false;">Вперед »</a>
