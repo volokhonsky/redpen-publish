@@ -64,7 +64,7 @@
     if (!window.RedPenEditor.state) {
       window.RedPenEditor.state = {
         editorMode: true,
-        ui: { selectedAnnotationId: null, lastAutoGeneralContent: undefined },
+        ui: { selectedAnnotationId: null, lastAutoGeneralContent: undefined, annDeepLinkApplied: false },
         draft: { id: undefined, annType: 'comment', content: '', coords: undefined },
         cache: { general: null },
         editing: { mode: 'none' },
@@ -94,6 +94,7 @@
       if (Array.isArray(d.coords) && d.coords.length === 2 && Number.isFinite(d.coords[0]) && Number.isFinite(d.coords[1])) {
         res.coords = [d.coords[0], d.coords[1]];
       }
+      res.status = d.status === 'draft' ? 'draft' : 'published';
       return res;
     }
 
@@ -234,7 +235,9 @@
             var cy = Math.round(mr.top + mr.height/2 - ir.top);
             coords = clientToOriginal(cx, cy);
           }
-          list.push({ id: el.id, annType: annType, text: (typeof ds.text==='string'?ds.text:''), coords: coords });
+          var item = { id: el.id, annType: annType, text: (typeof ds.text==='string'?ds.text:''), coords: coords };
+          if (ds.draft === 'true') item.draft = true;
+          list.push(item);
         });
         st.page.annotations = list;
       } catch(e){ /* noop */ }
@@ -251,11 +254,26 @@
       return headers;
     }
 
+    // RedPenAuth (templates/js/redpen-auth.js) holds the actual CSRF cache
+    // and session calls; these wrappers just keep filling the editor's own
+    // st.auth.* shape so nothing downstream (panel, save flow) has to change.
+    // If redpen-auth.js isn't loaded (older offline copy of the site), fall
+    // back to the original inline implementation.
     async function getCsrf(){
       var st = window.RedPenEditor.state;
       if (st.flags && st.flags.mock === true) {
         st.auth.csrfToken = st.auth.csrfToken || 'mock-csrf-'+Math.random().toString(36).slice(2,8);
         return { csrfToken: st.auth.csrfToken };
+      }
+      if (window.RedPenAuth && window.RedPenAuth.getCsrf) {
+        try {
+          var data = await window.RedPenAuth.getCsrf();
+          st.auth.csrfToken = data.csrfToken;
+          return data;
+        } catch (error) {
+          console.error('[RedPen Editor] CSRF error:', error);
+          throw error;
+        }
       }
       if (st.auth.csrfToken) {
         return { csrfToken: st.auth.csrfToken };
@@ -272,6 +290,19 @@
       }
     }
 
+    // Forces a fresh CSRF token (used after a save request comes back 403
+    // with a stale one).
+    async function refreshCsrf(){
+      var st = window.RedPenEditor.state;
+      st.auth.csrfToken = undefined;
+      if (window.RedPenAuth && window.RedPenAuth.getCsrf) {
+        var data = await window.RedPenAuth.getCsrf(true);
+        st.auth.csrfToken = data.csrfToken;
+        return data;
+      }
+      return getCsrf();
+    }
+
     async function apiMe(){
       var st = window.RedPenEditor.state;
       if (st.flags && st.flags.mock === true) {
@@ -280,6 +311,27 @@
         st.auth.userId = st.auth.userId || 'mock-'+Math.random().toString(36).slice(2,6);
         st.auth.role = st.auth.role || 'editor';
         return { userId: st.auth.userId, username: st.auth.username, role: st.auth.role };
+      }
+      if (window.RedPenAuth && window.RedPenAuth.me) {
+        try {
+          var data = await window.RedPenAuth.me();
+          if (!data) {
+            st.auth.isAuthenticated = false;
+            return null;
+          }
+          st.auth.isAuthenticated = true;
+          st.auth.userId = data.userId;
+          st.auth.username = data.username;
+          st.auth.email = data.email;
+          st.auth.name = data.name;
+          st.auth.picture = data.pictureUrl;
+          st.auth.role = data.role;
+          // Legacy shape (.picture, not .pictureUrl) for existing callers.
+          return { userId: data.userId, username: data.username, email: data.email, name: data.name, picture: data.pictureUrl, role: data.role };
+        } catch (error) {
+          console.error('[RedPen Editor] Auth error:', error);
+          throw error;
+        }
       }
       try {
         const res = await fetch(apiBase('/api/auth/me'), { credentials: 'include' });
@@ -316,6 +368,7 @@
 
     var _gisLoadPromise = null;
     function loadGoogleIdentityServices(){
+      if (window.RedPenAuth && window.RedPenAuth.loadGis) return window.RedPenAuth.loadGis();
       if (_gisLoadPromise) return _gisLoadPromise;
       _gisLoadPromise = new Promise(function(resolve){
         if (window.google && window.google.accounts && window.google.accounts.id) { resolve(); return; }
@@ -353,10 +406,20 @@
     }
 
     function renderGoogleButton(){
+      var el = document.getElementById('redpen-google-btn');
+      if (!el) return;
+      if (window.RedPenAuth && window.RedPenAuth.renderGoogleButton) {
+        window.RedPenAuth.renderGoogleButton(el, async function(user, error){
+          var errEl = document.getElementById('redpen-login-error');
+          if (error) { if (errEl) errEl.textContent = 'Не удалось войти через Google'; return; }
+          await refreshAuthUi();
+          var host = document.getElementById('redpen-login');
+          if (host) host.style.display = 'none';
+        });
+        return;
+      }
       try {
         if (!window.google || !window.google.accounts || !window.google.accounts.id) return;
-        var el = document.getElementById('redpen-google-btn');
-        if (!el) return;
         window.google.accounts.id.initialize({
           client_id: window.REDPEN_GOOGLE_CLIENT_ID,
           callback: onGoogleCredential
@@ -374,6 +437,16 @@
         st.auth.username = 'mockuser_'+token.slice(0,4);
         st.auth.userId = 'mock-'+Math.random().toString(36).slice(2,6);
         return { ok: true };
+      }
+      if (window.RedPenAuth && window.RedPenAuth.loginWithToken) {
+        try {
+          await window.RedPenAuth.loginWithToken(token);
+          await apiMe();
+          return { ok: true };
+        } catch (error) {
+          console.error('[RedPen Editor] Login error:', error);
+          throw error;
+        }
       }
       try {
         // No session exists yet, so /api/auth/csrf would 401 here; login is
@@ -425,7 +498,7 @@
     // Lightweight variant of fetchPageFromServer: only learns serverPageSha
     // so the first save can send a real clientPageSha, without touching the
     // DOM markers/general comment (those come from the normal page load).
-    async function syncServerPageSha(){
+    async function syncServerPageSha(retriesLeft){
       var st = window.RedPenEditor.state;
       if (st.flags && st.flags.mock === true) {
         st.page.serverPageSha = st.page.serverPageSha || ('mock-sha-'+Date.now().toString(36));
@@ -433,14 +506,77 @@
       }
       var docId = st.page && st.page.docId;
       var pageKey = (st.page && st.page.pageKey) || (st.page && st.page.pageNum);
-      if (!docId || !pageKey) return;
+      if (!docId || !pageKey) {
+        // main.js's loadPage() sets docId/pageKey synchronously, but if this
+        // races ahead of it, retry briefly instead of silently giving up
+        // (this call is also how draft annotations get seeded, C.9).
+        if (typeof retriesLeft === 'undefined') retriesLeft = 10;
+        if (retriesLeft > 0) setTimeout(function(){ syncServerPageSha(retriesLeft - 1); }, 100);
+        return;
+      }
       try {
         const res = await fetch(apiBase('/api/editor/'+encodeURIComponent(docId)+'/'+encodeURIComponent(pageKey)), { credentials: 'include' });
         if (!res.ok) return;
         const data = await res.json();
         st.page.serverPageSha = data.serverPageSha;
+        seedDraftAnnotations(data.annotations);
       } catch (error) {
         console.error('[RedPen Editor] Failed to sync serverPageSha:', error);
+      }
+    }
+
+    // Editor/admin-only: the GET above also returns draft annotations
+    // (draft:true), which never reach the published static JSON the plain
+    // viewer loads. Merge them into st.page.annotations and draw their
+    // markers with a dashed outline so they're visually distinct.
+    function seedDraftAnnotations(annotations){
+      if (!Array.isArray(annotations)) return;
+      var st = window.RedPenEditor.state;
+      st.page = st.page || { annotations: [] };
+      st.page.annotations = st.page.annotations || [];
+      annotations.forEach(function(a){
+        if (!a || !a.draft || a.annType === 'general') return;
+        var item = { id: a.id, annType: a.annType, text: a.text, coords: a.coords, draft: true };
+        var existing = st.page.annotations.find(function(x){ return x.id === a.id; });
+        if (existing) { Object.assign(existing, item); } else { st.page.annotations.push(item); }
+        try { window.RedPenEditor.markers.upsert(item); } catch (e) { /* noop */ }
+      });
+      maybeApplyAnnDeepLink();
+    }
+
+    // Deep-link from the cabinet ("Открыть"): ?ann=<id> selects the marker
+    // and loads it into the form, same as clicking it. Applied once; if the
+    // id never shows up in st.page.annotations, this silently no-ops.
+    function getAnnDeepLinkId(){
+      try {
+        var usp = new URLSearchParams(window.location.search || '');
+        var v = usp.get('ann');
+        return v && v.trim() ? v.trim() : null;
+      } catch (e) { return null; }
+    }
+
+    function maybeApplyAnnDeepLink(){
+      var st = window.RedPenEditor.state;
+      if (!st || (st.ui && st.ui.annDeepLinkApplied)) return;
+      var annId = getAnnDeepLinkId();
+      if (!annId) { if (st.ui) st.ui.annDeepLinkApplied = true; return; }
+      // Published markers are rendered by annotations.js with a "circle-"
+      // prefixed DOM id (snapshotDomMarkersToState reads el.id verbatim),
+      // while draft markers seeded here use the raw annotation id -- match
+      // both so the deep-link works for either.
+      var found = (st.page.annotations || []).find(function(a){ return a.id === annId || a.id === 'circle-' + annId; });
+      if (!found) return; // may still arrive via a later snapshot/draft merge
+      st.ui.annDeepLinkApplied = true;
+      try { window.RedPenEditor.markers.selectById(annId); } catch (e) { /* noop */ }
+      // Use the URL's annId (the true server-side id), not found.id, which
+      // may carry the DOM-only "circle-" prefix.
+      var draft = { id: annId, annType: found.annType, content: found.text || '', coords: found.coords, status: found.draft ? 'draft' : 'published' };
+      st.ui.selectedAnnotationId = annId;
+      st.draft = Object.assign({}, st.draft, draft);
+      beginEditingExisting(draft);
+      if (window.RedPenEditorPanel && window.RedPenEditorPanel.setDraft) {
+        window.RedPenEditorPanel.setDraft(st.draft);
+        if (window.RedPenEditorPanel.revalidate) try { window.RedPenEditorPanel.revalidate(); } catch (e) { /* noop */ }
       }
     }
 
@@ -459,7 +595,7 @@
       var docId = st.page && st.page.docId ? st.page.docId : 'unknown';
       var pageKey = (st.page && st.page.pageKey) || (st.page && st.page.pageNum) || 1;
 
-      var payload = { annType: draft.annType, text: draft.content, clientPageSha: st.page.serverPageSha };
+      var payload = { annType: draft.annType, text: draft.content, clientPageSha: st.page.serverPageSha, status: draft.isDraft ? 'draft' : 'published' };
       if (draft.annType !== 'general') payload.coords = draft.coords;
 
       var url, method;
@@ -560,9 +696,10 @@
       currentDraft = (window.RedPenEditor && window.RedPenEditor.state && window.RedPenEditor.state.draft) || { annType: 'comment', content: '' };
       var annType = ds.annType || currentDraft.annType || 'comment';
       var content = (typeof ds.text === 'string' && ds.text.trim().length > 0) ? ds.text : currentDraft.content;
+      var status = ds.draft === 'true' ? 'draft' : 'published';
       window.RedPenEditor.state.ui.selectedAnnotationId = id || null;
-      window.RedPenEditor.state.draft = Object.assign({}, currentDraft, { id: id, annType: annType, content: content, coords: coords });
-      beginEditingExisting({ id: id, annType: annType, content: content, coords: coords });
+      window.RedPenEditor.state.draft = Object.assign({}, currentDraft, { id: id, annType: annType, content: content, coords: coords, status: status });
+      beginEditingExisting({ id: id, annType: annType, content: content, coords: coords, status: status });
       selectMarker(marker);
       if (window.RedPenEditorPanel && window.RedPenEditorPanel.setDraft) {
         window.RedPenEditorPanel.setDraft(window.RedPenEditor.state.draft);
@@ -594,14 +731,14 @@
           if (!confirmLoseChanges()) return;
         }
         clearSelection();
-        var newDraft = { id: undefined, annType: current.annType, content: '', coords: coords };
+        var newDraft = { id: undefined, annType: current.annType, content: '', coords: coords, status: 'published' };
         window.RedPenEditor.state.draft = Object.assign({}, window.RedPenEditor.state.draft, newDraft);
         beginCreatingNew(newDraft);
       } else {
         clearSelection();
-        window.RedPenEditor.state.draft = Object.assign({}, window.RedPenEditor.state.draft, { id: undefined, annType: current.annType, content: current.content, coords: coords });
+        window.RedPenEditor.state.draft = Object.assign({}, window.RedPenEditor.state.draft, { id: undefined, annType: current.annType, content: current.content, coords: coords, status: 'published' });
         if (mode !== 'new') {
-          beginCreatingNew({ id: undefined, annType: current.annType, content: current.content, coords: coords });
+          beginCreatingNew({ id: undefined, annType: current.annType, content: current.content, coords: coords, status: 'published' });
         }
       }
       if (window.RedPenEditorPanel && window.RedPenEditorPanel.setDraft) {
@@ -750,10 +887,13 @@
           el.dataset.annType = ann.annType || 'comment';
           el.dataset.text = ann.text || '';
           if (Array.isArray(ann.coords)) el.dataset.coords = JSON.stringify(ann.coords);
+          if (ann.draft) { el.dataset.draft = 'true'; el.classList.add('is-draft'); }
+          else { delete el.dataset.draft; el.classList.remove('is-draft'); }
         } catch(e){ /* noop */ }
         var sizeMap = { main: 100, comment: 50, small: 25 };
         var d = sizeMap[ann.annType] || 50;
-        el.style.cssText = 'position:absolute;width:'+d+'px;height:'+d+'px;border-radius:50%;cursor:pointer;transform:translateX(-50%);';
+        el.style.cssText = 'position:absolute;width:'+d+'px;height:'+d+'px;border-radius:50%;cursor:pointer;transform:translateX(-50%);' +
+          (ann.draft ? 'outline:2px dashed #888;' : '');
         var color = ann.annType === 'main' ? '#DC143C' : '#0000FF';
         el.style.background = 'radial-gradient(circle, '+color+'80 0%, '+color+'40 50%, '+color+'00 100%)';
         var lt = [0,0];
@@ -869,9 +1009,8 @@
           }
           if (err && err.code === 403) {
             // CSRF token stale/rejected: drop it, fetch a fresh one, retry once.
-            st.auth.csrfToken = undefined;
             try {
-              await getCsrf();
+              await refreshCsrf();
               result = await saveAnnotationToServer(draft);
             } catch (err2) {
               console.error('[RedPen Editor] Retry after CSRF 403 failed:', err2);
@@ -893,11 +1032,12 @@
         var annType = draft.annType;
         var content = draft.content || '';
         var coords = Array.isArray(draft.coords) ? [draft.coords[0], draft.coords[1]] : undefined;
-        
+        var status = draft.isDraft ? 'draft' : 'published';
+
         if (annType === 'general') {
           st.cache.general = { id: serverId ? serverId : undefined, content: content };
           try { var gc = document.getElementById('global-comment'); if (gc) gc.textContent = content; } catch(e){}
-          st.draft = { id: serverId, annType: 'general', content: content, coords: undefined };
+          st.draft = { id: serverId, annType: 'general', content: content, coords: undefined, status: status };
           beginEditingExisting(st.draft);
           try { window.RedPenEditor.markers.clearSelection(); } catch(e){}
         } else {
@@ -907,20 +1047,23 @@
           if (!idToUse) idToUse = 'srv-'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
           var found = null;
           for (var i=0;i<st.page.annotations.length;i++){ if (st.page.annotations[i].id === (serverId || oldId)) { found = st.page.annotations[i]; break; } }
-          if (!found) { st.page.annotations.push({ id: idToUse, annType: annType, text: content, coords: coords }); }
-          else { found.id = idToUse; found.annType = annType; found.text = content; if (Array.isArray(coords)) found.coords = coords; }
+          var isDraftFlag = status === 'draft' ? true : undefined;
+          if (!found) { st.page.annotations.push({ id: idToUse, annType: annType, text: content, coords: coords, draft: isDraftFlag }); }
+          else { found.id = idToUse; found.annType = annType; found.text = content; if (Array.isArray(coords)) found.coords = coords; found.draft = isDraftFlag; }
           if (oldId && serverId && oldId !== serverId) { var oldEl = document.getElementById(oldId); if (oldEl && oldEl.parentNode) oldEl.parentNode.removeChild(oldEl); }
-          window.RedPenEditor.markers.upsert({ id: idToUse, annType: annType, text: content, coords: coords });
+          window.RedPenEditor.markers.upsert({ id: idToUse, annType: annType, text: content, coords: coords, draft: isDraftFlag });
           window.RedPenEditor.markers.selectById(idToUse);
           st.ui.selectedAnnotationId = idToUse;
-          st.draft = { id: idToUse, annType: annType, content: content, coords: coords };
+          st.draft = { id: idToUse, annType: annType, content: content, coords: coords, status: status };
           beginEditingExisting(st.draft);
         }
-        
+
         if (window.RedPenEditorPanel && window.RedPenEditorPanel.setPreviewEnabled) window.RedPenEditorPanel.setPreviewEnabled(false);
         if (window.RedPenEditorPanel && window.RedPenEditorPanel.setSubmitEnabled) window.RedPenEditorPanel.setSubmitEnabled(false);
         if (window.RedPenEditorPanel && window.RedPenEditorPanel.revalidate) window.RedPenEditorPanel.revalidate();
-        try { window.alert('Отправлено'); } catch(e){}
+        // result.published is false for drafts by design (they never reach
+        // the published static JSON) -- not an error, just a different message.
+        try { window.alert(result && result.published === false ? 'Сохранено как черновик' : 'Отправлено'); } catch(e){}
       } catch(e){ console.error('[RedPen Editor] Submit error (top level):', e); }
     };
 
@@ -931,7 +1074,7 @@
         var base = state.baseline;
         if (!base) { if (window.RedPenEditorPanel && window.RedPenEditorPanel.revalidate) window.RedPenEditorPanel.revalidate(); return; }
         if (isDirty(current, base)) { if (!confirmLoseChanges()) return; }
-        var revert = { id: base.id, annType: base.annType, content: base.content, coords: base.coords };
+        var revert = { id: base.id, annType: base.annType, content: base.content, coords: base.coords, status: base.status };
         state.draft = Object.assign({}, state.draft, revert);
         if (window.RedPenEditorPanel && window.RedPenEditorPanel.setDraft) window.RedPenEditorPanel.setDraft(state.draft);
         if (base.annType === 'general' || !base.id || (typeof base.id === 'undefined' && !base.coords)) {
@@ -948,7 +1091,11 @@
     window.RedPenEditor.onLogoutClick = async function(){
       var st = window.RedPenEditor.state;
       try {
-        await fetch(apiBase('/api/auth/logout'), { method: 'POST', credentials: 'include' });
+        if (window.RedPenAuth && window.RedPenAuth.logout) {
+          await window.RedPenAuth.logout();
+        } else {
+          await fetch(apiBase('/api/auth/logout'), { method: 'POST', credentials: 'include' });
+        }
       } catch (error) {
         console.error('[RedPen Editor] Logout error:', error);
       }
@@ -959,7 +1106,7 @@
       }
     };
 
-    setTimeout(function(){ try { snapshotDomMarkersToState(); } catch(e){} }, 1000);
+    setTimeout(function(){ try { snapshotDomMarkersToState(); maybeApplyAnnDeepLink(); } catch(e){} }, 1000);
     syncServerPageSha();
     loadGoogleIdentityServices();
     refreshAuthUi();
