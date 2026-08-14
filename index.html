@@ -3,78 +3,228 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>RedPen — Красной ручкой</title>
+  <title>Красной ручкой — разбор школьного учебника истории</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Постраничный критический разбор школьного учебника истории: фактчек, разбор манипуляций и умолчаний прямо поверх страниц оригинала."/>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="icon" href="favicon.svg">
   <style>
-    .document-list {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
+    .landing {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 8px 20px 48px;
+      color: #1c1c1c;
+      line-height: 1.55;
     }
-    .document-card {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-      padding: 20px;
-      transition: transform 0.2s, box-shadow 0.2s;
+    /* Текстовые блоки держим в комфортной для чтения колонке,
+       а сетка учебников занимает всю ширину. */
+    .prose { max-width: 780px; margin-left: auto; margin-right: auto; }
+    .landing section + section { margin-top: 44px; }
+    .landing h1 {
+      font-size: 2.4rem;
+      line-height: 1.15;
+      margin: 8px 0 16px;
     }
-    .document-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    .landing h2 {
+      font-size: 1.25rem;
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #f0d6dc;
     }
-    .document-content {
-      display: flex;
-      align-items: flex-start;
-    }
-    .document-icon {
-      margin-right: 20px;
-      flex-shrink: 0;
-    }
-    .document-icon img {
-      border-radius: 4px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .document-card h2 {
-      margin-top: 0;
+    .hero { padding-top: 28px; }
+    .hero__eyebrow {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-size: 0.78rem;
+      font-weight: 700;
       color: #DC143C;
     }
-    .document-card a {
+    .hero__lead {
+      font-size: 1.1rem;
+      margin: 0;
+      color: #333;
+    }
+
+    /* Библиотека разборов */
+    .books__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 18px;
+    }
+    /* Один учебник — не растягиваем карточку на всю ширину сетки. */
+    .books--single .books__grid { max-width: 780px; margin: 0 auto; }
+    .document-card {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      background-color: #fff;
+      border: 1px solid #e6e2dd;
+      border-left: 5px solid #DC143C;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      padding: 20px;
+    }
+    .document-card--pending { border-left-color: #c9c4bd; }
+    .document-card__cover { flex-shrink: 0; display: block; }
+    .document-card__cover img {
+      display: block;
+      width: 104px;
+      height: auto;
+      border-radius: 3px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .document-card--pending .document-card__cover img { filter: grayscale(0.8); opacity: 0.75; }
+    /* Карточки в ряду одной высоты, кнопка прижата к низу. */
+    .document-card__body {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1;
+    }
+    .document-card__body .btn { margin-top: auto; }
+    .document-card h3 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+      line-height: 1.3;
+    }
+    .document-card__meta,
+    .document-card__stats {
+      margin: 0 0 6px;
+      font-size: 0.88rem;
+      color: #6b6b6b;
+    }
+    .document-card__stats { color: #DC143C; font-weight: 600; }
+    .document-card--pending .document-card__stats { color: #8a8a8a; font-weight: 400; font-style: italic; }
+    .document-card__desc { margin: 10px 0 16px; font-size: 0.95rem; }
+    .btn {
       display: inline-block;
       background-color: #DC143C;
-      color: white;
-      padding: 10px 20px;
+      color: #fff;
+      padding: 9px 20px;
       border-radius: 4px;
       text-decoration: none;
-      margin-top: 10px;
+      font-weight: 600;
       transition: background-color 0.2s;
     }
-    .document-card a:hover {
-      background-color: #b01030;
+    .btn:hover { background-color: #b01030; }
+    .btn { white-space: nowrap; }
+    .btn--ghost {
+      background: transparent;
+      color: #8a3a4a;
+      border: 1px solid #d8ccce;
+      font-weight: 500;
+    }
+    .btn--ghost:hover { background: #f7eef0; }
+
+    /* Легенда маркеров */
+    .legend { list-style: none; margin: 0; padding: 0; }
+    .legend li {
+      position: relative;
+      padding-left: 34px;
+      margin-bottom: 14px;
+    }
+    .legend .dot {
+      position: absolute;
+      left: 0;
+      top: 3px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 3px solid #DC143C;
+    }
+    .legend .dot--comment { border-color: #0000FF; width: 14px; height: 14px; top: 5px; left: 2px; }
+    .legend .dot--general {
+      border: none;
+      background: #d9d9d9;
+      border-radius: 3px;
+      width: 20px;
+      height: 12px;
+      top: 6px;
+    }
+    .rules { margin: 0; padding-left: 22px; }
+    .rules li { margin-bottom: 12px; }
+    .note {
+      background: #fff;
+      border: 1px solid #e6e2dd;
+      border-radius: 6px;
+      padding: 16px 20px;
+    }
+    .note p { margin: 0; }
+    .landing footer {
+      margin-top: 44px;
+      padding-top: 14px;
+      border-top: 1px solid #e2ded9;
+      font-size: 0.85rem;
+      color: #7a7a7a;
+    }
+    @media (max-width: 560px) {
+      .landing h1 { font-size: 1.9rem; }
+      .document-card { flex-direction: column; gap: 16px; }
+      .document-card__cover img { width: 110px; }
     }
   </style>
 </head>
 <body>
-  <header>RedPen — Красной ручкой <span id="timestamp" style="font-size: 0.7rem; font-weight: normal; opacity: 0.8;">Последнее обновление: 09.07.2026 13:25</span></header>
+  <header>RedPen — Красной ручкой <span id="timestamp" style="font-size: 0.7rem; font-weight: normal; opacity: 0.8;">Последнее обновление: 14.08.2026 12:06</span></header>
 
-  <div class="document-list">
-    <h1>Выберите документ</h1>
+  <main class="landing">
+    <section class="hero prose">
+      <p class="hero__eyebrow">Постраничный разбор учебников</p>
+      <h1>Красной ручкой</h1>
+      <p class="hero__lead">Мы читаем школьные учебники истории страницу за страницей и выносим на поля то, что написал бы внимательный преподаватель: где факт передёрнут, где оценка выдана за установленный факт, а где о важном просто умолчали. Замечания стоят прямо на развороте — у того места, к которому относятся.</p>
+    </section>
 
-    <div class="document-card">
-      <div class="document-content">
-      <div class="document-icon">
-        <img src="medinsky11klass/cover.png" alt="История России. 11 класс. Базовый уровень" width="150">
+    <section class="books books--single">
+      <h2>Учебники</h2>
+      <div class="books__grid">
+        <article class="document-card">
+          <a class="document-card__cover" href="medinsky11klass/index.html">
+            <img src="medinsky11klass/cover.png" alt="Обложка: История России. 11 класс. Базовый уровень" width="104">
+          </a>
+          <div class="document-card__body">
+            <h3>История России. 11 класс. Базовый уровень</h3>
+            <p class="document-card__meta">В. Р. Мединский, А. В. Торкунов · Просвещение, 2023</p>
+            <p class="document-card__stats">225 аннотаций на 86 страницах</p>
+            <p class="document-card__desc">Учебник по истории России для 11 класса. Освещает события от 1945 года до начала XXI века.</p>
+            <a class="btn" href="medinsky11klass/index.html">Открыть разбор</a>
+          </div>
+        </article>
       </div>
-        <h2>История России. 11 класс. Базовый уровень</h2>
-        <a href="medinsky11klass/index.html">Открыть документ</a>
-      </div>
-    </div>
+    </section>
 
-  </div>
+    <section class="how prose">
+      <h2>Как читать</h2>
+      <ul class="legend">
+        <li><span class="dot"></span><strong>Красный кружок</strong> — главный разбор фрагмента: что именно не так с этим местом и чем это подтверждается.</li>
+        <li><span class="dot dot--comment"></span><strong>Синий кружок</strong> — комментарий к детали: уточнение, недостающий контекст, справка.</li>
+        <li><span class="dot dot--general"></span><strong>Общий комментарий</strong> под страницей — о развороте целиком: как выстроен рассказ и куда он ведёт читателя.</li>
+      </ul>
+      <p>Листать можно стрелками «Назад» и «Вперёд» или полем «Стр.». Адрес страницы вида <code>?p=17</code> ведёт ровно на неё — такую ссылку удобно давать в споре, чтобы собеседник открыл тот же разворот.</p>
+    </section>
+
+    <section class="rules-section prose">
+      <h2>Правила разбора</h2>
+      <ol class="rules">
+        <li><strong>Привязка к месту.</strong> Замечание относится к конкретному абзацу, а не к учебнику вообще: рядом всегда видно, что именно разбирается.</li>
+        <li><strong>Проверяемость.</strong> Утверждение без ссылки на источник — не разбор, а мнение. Ссылки стоят в тексте самих аннотаций.</li>
+        <li><strong>Факт отдельно, оценка отдельно.</strong> Мы отмечаем, где учебник подаёт оценку как установленный факт, и стараемся не делать того же сами.</li>
+        <li><strong>Умолчание — тоже приём.</strong> Прежде чем написать «в учебнике об этом не сказано», мы ищем по всему тексту книги.</li>
+      </ol>
+    </section>
+
+    <section class="offline prose">
+      <h2>Этот сайт можно унести с собой</h2>
+      <div class="note">
+        <p>Здесь нет ни регистрации, ни счётчиков, ни обращений к нашему серверу при чтении: страницы, текст и аннотации — обычные файлы, лежащие рядом. Копию сайта можно скачать целиком, положить на флешку и читать без интернета.</p>
+      </div>
+    </section>
+
+    <footer class="prose">Последнее обновление: 14.08.2026 12:06</footer>
+  </main>
   <script>
   (function(){
     var g = window;
