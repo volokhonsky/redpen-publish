@@ -6,6 +6,12 @@
     "coords": [
       480,
       200
+    ],
+    "tags": [
+      "anachronism",
+      "confidence:high",
+      "false-symmetry",
+      "tc-defensive-bloc"
     ]
   },
   {
@@ -15,6 +21,12 @@
     "coords": [
       480,
       430
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "omission",
+      "overclaim"
     ]
   },
   {
@@ -24,6 +36,11 @@
     "coords": [
       480,
       600
+    ],
+    "tags": [
+      "confidence:medium",
+      "double-standard",
+      "framing"
     ]
   }
 ]

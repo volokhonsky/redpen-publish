@@ -6,6 +6,11 @@
     "coords": [
       480,
       480
+    ],
+    "tags": [
+      "confidence:medium",
+      "context",
+      "source-selection"
     ]
   },
   {
@@ -15,6 +20,10 @@
     "coords": [
       400,
       1010
+    ],
+    "tags": [
+      "confidence:low",
+      "source-selection"
     ]
   },
   {
@@ -24,6 +33,10 @@
     "coords": [
       480,
       270
+    ],
+    "tags": [
+      "confidence:medium",
+      "loaded-question"
     ]
   }
 ]

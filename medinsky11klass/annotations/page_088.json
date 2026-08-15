@@ -6,6 +6,11 @@
     "coords": [
       250,
       470
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing",
+      "omission"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       300,
       285
+    ],
+    "tags": [
+      "confidence:high",
+      "context",
+      "framing"
     ]
   }
 ]

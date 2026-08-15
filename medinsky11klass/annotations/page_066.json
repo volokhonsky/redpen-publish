@@ -6,6 +6,12 @@
     "coords": [
       400,
       550
+    ],
+    "tags": [
+      "confidence:high",
+      "false-cause",
+      "framing",
+      "tc-modern-grudge"
     ]
   },
   {
@@ -15,6 +21,11 @@
     "coords": [
       400,
       800
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "omission"
     ]
   },
   {
@@ -24,6 +35,11 @@
     "coords": [
       400,
       615
+    ],
+    "tags": [
+      "confidence:medium",
+      "contested-as-settled",
+      "framing"
     ]
   },
   {
@@ -33,6 +49,10 @@
     "coords": [
       400,
       275
+    ],
+    "tags": [
+      "confidence:high",
+      "loaded-question"
     ]
   }
 ]

@@ -6,6 +6,11 @@
     "coords": [
       430,
       245
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "tc-leader-science"
     ]
   },
   {
@@ -15,6 +20,12 @@
     "coords": [
       430,
       495
+    ],
+    "tags": [
+      "confidence:high",
+      "double-standard",
+      "euphemism",
+      "tc-annexation-euphemism"
     ]
   }
 ]

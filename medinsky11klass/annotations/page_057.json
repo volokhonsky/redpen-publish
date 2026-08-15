@@ -6,6 +6,10 @@
     "coords": [
       300,
       1045
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing"
     ]
   }
 ]

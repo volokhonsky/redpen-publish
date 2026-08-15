@@ -6,6 +6,11 @@
     "coords": [
       500,
       915
+    ],
+    "tags": [
+      "confidence:high",
+      "contradiction",
+      "framing"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       500,
       555
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing",
+      "tc-usa-origin"
     ]
   },
   {
@@ -24,6 +34,11 @@
     "coords": [
       450,
       1075
+    ],
+    "tags": [
+      "confidence:medium",
+      "double-standard",
+      "framing"
     ]
   }
 ]

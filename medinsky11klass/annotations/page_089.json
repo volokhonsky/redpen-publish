@@ -6,6 +6,11 @@
     "coords": [
       300,
       185
+    ],
+    "tags": [
+      "confidence:high",
+      "omission",
+      "tc-victim-hero"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       300,
       55
+    ],
+    "tags": [
+      "confidence:high",
+      "omission",
+      "tc-hidden-disasters"
     ]
   },
   {
@@ -24,6 +34,10 @@
     "coords": [
       350,
       405
+    ],
+    "tags": [
+      "confidence:high",
+      "omission"
     ]
   }
 ]

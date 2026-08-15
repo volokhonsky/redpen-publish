@@ -6,6 +6,11 @@
     "coords": [
       150,
       405
+    ],
+    "tags": [
+      "confidence:high",
+      "dubious-number",
+      "tc-official-stats"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       350,
       230
+    ],
+    "tags": [
+      "confidence:high",
+      "omission",
+      "tc-leader-science"
     ]
   }
 ]

@@ -6,6 +6,12 @@
     "coords": [
       480,
       645
+    ],
+    "tags": [
+      "confidence:high",
+      "false-cause",
+      "omission",
+      "tc-usa-origin"
     ]
   },
   {
@@ -15,6 +21,12 @@
     "coords": [
       480,
       815
+    ],
+    "tags": [
+      "confidence:high",
+      "double-standard",
+      "euphemism",
+      "omission"
     ]
   },
   {
@@ -24,6 +36,11 @@
     "coords": [
       660,
       250
+    ],
+    "tags": [
+      "confidence:high",
+      "contradiction",
+      "framing"
     ]
   }
 ]

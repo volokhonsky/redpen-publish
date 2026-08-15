@@ -6,6 +6,12 @@
     "coords": [
       400,
       165
+    ],
+    "tags": [
+      "confidence:high",
+      "contradiction",
+      "dubious-number",
+      "tc-official-stats"
     ]
   },
   {
@@ -15,6 +21,11 @@
     "coords": [
       400,
       620
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "omission"
     ]
   },
   {
@@ -24,6 +35,11 @@
     "coords": [
       650,
       900
+    ],
+    "tags": [
+      "confidence:medium",
+      "source-selection",
+      "tc-agitprop-as-source"
     ]
   }
 ]

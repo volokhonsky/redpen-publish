@@ -6,6 +6,11 @@
     "coords": [
       400,
       1080
+    ],
+    "tags": [
+      "confidence:medium",
+      "dubious-number",
+      "tc-official-stats"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       400,
       690
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "tc-passive-voice"
     ]
   },
   {
@@ -24,6 +34,10 @@
     "coords": [
       400,
       830
+    ],
+    "tags": [
+      "confidence:high",
+      "framing"
     ]
   },
   {
@@ -33,6 +47,10 @@
     "coords": [
       400,
       645
+    ],
+    "tags": [
+      "confidence:medium",
+      "source-selection"
     ]
   }
 ]

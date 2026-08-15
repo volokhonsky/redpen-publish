@@ -6,6 +6,12 @@
     "coords": [
       480,
       520
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "omission",
+      "tc-red-army-invisible"
     ]
   },
   {
@@ -15,6 +21,11 @@
     "coords": [
       480,
       800
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing",
+      "loaded-question"
     ]
   }
 ]

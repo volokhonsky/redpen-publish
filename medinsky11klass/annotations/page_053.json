@@ -6,6 +6,11 @@
     "coords": [
       480,
       535
+    ],
+    "tags": [
+      "confidence:high",
+      "double-standard",
+      "tc-usa-origin"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       500,
       605
+    ],
+    "tags": [
+      "confidence:medium",
+      "contested-as-settled",
+      "framing"
     ]
   },
   {
@@ -24,6 +34,12 @@
     "coords": [
       430,
       1120
+    ],
+    "tags": [
+      "confidence:medium",
+      "loaded-question",
+      "source-selection",
+      "tc-agitprop-as-source"
     ]
   }
 ]

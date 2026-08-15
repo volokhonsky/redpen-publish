@@ -6,6 +6,12 @@
     "coords": [
       420,
       710
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "framing",
+      "omission"
     ]
   },
   {
@@ -15,6 +21,12 @@
     "coords": [
       450,
       970
+    ],
+    "tags": [
+      "confidence:high",
+      "double-standard",
+      "euphemism",
+      "omission"
     ]
   },
   {
@@ -24,6 +36,11 @@
     "coords": [
       430,
       1110
+    ],
+    "tags": [
+      "confidence:medium",
+      "euphemism",
+      "framing"
     ]
   },
   {
@@ -33,6 +50,10 @@
     "coords": [
       340,
       240
+    ],
+    "tags": [
+      "confidence:medium",
+      "source-selection"
     ]
   }
 ]

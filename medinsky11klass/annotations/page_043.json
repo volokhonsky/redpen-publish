@@ -6,6 +6,12 @@
     "coords": [
       450,
       360
+    ],
+    "tags": [
+      "confidence:medium",
+      "euphemism",
+      "framing",
+      "tc-usa-origin"
     ]
   },
   {
@@ -15,6 +21,11 @@
     "coords": [
       500,
       190
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "framing"
     ]
   },
   {
@@ -24,6 +35,11 @@
     "coords": [
       450,
       1055
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing",
+      "tc-usa-origin"
     ]
   }
 ]

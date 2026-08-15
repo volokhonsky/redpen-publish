@@ -6,6 +6,10 @@
     "coords": [
       400,
       500
+    ],
+    "tags": [
+      "confidence:high",
+      "framing"
     ]
   },
   {
@@ -15,6 +19,11 @@
     "coords": [
       400,
       430
+    ],
+    "tags": [
+      "confidence:high",
+      "context",
+      "omission"
     ]
   }
 ]

@@ -6,6 +6,11 @@
     "coords": [
       400,
       60
+    ],
+    "tags": [
+      "confidence:high",
+      "contradiction",
+      "false-cause"
     ]
   },
   {
@@ -15,6 +20,10 @@
     "coords": [
       400,
       850
+    ],
+    "tags": [
+      "confidence:medium",
+      "source-selection"
     ]
   }
 ]

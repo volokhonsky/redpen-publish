@@ -6,6 +6,12 @@
     "coords": [
       430,
       235
+    ],
+    "tags": [
+      "confidence:medium",
+      "false-symmetry",
+      "loaded-question",
+      "tc-whatabout"
     ]
   }
 ]

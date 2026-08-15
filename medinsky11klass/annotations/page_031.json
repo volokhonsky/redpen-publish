@@ -6,6 +6,11 @@
     "coords": [
       250,
       180
+    ],
+    "tags": [
+      "confidence:high",
+      "context",
+      "source-selection"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       330,
       1000
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "tc-famine-1946"
     ]
   }
 ]

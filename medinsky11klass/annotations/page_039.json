@@ -6,6 +6,12 @@
     "coords": [
       430,
       660
+    ],
+    "tags": [
+      "confidence:high",
+      "context",
+      "loaded-question",
+      "source-selection"
     ]
   },
   {
@@ -15,6 +21,11 @@
     "coords": [
       520,
       165
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing",
+      "overclaim"
     ]
   },
   {
@@ -24,6 +35,10 @@
     "coords": [
       430,
       205
+    ],
+    "tags": [
+      "confidence:medium",
+      "false-cause"
     ]
   }
 ]

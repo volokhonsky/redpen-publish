@@ -6,6 +6,10 @@
     "coords": [
       400,
       200
+    ],
+    "tags": [
+      "confidence:high",
+      "framing"
     ]
   },
   {
@@ -15,6 +19,12 @@
     "coords": [
       400,
       390
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "loaded-question",
+      "tc-reform-as-powergrab"
     ]
   }
 ]

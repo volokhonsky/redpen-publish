@@ -6,6 +6,11 @@
     "coords": [
       450,
       215
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "omission"
     ]
   },
   {
@@ -15,6 +20,10 @@
     "coords": [
       450,
       430
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing"
     ]
   },
   {
@@ -24,6 +33,10 @@
     "coords": [
       400,
       500
+    ],
+    "tags": [
+      "confidence:medium",
+      "dubious-number"
     ]
   },
   {
@@ -33,6 +46,11 @@
     "coords": [
       500,
       720
+    ],
+    "tags": [
+      "confidence:high",
+      "context",
+      "euphemism"
     ]
   }
 ]

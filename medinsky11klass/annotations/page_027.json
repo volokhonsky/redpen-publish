@@ -6,6 +6,12 @@
     "coords": [
       500,
       830
+    ],
+    "tags": [
+      "confidence:high",
+      "loaded-question",
+      "omission",
+      "tc-antisemitism-hidden"
     ]
   },
   {
@@ -15,6 +21,10 @@
     "coords": [
       500,
       1050
+    ],
+    "tags": [
+      "confidence:medium",
+      "source-selection"
     ]
   }
 ]

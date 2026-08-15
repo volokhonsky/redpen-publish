@@ -6,6 +6,11 @@
     "coords": [
       400,
       700
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "tc-passive-voice"
     ]
   },
   {
@@ -15,6 +20,10 @@
     "coords": [
       400,
       1000
+    ],
+    "tags": [
+      "confidence:high",
+      "loaded-question"
     ]
   }
 ]

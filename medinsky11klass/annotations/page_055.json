@@ -6,6 +6,10 @@
     "coords": [
       480,
       760
+    ],
+    "tags": [
+      "confidence:high",
+      "fact-error"
     ]
   },
   {
@@ -15,6 +19,12 @@
     "coords": [
       300,
       370
+    ],
+    "tags": [
+      "confidence:high",
+      "loaded-question",
+      "omission",
+      "source-selection"
     ]
   },
   {
@@ -24,6 +34,11 @@
     "coords": [
       740,
       1050
+    ],
+    "tags": [
+      "confidence:medium",
+      "source-selection",
+      "tc-agitprop-as-source"
     ]
   }
 ]

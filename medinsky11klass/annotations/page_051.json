@@ -6,6 +6,12 @@
     "coords": [
       480,
       630
+    ],
+    "tags": [
+      "confidence:high",
+      "double-standard",
+      "framing",
+      "tc-defensive-bloc"
     ]
   },
   {
@@ -15,6 +21,11 @@
     "coords": [
       300,
       445
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "loaded-question"
     ]
   },
   {
@@ -24,6 +35,11 @@
     "coords": [
       480,
       875
+    ],
+    "tags": [
+      "confidence:medium",
+      "double-standard",
+      "framing"
     ]
   }
 ]

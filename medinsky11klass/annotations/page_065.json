@@ -6,6 +6,10 @@
     "coords": [
       400,
       60
+    ],
+    "tags": [
+      "confidence:high",
+      "context"
     ]
   },
   {
@@ -15,6 +19,10 @@
     "coords": [
       400,
       270
+    ],
+    "tags": [
+      "confidence:medium",
+      "context"
     ]
   }
 ]

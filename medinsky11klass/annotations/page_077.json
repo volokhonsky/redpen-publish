@@ -6,6 +6,10 @@
     "coords": [
       400,
       1095
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism"
     ]
   },
   {
@@ -15,6 +19,11 @@
     "coords": [
       400,
       530
+    ],
+    "tags": [
+      "confidence:medium",
+      "euphemism",
+      "omission"
     ]
   }
 ]

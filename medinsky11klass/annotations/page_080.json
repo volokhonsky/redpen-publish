@@ -6,6 +6,10 @@
     "coords": [
       400,
       490
+    ],
+    "tags": [
+      "confidence:medium",
+      "source-selection"
     ]
   },
   {
@@ -15,6 +19,10 @@
     "coords": [
       400,
       200
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing"
     ]
   }
 ]

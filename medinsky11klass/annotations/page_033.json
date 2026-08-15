@@ -6,6 +6,11 @@
     "coords": [
       430,
       835
+    ],
+    "tags": [
+      "confidence:high",
+      "omission",
+      "overclaim"
     ]
   },
   {
@@ -15,6 +20,12 @@
     "coords": [
       430,
       985
+    ],
+    "tags": [
+      "confidence:high",
+      "contradiction",
+      "euphemism",
+      "tc-passive-voice"
     ]
   },
   {
@@ -24,6 +35,10 @@
     "coords": [
       700,
       300
+    ],
+    "tags": [
+      "confidence:high",
+      "fact-error"
     ]
   },
   {
@@ -33,6 +48,11 @@
     "coords": [
       400,
       1105
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "tc-leader-science"
     ]
   }
 ]

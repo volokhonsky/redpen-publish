@@ -6,6 +6,11 @@
     "coords": [
       300,
       500
+    ],
+    "tags": [
+      "confidence:high",
+      "omission",
+      "tc-hidden-disasters"
     ]
   },
   {
@@ -15,6 +20,10 @@
     "coords": [
       250,
       175
+    ],
+    "tags": [
+      "anachronism",
+      "confidence:high"
     ]
   },
   {
@@ -24,6 +33,11 @@
     "coords": [
       300,
       660
+    ],
+    "tags": [
+      "confidence:high",
+      "contradiction",
+      "overclaim"
     ]
   }
 ]

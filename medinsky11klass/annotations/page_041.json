@@ -6,6 +6,11 @@
     "coords": [
       400,
       915
+    ],
+    "tags": [
+      "confidence:high",
+      "fact-error",
+      "framing"
     ]
   },
   {
@@ -15,6 +20,12 @@
     "coords": [
       400,
       520
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "omission",
+      "tc-annexation-euphemism"
     ]
   },
   {
@@ -24,6 +35,11 @@
     "coords": [
       500,
       410
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "omission"
     ]
   }
 ]

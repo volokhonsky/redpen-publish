@@ -6,6 +6,12 @@
     "coords": [
       300,
       900
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "overclaim",
+      "tc-foreign-praise"
     ]
   },
   {
@@ -15,6 +21,11 @@
     "coords": [
       300,
       490
+    ],
+    "tags": [
+      "confidence:medium",
+      "source-selection",
+      "tc-foreign-praise"
     ]
   }
 ]

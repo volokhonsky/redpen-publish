@@ -6,6 +6,11 @@
     "coords": [
       630,
       380
+    ],
+    "tags": [
+      "confidence:high",
+      "context",
+      "euphemism"
     ]
   },
   {
@@ -15,6 +20,10 @@
     "coords": [
       400,
       720
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism"
     ]
   },
   {
@@ -24,6 +33,11 @@
     "coords": [
       450,
       900
+    ],
+    "tags": [
+      "confidence:medium",
+      "euphemism",
+      "framing"
     ]
   }
 ]

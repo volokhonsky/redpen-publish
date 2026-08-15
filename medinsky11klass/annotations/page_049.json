@@ -6,6 +6,12 @@
     "coords": [
       480,
       480
+    ],
+    "tags": [
+      "confidence:high",
+      "false-cause",
+      "framing",
+      "omission"
     ]
   },
   {
@@ -15,6 +21,12 @@
     "coords": [
       480,
       915
+    ],
+    "tags": [
+      "confidence:high",
+      "double-standard",
+      "framing",
+      "tc-usa-origin"
     ]
   },
   {
@@ -24,6 +36,11 @@
     "coords": [
       480,
       830
+    ],
+    "tags": [
+      "confidence:medium",
+      "contested-as-settled",
+      "omission"
     ]
   }
 ]

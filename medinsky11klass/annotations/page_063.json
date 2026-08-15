@@ -6,6 +6,11 @@
     "coords": [
       400,
       600
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "fact-error"
     ]
   },
   {
@@ -15,6 +20,10 @@
     "coords": [
       400,
       665
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism"
     ]
   },
   {
@@ -24,6 +33,11 @@
     "coords": [
       400,
       420
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing",
+      "tc-reform-as-powergrab"
     ]
   }
 ]

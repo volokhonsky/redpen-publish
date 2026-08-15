@@ -6,6 +6,11 @@
     "coords": [
       300,
       380
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing",
+      "omission"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       250,
       1030
+    ],
+    "tags": [
+      "confidence:high",
+      "source-selection",
+      "tc-hidden-disasters"
     ]
   }
 ]

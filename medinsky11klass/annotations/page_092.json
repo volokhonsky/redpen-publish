@@ -6,6 +6,11 @@
     "coords": [
       300,
       800
+    ],
+    "tags": [
+      "confidence:high",
+      "source-selection",
+      "tc-foreign-praise"
     ]
   },
   {
@@ -15,6 +20,12 @@
     "coords": [
       300,
       410
+    ],
+    "tags": [
+      "confidence:high",
+      "loaded-question",
+      "source-selection",
+      "tc-agitprop-as-source"
     ]
   }
 ]

@@ -6,6 +6,11 @@
     "coords": [
       330,
       1030
+    ],
+    "tags": [
+      "confidence:high",
+      "omission",
+      "tc-victim-hero"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       300,
       300
+    ],
+    "tags": [
+      "confidence:high",
+      "omission",
+      "tc-leader-science"
     ]
   }
 ]

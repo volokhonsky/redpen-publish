@@ -6,6 +6,12 @@
     "coords": [
       300,
       555
+    ],
+    "tags": [
+      "confidence:high",
+      "false-cause",
+      "omission",
+      "tc-leader-science"
     ]
   },
   {
@@ -15,6 +21,11 @@
     "coords": [
       300,
       400
+    ],
+    "tags": [
+      "confidence:high",
+      "contradiction",
+      "omission"
     ]
   },
   {
@@ -24,6 +35,10 @@
     "coords": [
       300,
       630
+    ],
+    "tags": [
+      "confidence:medium",
+      "loaded-question"
     ]
   }
 ]

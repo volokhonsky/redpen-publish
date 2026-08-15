@@ -6,6 +6,11 @@
     "coords": [
       700,
       1050
+    ],
+    "tags": [
+      "confidence:high",
+      "omission",
+      "tc-passive-voice"
     ]
   },
   {
@@ -15,6 +20,10 @@
     "coords": [
       700,
       1090
+    ],
+    "tags": [
+      "anachronism",
+      "confidence:medium"
     ]
   },
   {
@@ -24,6 +33,11 @@
     "coords": [
       400,
       280
+    ],
+    "tags": [
+      "confidence:high",
+      "context",
+      "omission"
     ]
   }
 ]

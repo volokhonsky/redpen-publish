@@ -6,6 +6,12 @@
     "coords": [
       450,
       515
+    ],
+    "tags": [
+      "confidence:high",
+      "contested-as-settled",
+      "double-standard",
+      "tc-usa-origin"
     ]
   },
   {
@@ -15,6 +21,11 @@
     "coords": [
       430,
       600
+    ],
+    "tags": [
+      "confidence:medium",
+      "dubious-number",
+      "source-selection"
     ]
   },
   {
@@ -24,6 +35,10 @@
     "coords": [
       400,
       1045
+    ],
+    "tags": [
+      "confidence:high",
+      "loaded-question"
     ]
   },
   {
@@ -33,6 +48,10 @@
     "coords": [
       650,
       255
+    ],
+    "tags": [
+      "confidence:medium",
+      "source-selection"
     ]
   }
 ]

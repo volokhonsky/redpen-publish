@@ -6,6 +6,12 @@
     "coords": [
       400,
       300
+    ],
+    "tags": [
+      "anachronism",
+      "confidence:high",
+      "framing",
+      "tc-modern-grudge"
     ]
   },
   {
@@ -15,6 +21,11 @@
     "coords": [
       400,
       150
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "omission"
     ]
   },
   {
@@ -24,6 +35,11 @@
     "coords": [
       400,
       620
+    ],
+    "tags": [
+      "confidence:high",
+      "dubious-number",
+      "overclaim"
     ]
   }
 ]

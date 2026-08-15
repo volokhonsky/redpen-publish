@@ -6,6 +6,11 @@
     "coords": [
       210,
       500
+    ],
+    "tags": [
+      "confidence:high",
+      "source-selection",
+      "tc-agitprop-as-source"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       520,
       210
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing",
+      "loaded-question"
     ]
   },
   {
@@ -24,6 +34,10 @@
     "coords": [
       700,
       900
+    ],
+    "tags": [
+      "confidence:high",
+      "framing"
     ]
   }
 ]

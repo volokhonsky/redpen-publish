@@ -6,6 +6,11 @@
     "coords": [
       400,
       650
+    ],
+    "tags": [
+      "confidence:high",
+      "dubious-number",
+      "overclaim"
     ]
   }
 ]

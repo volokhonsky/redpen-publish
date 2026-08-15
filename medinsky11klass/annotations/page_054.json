@@ -6,6 +6,11 @@
     "coords": [
       480,
       290
+    ],
+    "tags": [
+      "confidence:high",
+      "false-cause",
+      "framing"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       480,
       500
+    ],
+    "tags": [
+      "confidence:high",
+      "contested-as-settled",
+      "framing"
     ]
   },
   {
@@ -24,6 +34,12 @@
     "coords": [
       480,
       1075
+    ],
+    "tags": [
+      "confidence:medium",
+      "double-standard",
+      "dubious-number",
+      "source-selection"
     ]
   }
 ]

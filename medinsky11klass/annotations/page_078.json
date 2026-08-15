@@ -6,6 +6,11 @@
     "coords": [
       400,
       45
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "omission"
     ]
   },
   {
@@ -15,6 +20,10 @@
     "coords": [
       400,
       165
+    ],
+    "tags": [
+      "confidence:high",
+      "framing"
     ]
   },
   {
@@ -24,6 +33,11 @@
     "coords": [
       400,
       265
+    ],
+    "tags": [
+      "confidence:medium",
+      "context",
+      "tc-official-stats"
     ]
   }
 ]

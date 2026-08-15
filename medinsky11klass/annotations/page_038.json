@@ -6,6 +6,11 @@
     "coords": [
       400,
       208
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "loaded-question"
     ]
   },
   {
@@ -15,6 +20,12 @@
     "coords": [
       250,
       905
+    ],
+    "tags": [
+      "confidence:high",
+      "framing",
+      "source-selection",
+      "tc-usa-origin"
     ]
   },
   {
@@ -24,6 +35,10 @@
     "coords": [
       660,
       833
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism"
     ]
   }
 ]

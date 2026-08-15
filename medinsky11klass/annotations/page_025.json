@@ -6,6 +6,11 @@
     "coords": [
       450,
       220
+    ],
+    "tags": [
+      "confidence:high",
+      "false-cause",
+      "tc-usa-origin"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       500,
       310
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "omission"
     ]
   },
   {
@@ -24,6 +34,12 @@
     "coords": [
       400,
       420
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "omission",
+      "tc-antisemitism-hidden"
     ]
   },
   {
@@ -33,6 +49,11 @@
     "coords": [
       450,
       620
+    ],
+    "tags": [
+      "confidence:high",
+      "contested-as-settled",
+      "framing"
     ]
   },
   {
@@ -42,6 +63,12 @@
     "coords": [
       300,
       1050
+    ],
+    "tags": [
+      "confidence:high",
+      "omission",
+      "source-selection",
+      "tc-antisemitism-hidden"
     ]
   }
 ]

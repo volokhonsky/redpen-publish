@@ -6,6 +6,10 @@
     "coords": [
       400,
       640
+    ],
+    "tags": [
+      "confidence:high",
+      "source-selection"
     ]
   }
 ]

@@ -6,6 +6,10 @@
     "coords": [
       250,
       660
+    ],
+    "tags": [
+      "confidence:high",
+      "omission"
     ]
   },
   {
@@ -15,6 +19,11 @@
     "coords": [
       200,
       900
+    ],
+    "tags": [
+      "confidence:high",
+      "omission",
+      "source-selection"
     ]
   }
 ]

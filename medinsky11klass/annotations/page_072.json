@@ -6,6 +6,11 @@
     "coords": [
       245,
       470
+    ],
+    "tags": [
+      "confidence:medium",
+      "source-selection",
+      "tc-agitprop-as-source"
     ]
   },
   {
@@ -15,6 +20,10 @@
     "coords": [
       270,
       1000
+    ],
+    "tags": [
+      "confidence:high",
+      "framing"
     ]
   },
   {
@@ -24,6 +33,11 @@
     "coords": [
       700,
       920
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing",
+      "omission"
     ]
   }
 ]

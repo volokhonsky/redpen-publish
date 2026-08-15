@@ -6,6 +6,11 @@
     "coords": [
       300,
       80
+    ],
+    "tags": [
+      "confidence:high",
+      "omission",
+      "overclaim"
     ]
   },
   {
@@ -15,6 +20,10 @@
     "coords": [
       400,
       345
+    ],
+    "tags": [
+      "confidence:high",
+      "omission"
     ]
   },
   {
@@ -24,6 +33,11 @@
     "coords": [
       300,
       1010
+    ],
+    "tags": [
+      "confidence:medium",
+      "source-selection",
+      "tc-agitprop-as-source"
     ]
   }
 ]

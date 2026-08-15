@@ -6,6 +6,11 @@
     "coords": [
       700,
       320
+    ],
+    "tags": [
+      "confidence:high",
+      "contradiction",
+      "source-selection"
     ]
   },
   {
@@ -15,6 +20,10 @@
     "coords": [
       400,
       790
+    ],
+    "tags": [
+      "confidence:high",
+      "context"
     ]
   }
 ]

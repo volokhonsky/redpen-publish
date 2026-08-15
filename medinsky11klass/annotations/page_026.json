@@ -6,6 +6,11 @@
     "coords": [
       450,
       560
+    ],
+    "tags": [
+      "confidence:high",
+      "omission",
+      "tc-antisemitism-hidden"
     ]
   },
   {
@@ -15,6 +20,11 @@
     "coords": [
       650,
       330
+    ],
+    "tags": [
+      "confidence:medium",
+      "euphemism",
+      "omission"
     ]
   },
   {
@@ -24,6 +34,11 @@
     "coords": [
       450,
       990
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "tc-passive-voice"
     ]
   },
   {
@@ -33,6 +48,11 @@
     "coords": [
       350,
       1055
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "tc-annexation-euphemism"
     ]
   }
 ]

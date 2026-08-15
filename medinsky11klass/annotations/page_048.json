@@ -6,6 +6,12 @@
     "coords": [
       450,
       775
+    ],
+    "tags": [
+      "confidence:high",
+      "false-cause",
+      "omission",
+      "tc-red-army-invisible"
     ]
   },
   {
@@ -15,6 +21,11 @@
     "coords": [
       430,
       650
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "omission"
     ]
   },
   {
@@ -24,6 +35,12 @@
     "coords": [
       700,
       350
+    ],
+    "tags": [
+      "confidence:medium",
+      "contested-as-settled",
+      "framing",
+      "source-selection"
     ]
   }
 ]

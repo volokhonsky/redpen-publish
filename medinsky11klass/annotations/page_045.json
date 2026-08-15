@@ -6,6 +6,12 @@
     "coords": [
       420,
       700
+    ],
+    "tags": [
+      "confidence:high",
+      "contested-as-settled",
+      "double-standard",
+      "tc-usa-origin"
     ]
   },
   {
@@ -15,6 +21,11 @@
     "coords": [
       300,
       815
+    ],
+    "tags": [
+      "confidence:high",
+      "false-cause",
+      "framing"
     ]
   },
   {
@@ -24,6 +35,11 @@
     "coords": [
       280,
       1055
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing",
+      "source-selection"
     ]
   }
 ]

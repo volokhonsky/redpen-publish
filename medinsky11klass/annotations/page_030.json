@@ -6,6 +6,13 @@
     "coords": [
       430,
       215
+    ],
+    "tags": [
+      "confidence:high",
+      "false-cause",
+      "false-symmetry",
+      "tc-usa-origin",
+      "tc-whatabout"
     ]
   },
   {
@@ -15,6 +22,11 @@
     "coords": [
       430,
       662
+    ],
+    "tags": [
+      "confidence:high",
+      "euphemism",
+      "tc-passive-voice"
     ]
   },
   {
@@ -24,6 +36,11 @@
     "coords": [
       400,
       935
+    ],
+    "tags": [
+      "confidence:medium",
+      "framing",
+      "omission"
     ]
   }
 ]
