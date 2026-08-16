@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /cabinet/
+Disallow: /*?editor=
+
+Sitemap: https://medinsky.net/sitemap.xml

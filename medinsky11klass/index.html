@@ -3,156 +3,127 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <!-- Заголовок вкладки уточняется из metadata.json (см. main.js, setDocumentTitle). -->
-  <title>Мединский.нет — разбор учебника</title>
+  <title>История России. 11 класс. Базовый уровень — постраничный разбор — Мединский.нет</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Учебник по истории России для 11 класса. Освещает события от 1945 года до начала XXI века."/>
+  <link rel="canonical" href="https://medinsky.net/medinsky11klass/"/>
+  <meta property="og:type" content="book"/>
+  <meta property="og:site_name" content="Мединский.нет"/>
+  <meta property="og:title" content="История России. 11 класс. Базовый уровень — постраничный разбор"/>
+  <meta property="og:description" content="Учебник по истории России для 11 класса. Освещает события от 1945 года до начала XXI века."/>
+  <meta property="og:url" content="https://medinsky.net/medinsky11klass/"/>
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/components.css">
-  <link rel="stylesheet" href="../css/annotations.css">
-  <link rel="stylesheet" href="../css/global-comment.css">
-  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/page-panel.css">
   <link rel="icon" href="../favicon.svg">
-  <style>
-    .home-button {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 40px;
-      height: 40px;
-      background-color: #DC143C;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      z-index: 1000;
-      transition: background-color 0.2s;
-    }
-    .home-button:hover {
-      background-color: #b01030;
-    }
-  </style>
 </head>
 <body>
-  <a href="../index.html" class="home-button" title="Вернуться к выбору документов">⌂</a>
-  <header>Мединский.нет <span id="timestamp" style="font-size: 0.7rem; font-weight: normal; opacity: 0.8;">Последнее обновление: 15.08.2026 21:44</span></header>
-  <nav id="pagination">
-    <a href="#" class="pagination-btn" id="prev-page" onclick="prevPage();return false;">« Назад</a>
-    <div id="page-numbers" class="page-numbers">
-      <!-- Page numbers will be generated dynamically -->
-    </div>
-    <div class="page-input-container">
-      <input type="text" inputmode="text" id="page-input" placeholder="Стр." aria-label="Номер или метка страницы" onkeypress="if(event.key === 'Enter') { goToPage(); return false; }">
-      <button id="go-to-page-btn" class="pagination-btn" onclick="goToPage()">Перейти</button>
-    </div>
-    <a href="#" class="pagination-btn" id="next-page" onclick="nextPage();return false;">Вперед »</a>
+  <a href="../index.html" class="home-button" title="На главную">⌂</a>
+  <header>Мединский.нет <span id="timestamp" style="font-size: 0.7rem; font-weight: normal; opacity: 0.8;">Последнее обновление: 16.08.2026 18:31</span></header>
+
+  <nav class="breadcrumbs" aria-label="Навигационная цепочка">
+    <a href="../index.html">Мединский.нет</a>
+    <span class="breadcrumbs__sep">›</span>
+    <span aria-current="page">История России. 11 класс. Базовый уровень</span>
   </nav>
-  <style>
-    #pagination {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      margin: 10px 0;
-    }
-    .pagination-btn {
-      padding: 5px 10px;
-      background-color: #DC143C;
-      color: white;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: background-color 0.2s;
-      border: none;
-      cursor: pointer;
-    }
-    .pagination-btn:hover {
-      background-color: #b01030;
-    }
-    .page-numbers {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 5px;
-    }
-    .page-number {
-      padding: 5px 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-    .page-number:hover {
-      background-color: #f0f0f0;
-    }
-    .page-number.active {
-      background-color: #DC143C;
-      color: white;
-      border-color: #DC143C;
-    }
-    .page-ellipsis {
-      padding: 5px 10px;
-    }
-    .page-input-container {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    #page-input {
-      width: 60px;
-      padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      text-align: center;
-    }
-  </style>
-  <div id="layout">
-    <div id="content-wrapper">
-      <div id="image-container">
-        <img id="page-image"/>
-      </div>
-      <div id="comments-content">
-        <h2>Комментарии</h2>
-        <ul id="comment-list"></ul>
-      </div>
-    </div>
-    <div id="global-comment-container">
-      <h2>Общий комментарий</h2>
-      <div id="global-comment">Загрузка...</div>
-    </div>
-  </div>
 
-  <!-- Mobile comment overlay -->
-  <div id="mobile-overlay" class="mobile-overlay">
-    <div class="mobile-overlay-close" onclick="closeMobileOverlay()">×</div>
-    <div class="mobile-comment-content" id="mobile-comment-content"></div>
-  </div>
+  <main class="toc">
+    <h1>История России. 11 класс. Базовый уровень</h1>
+    <p class="toc-intro">Учебник по истории России для 11 класса. Освещает события от 1945 года до начала XXI века.</p>
+    <p class="toc-stats">Разбор опубликован на 84 страницах — 224 комментария.</p>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/A1/index.html" title="Обложка">Обложка</a></li><li><a class="toc-page toc-page--empty" href="pages/A2/index.html" title="Титульный лист">Титульный лист</a></li><li><a class="toc-page" href="pages/A3/index.html" title="Выходные данные">Выходные данные<span class="toc-page__count">2</span></a></li></ul>
+    <h2 class="toc-chapter">Введение</h2>
+    <ul class="toc-pages"><li><a class="toc-page" href="pages/3/index.html">3<span class="toc-page__count">1</span></a></li><li><a class="toc-page" href="pages/4/index.html">4<span class="toc-page__count">1</span></a></li></ul>
+    <h2 class="toc-chapter">Глава I. СССР в 1945—1991 гг.</h2>
+    <ul class="toc-pages"><li><a class="toc-page" href="pages/5/index.html">5<span class="toc-page__count">1</span></a></li></ul>
+    <h3 class="toc-section">§ 1. Восстановление и развитие экономики и социальной сферы</h3>
+    <ul class="toc-pages"><li><a class="toc-page" href="pages/6/index.html">6<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/7/index.html">7<span class="toc-page__count">6</span></a></li><li><a class="toc-page" href="pages/8/index.html">8<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/9/index.html">9<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/10/index.html">10<span class="toc-page__count">1</span></a></li><li><a class="toc-page toc-page--empty" href="pages/11/index.html">11</a></li><li><a class="toc-page toc-page--empty" href="pages/12/index.html">12</a></li><li><a class="toc-page toc-page--empty" href="pages/13/index.html">13</a></li><li><a class="toc-page toc-page--empty" href="pages/14/index.html">14</a></li><li><a class="toc-page toc-page--empty" href="pages/15/index.html">15</a></li><li><a class="toc-page toc-page--empty" href="pages/16/index.html">16</a></li><li><a class="toc-page toc-page--empty" href="pages/17/index.html">17</a></li><li><a class="toc-page toc-page--empty" href="pages/18/index.html">18</a></li><li><a class="toc-page toc-page--empty" href="pages/19/index.html">19</a></li><li><a class="toc-page toc-page--empty" href="pages/20/index.html">20</a></li></ul>
+    <h3 class="toc-section">§ 2. Политическая система в послевоенные годы</h3>
+    <ul class="toc-pages"><li><a class="toc-page" href="pages/21/index.html">21<span class="toc-page__count">4</span></a></li><li><a class="toc-page" href="pages/22/index.html">22<span class="toc-page__count">4</span></a></li><li><a class="toc-page" href="pages/23/index.html">23<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/24/index.html">24<span class="toc-page__count">5</span></a></li><li><a class="toc-page" href="pages/25/index.html">25<span class="toc-page__count">5</span></a></li><li><a class="toc-page" href="pages/26/index.html">26<span class="toc-page__count">4</span></a></li><li><a class="toc-page" href="pages/27/index.html">27<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/28/index.html">28<span class="toc-page__count">2</span></a></li></ul>
+    <h3 class="toc-section">§ 3. Идеология, наука, культура и спорт в послевоенные годы</h3>
+    <ul class="toc-pages"><li><a class="toc-page" href="pages/29/index.html">29<span class="toc-page__count">4</span></a></li><li><a class="toc-page" href="pages/30/index.html">30<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/31/index.html">31<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/32/index.html">32<span class="toc-page__count">1</span></a></li><li><a class="toc-page" href="pages/33/index.html">33<span class="toc-page__count">4</span></a></li><li><a class="toc-page" href="pages/34/index.html">34<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/35/index.html">35<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/36/index.html">36<span class="toc-page__count">1</span></a></li><li><a class="toc-page" href="pages/37/index.html">37<span class="toc-page__count">1</span></a></li></ul>
+    <h3 class="toc-section">§ 4. Место и роль СССР в послевоенном мире. Внешняя политика СССР в 1945—1953 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page" href="pages/38/index.html">38<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/39/index.html">39<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/40/index.html">40<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/41/index.html">41<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/42/index.html">42<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/43/index.html">43<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/44/index.html">44<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/45/index.html">45<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/46/index.html">46<span class="toc-page__count">4</span></a></li><li><a class="toc-page" href="pages/47/index.html">47<span class="toc-page__count">4</span></a></li><li><a class="toc-page" href="pages/48/index.html">48<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/49/index.html">49<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/50/index.html">50<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/51/index.html">51<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/52/index.html">52<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/53/index.html">53<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/54/index.html">54<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/55/index.html">55<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/56/index.html">56<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/57/index.html">57<span class="toc-page__count">1</span></a></li><li><a class="toc-page" href="pages/58/index.html">58<span class="toc-page__count">3</span></a></li></ul>
+    <h3 class="toc-section">§ 5. Новое руководство страны. Смена политического курса</h3>
+    <ul class="toc-pages"><li><a class="toc-page" href="pages/59/index.html">59<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/60/index.html">60<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/61/index.html">61<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/62/index.html">62<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/63/index.html">63<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/64/index.html">64<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/65/index.html">65<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/66/index.html">66<span class="toc-page__count">4</span></a></li><li><a class="toc-page" href="pages/67/index.html">67<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/68/index.html">68<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/69/index.html">69<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/70/index.html">70<span class="toc-page__count">1</span></a></li><li><a class="toc-page" href="pages/71/index.html">71<span class="toc-page__count">2</span></a></li></ul>
+    <h3 class="toc-section">§ 6. Экономическое и социальное развитие в 1953—1964 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page" href="pages/72/index.html">72<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/73/index.html">73<span class="toc-page__count">4</span></a></li><li><a class="toc-page" href="pages/74/index.html">74<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/75/index.html">75<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/76/index.html">76<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/77/index.html">77<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/78/index.html">78<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/79/index.html">79<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/80/index.html">80<span class="toc-page__count">2</span></a></li><li><a class="toc-page toc-page--empty" href="pages/81/index.html">81</a></li></ul>
+    <h3 class="toc-section">§ 7. Развитие науки и техники в СССР в 1953—1964 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page" href="pages/82/index.html">82<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/83/index.html">83<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/84/index.html">84<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/85/index.html">85<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/86/index.html">86<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/87/index.html">87<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/88/index.html">88<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/89/index.html">89<span class="toc-page__count">3</span></a></li><li><a class="toc-page" href="pages/90/index.html">90<span class="toc-page__count">1</span></a></li><li><a class="toc-page" href="pages/91/index.html">91<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/92/index.html">92<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/93/index.html">93<span class="toc-page__count">2</span></a></li></ul>
+    <h3 class="toc-section">§ 8. Культурное пространство в 1953—1964 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/94/index.html">94</a></li><li><a class="toc-page toc-page--empty" href="pages/95/index.html">95</a></li><li><a class="toc-page toc-page--empty" href="pages/96/index.html">96</a></li><li><a class="toc-page toc-page--empty" href="pages/97/index.html">97</a></li><li><a class="toc-page toc-page--empty" href="pages/98/index.html">98</a></li><li><a class="toc-page toc-page--empty" href="pages/99/index.html">99</a></li><li><a class="toc-page toc-page--empty" href="pages/100/index.html">100</a></li><li><a class="toc-page toc-page--empty" href="pages/101/index.html">101</a></li><li><a class="toc-page toc-page--empty" href="pages/102/index.html">102</a></li><li><a class="toc-page toc-page--empty" href="pages/103/index.html">103</a></li><li><a class="toc-page toc-page--empty" href="pages/104/index.html">104</a></li><li><a class="toc-page toc-page--empty" href="pages/105/index.html">105</a></li></ul>
+    <h3 class="toc-section">§ 9. Перемены в повседневной жизни в 1953—1964 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/106/index.html">106</a></li><li><a class="toc-page toc-page--empty" href="pages/107/index.html">107</a></li><li><a class="toc-page toc-page--empty" href="pages/108/index.html">108</a></li><li><a class="toc-page toc-page--empty" href="pages/109/index.html">109</a></li><li><a class="toc-page toc-page--empty" href="pages/110/index.html">110</a></li><li><a class="toc-page toc-page--empty" href="pages/111/index.html">111</a></li><li><a class="toc-page toc-page--empty" href="pages/112/index.html">112</a></li><li><a class="toc-page toc-page--empty" href="pages/113/index.html">113</a></li><li><a class="toc-page toc-page--empty" href="pages/114/index.html">114</a></li><li><a class="toc-page toc-page--empty" href="pages/115/index.html">115</a></li><li><a class="toc-page toc-page--empty" href="pages/116/index.html">116</a></li><li><a class="toc-page toc-page--empty" href="pages/117/index.html">117</a></li><li><a class="toc-page toc-page--empty" href="pages/118/index.html">118</a></li><li><a class="toc-page toc-page--empty" href="pages/119/index.html">119</a></li><li><a class="toc-page toc-page--empty" href="pages/120/index.html">120</a></li><li><a class="toc-page toc-page--empty" href="pages/121/index.html">121</a></li></ul>
+    <h3 class="toc-section">§ 10. Внешняя политика в 1953—1964 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/122/index.html">122</a></li><li><a class="toc-page toc-page--empty" href="pages/123/index.html">123</a></li><li><a class="toc-page toc-page--empty" href="pages/124/index.html">124</a></li><li><a class="toc-page toc-page--empty" href="pages/125/index.html">125</a></li><li><a class="toc-page toc-page--empty" href="pages/126/index.html">126</a></li><li><a class="toc-page toc-page--empty" href="pages/127/index.html">127</a></li><li><a class="toc-page toc-page--empty" href="pages/128/index.html">128</a></li><li><a class="toc-page toc-page--empty" href="pages/129/index.html">129</a></li><li><a class="toc-page toc-page--empty" href="pages/130/index.html">130</a></li><li><a class="toc-page toc-page--empty" href="pages/131/index.html">131</a></li><li><a class="toc-page toc-page--empty" href="pages/132/index.html">132</a></li><li><a class="toc-page toc-page--empty" href="pages/133/index.html">133</a></li></ul>
+    <h3 class="toc-section">§ 11. Политическое развитие СССР в 1964—1985 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/134/index.html">134</a></li><li><a class="toc-page toc-page--empty" href="pages/135/index.html">135</a></li><li><a class="toc-page toc-page--empty" href="pages/136/index.html">136</a></li><li><a class="toc-page toc-page--empty" href="pages/137/index.html">137</a></li><li><a class="toc-page toc-page--empty" href="pages/138/index.html">138</a></li><li><a class="toc-page toc-page--empty" href="pages/139/index.html">139</a></li><li><a class="toc-page toc-page--empty" href="pages/140/index.html">140</a></li><li><a class="toc-page toc-page--empty" href="pages/141/index.html">141</a></li><li><a class="toc-page toc-page--empty" href="pages/142/index.html">142</a></li><li><a class="toc-page toc-page--empty" href="pages/143/index.html">143</a></li></ul>
+    <h3 class="toc-section">§ 12. Социально-экономическое развитие СССР в 1964—1985 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/144/index.html">144</a></li><li><a class="toc-page toc-page--empty" href="pages/145/index.html">145</a></li><li><a class="toc-page toc-page--empty" href="pages/146/index.html">146</a></li><li><a class="toc-page toc-page--empty" href="pages/147/index.html">147</a></li><li><a class="toc-page toc-page--empty" href="pages/148/index.html">148</a></li><li><a class="toc-page toc-page--empty" href="pages/149/index.html">149</a></li><li><a class="toc-page toc-page--empty" href="pages/150/index.html">150</a></li><li><a class="toc-page toc-page--empty" href="pages/151/index.html">151</a></li><li><a class="toc-page toc-page--empty" href="pages/152/index.html">152</a></li><li><a class="toc-page toc-page--empty" href="pages/153/index.html">153</a></li></ul>
+    <h3 class="toc-section">§ 13. Развитие науки, образования, здравоохранения в 1964—1985 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/154/index.html">154</a></li><li><a class="toc-page toc-page--empty" href="pages/155/index.html">155</a></li><li><a class="toc-page toc-page--empty" href="pages/156/index.html">156</a></li><li><a class="toc-page toc-page--empty" href="pages/157/index.html">157</a></li><li><a class="toc-page toc-page--empty" href="pages/158/index.html">158</a></li><li><a class="toc-page toc-page--empty" href="pages/159/index.html">159</a></li><li><a class="toc-page toc-page--empty" href="pages/160/index.html">160</a></li><li><a class="toc-page toc-page--empty" href="pages/161/index.html">161</a></li><li><a class="toc-page toc-page--empty" href="pages/162/index.html">162</a></li><li><a class="toc-page toc-page--empty" href="pages/163/index.html">163</a></li></ul>
+    <h3 class="toc-section">§ 14. Идеология и культура в 1964—1985 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/164/index.html">164</a></li><li><a class="toc-page toc-page--empty" href="pages/165/index.html">165</a></li><li><a class="toc-page toc-page--empty" href="pages/166/index.html">166</a></li><li><a class="toc-page toc-page--empty" href="pages/167/index.html">167</a></li><li><a class="toc-page toc-page--empty" href="pages/168/index.html">168</a></li><li><a class="toc-page toc-page--empty" href="pages/169/index.html">169</a></li><li><a class="toc-page toc-page--empty" href="pages/170/index.html">170</a></li><li><a class="toc-page toc-page--empty" href="pages/171/index.html">171</a></li><li><a class="toc-page toc-page--empty" href="pages/172/index.html">172</a></li><li><a class="toc-page toc-page--empty" href="pages/173/index.html">173</a></li><li><a class="toc-page toc-page--empty" href="pages/174/index.html">174</a></li><li><a class="toc-page toc-page--empty" href="pages/175/index.html">175</a></li><li><a class="toc-page toc-page--empty" href="pages/176/index.html">176</a></li></ul>
+    <h3 class="toc-section">§ 15. Повседневная жизнь советского общества в 1964—1985 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/177/index.html">177</a></li><li><a class="toc-page toc-page--empty" href="pages/178/index.html">178</a></li><li><a class="toc-page toc-page--empty" href="pages/179/index.html">179</a></li><li><a class="toc-page toc-page--empty" href="pages/180/index.html">180</a></li><li><a class="toc-page toc-page--empty" href="pages/181/index.html">181</a></li><li><a class="toc-page toc-page--empty" href="pages/182/index.html">182</a></li><li><a class="toc-page toc-page--empty" href="pages/183/index.html">183</a></li></ul>
+    <h3 class="toc-section">§ 16. Национальная политика и национальные движения в 1964—1985 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/184/index.html">184</a></li><li><a class="toc-page toc-page--empty" href="pages/185/index.html">185</a></li><li><a class="toc-page toc-page--empty" href="pages/186/index.html">186</a></li><li><a class="toc-page toc-page--empty" href="pages/187/index.html">187</a></li><li><a class="toc-page toc-page--empty" href="pages/188/index.html">188</a></li><li><a class="toc-page toc-page--empty" href="pages/189/index.html">189</a></li><li><a class="toc-page toc-page--empty" href="pages/190/index.html">190</a></li><li><a class="toc-page toc-page--empty" href="pages/191/index.html">191</a></li></ul>
+    <h3 class="toc-section">§ 17. Внешняя политика СССР в 1964—1985 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/192/index.html">192</a></li><li><a class="toc-page toc-page--empty" href="pages/193/index.html">193</a></li><li><a class="toc-page toc-page--empty" href="pages/194/index.html">194</a></li><li><a class="toc-page toc-page--empty" href="pages/195/index.html">195</a></li><li><a class="toc-page toc-page--empty" href="pages/196/index.html">196</a></li><li><a class="toc-page toc-page--empty" href="pages/197/index.html">197</a></li><li><a class="toc-page toc-page--empty" href="pages/198/index.html">198</a></li><li><a class="toc-page toc-page--empty" href="pages/199/index.html">199</a></li><li><a class="toc-page toc-page--empty" href="pages/200/index.html">200</a></li><li><a class="toc-page toc-page--empty" href="pages/201/index.html">201</a></li></ul>
+    <h3 class="toc-section">§ 18. СССР и мир в начале 1980-х гг. Предпосылки реформ</h3>
+    <ul class="toc-pages"><li><a class="toc-page" href="pages/202/index.html">202<span class="toc-page__count">2</span></a></li><li><a class="toc-page" href="pages/203/index.html">203<span class="toc-page__count">5</span></a></li><li><a class="toc-page" href="pages/204/index.html">204<span class="toc-page__count">5</span></a></li><li><a class="toc-page toc-page--empty" href="pages/205/index.html">205</a></li><li><a class="toc-page toc-page--empty" href="pages/206/index.html">206</a></li><li><a class="toc-page toc-page--empty" href="pages/207/index.html">207</a></li><li><a class="toc-page toc-page--empty" href="pages/208/index.html">208</a></li><li><a class="toc-page toc-page--empty" href="pages/209/index.html">209</a></li></ul>
+    <h3 class="toc-section">§ 19. Социально-экономическое развитие СССР в 1985—1991 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/210/index.html">210</a></li><li><a class="toc-page toc-page--empty" href="pages/211/index.html">211</a></li><li><a class="toc-page toc-page--empty" href="pages/212/index.html">212</a></li><li><a class="toc-page toc-page--empty" href="pages/213/index.html">213</a></li><li><a class="toc-page toc-page--empty" href="pages/214/index.html">214</a></li><li><a class="toc-page toc-page--empty" href="pages/215/index.html">215</a></li><li><a class="toc-page toc-page--empty" href="pages/216/index.html">216</a></li><li><a class="toc-page toc-page--empty" href="pages/217/index.html">217</a></li><li><a class="toc-page toc-page--empty" href="pages/218/index.html">218</a></li><li><a class="toc-page toc-page--empty" href="pages/219/index.html">219</a></li><li><a class="toc-page toc-page--empty" href="pages/220/index.html">220</a></li><li><a class="toc-page toc-page--empty" href="pages/221/index.html">221</a></li><li><a class="toc-page toc-page--empty" href="pages/222/index.html">222</a></li><li><a class="toc-page toc-page--empty" href="pages/223/index.html">223</a></li></ul>
+    <h3 class="toc-section">§ 20. Перемены в духовной сфере в годы перестройки</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/224/index.html">224</a></li><li><a class="toc-page toc-page--empty" href="pages/225/index.html">225</a></li><li><a class="toc-page toc-page--empty" href="pages/226/index.html">226</a></li><li><a class="toc-page toc-page--empty" href="pages/227/index.html">227</a></li><li><a class="toc-page toc-page--empty" href="pages/228/index.html">228</a></li><li><a class="toc-page toc-page--empty" href="pages/229/index.html">229</a></li><li><a class="toc-page toc-page--empty" href="pages/230/index.html">230</a></li><li><a class="toc-page toc-page--empty" href="pages/231/index.html">231</a></li><li><a class="toc-page toc-page--empty" href="pages/232/index.html">232</a></li><li><a class="toc-page toc-page--empty" href="pages/233/index.html">233</a></li></ul>
+    <h3 class="toc-section">§ 21. Реформа политической системы СССР и её итоги</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/234/index.html">234</a></li><li><a class="toc-page toc-page--empty" href="pages/235/index.html">235</a></li><li><a class="toc-page toc-page--empty" href="pages/236/index.html">236</a></li><li><a class="toc-page toc-page--empty" href="pages/237/index.html">237</a></li><li><a class="toc-page toc-page--empty" href="pages/238/index.html">238</a></li><li><a class="toc-page toc-page--empty" href="pages/239/index.html">239</a></li><li><a class="toc-page toc-page--empty" href="pages/240/index.html">240</a></li><li><a class="toc-page toc-page--empty" href="pages/241/index.html">241</a></li><li><a class="toc-page toc-page--empty" href="pages/242/index.html">242</a></li></ul>
+    <h3 class="toc-section">§ 22. Новое политическое мышление и перемены во внешней политике</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/243/index.html">243</a></li><li><a class="toc-page toc-page--empty" href="pages/244/index.html">244</a></li><li><a class="toc-page toc-page--empty" href="pages/245/index.html">245</a></li><li><a class="toc-page toc-page--empty" href="pages/246/index.html">246</a></li><li><a class="toc-page toc-page--empty" href="pages/247/index.html">247</a></li><li><a class="toc-page toc-page--empty" href="pages/248/index.html">248</a></li><li><a class="toc-page toc-page--empty" href="pages/249/index.html">249</a></li><li><a class="toc-page toc-page--empty" href="pages/250/index.html">250</a></li><li><a class="toc-page toc-page--empty" href="pages/251/index.html">251</a></li></ul>
+    <h3 class="toc-section">§ 23. Национальная политика и подъём национальных движений. Распад СССР</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/252/index.html">252</a></li><li><a class="toc-page toc-page--empty" href="pages/253/index.html">253</a></li><li><a class="toc-page toc-page--empty" href="pages/254/index.html">254</a></li><li><a class="toc-page toc-page--empty" href="pages/255/index.html">255</a></li><li><a class="toc-page toc-page--empty" href="pages/256/index.html">256</a></li><li><a class="toc-page toc-page--empty" href="pages/257/index.html">257</a></li><li><a class="toc-page toc-page--empty" href="pages/258/index.html">258</a></li><li><a class="toc-page toc-page--empty" href="pages/259/index.html">259</a></li><li><a class="toc-page toc-page--empty" href="pages/260/index.html">260</a></li><li><a class="toc-page toc-page--empty" href="pages/261/index.html">261</a></li><li><a class="toc-page toc-page--empty" href="pages/262/index.html">262</a></li><li><a class="toc-page toc-page--empty" href="pages/263/index.html">263</a></li><li><a class="toc-page toc-page--empty" href="pages/264/index.html">264</a></li><li><a class="toc-page toc-page--empty" href="pages/265/index.html">265</a></li><li><a class="toc-page toc-page--empty" href="pages/266/index.html">266</a></li><li><a class="toc-page toc-page--empty" href="pages/267/index.html">267</a></li><li><a class="toc-page toc-page--empty" href="pages/268/index.html">268</a></li></ul>
+    <h3 class="toc-section">Итоги главы</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/269/index.html">269</a></li></ul>
+    <h3 class="toc-section">Вопросы и задания к главе</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/270/index.html">270</a></li></ul>
+    <h3 class="toc-section">Ресурсы к главе</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/271/index.html">271</a></li><li><a class="toc-page toc-page--empty" href="pages/272/index.html">272</a></li><li><a class="toc-page toc-page--empty" href="pages/273/index.html">273</a></li><li><a class="toc-page toc-page--empty" href="pages/274/index.html">274</a></li><li><a class="toc-page toc-page--empty" href="pages/275/index.html">275</a></li><li><a class="toc-page toc-page--empty" href="pages/276/index.html">276</a></li></ul>
+    <h2 class="toc-chapter">Глава II. Российская Федерация в 1992 — начале 2020-х гг.</h2>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/277/index.html">277</a></li></ul>
+    <h3 class="toc-section">§ 24. Российская экономика в условиях рынка</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/278/index.html">278</a></li><li><a class="toc-page toc-page--empty" href="pages/279/index.html">279</a></li><li><a class="toc-page toc-page--empty" href="pages/280/index.html">280</a></li><li><a class="toc-page toc-page--empty" href="pages/281/index.html">281</a></li><li><a class="toc-page toc-page--empty" href="pages/282/index.html">282</a></li><li><a class="toc-page toc-page--empty" href="pages/283/index.html">283</a></li><li><a class="toc-page toc-page--empty" href="pages/284/index.html">284</a></li><li><a class="toc-page toc-page--empty" href="pages/285/index.html">285</a></li><li><a class="toc-page toc-page--empty" href="pages/286/index.html">286</a></li><li><a class="toc-page toc-page--empty" href="pages/287/index.html">287</a></li><li><a class="toc-page toc-page--empty" href="pages/288/index.html">288</a></li><li><a class="toc-page toc-page--empty" href="pages/289/index.html">289</a></li><li><a class="toc-page toc-page--empty" href="pages/290/index.html">290</a></li><li><a class="toc-page toc-page--empty" href="pages/291/index.html">291</a></li><li><a class="toc-page toc-page--empty" href="pages/292/index.html">292</a></li></ul>
+    <h3 class="toc-section">§ 25. Политическое развитие Российской Федерации в 1990-е гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/293/index.html">293</a></li><li><a class="toc-page toc-page--empty" href="pages/294/index.html">294</a></li><li><a class="toc-page toc-page--empty" href="pages/295/index.html">295</a></li><li><a class="toc-page toc-page--empty" href="pages/296/index.html">296</a></li><li><a class="toc-page toc-page--empty" href="pages/297/index.html">297</a></li><li><a class="toc-page toc-page--empty" href="pages/298/index.html">298</a></li><li><a class="toc-page toc-page--empty" href="pages/299/index.html">299</a></li><li><a class="toc-page toc-page--empty" href="pages/300/index.html">300</a></li><li><a class="toc-page toc-page--empty" href="pages/301/index.html">301</a></li><li><a class="toc-page toc-page--empty" href="pages/302/index.html">302</a></li></ul>
+    <h3 class="toc-section">§ 26. Межнациональные отношения и национальная политика в 1990-е гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/303/index.html">303</a></li><li><a class="toc-page toc-page--empty" href="pages/304/index.html">304</a></li><li><a class="toc-page toc-page--empty" href="pages/305/index.html">305</a></li><li><a class="toc-page toc-page--empty" href="pages/306/index.html">306</a></li><li><a class="toc-page toc-page--empty" href="pages/307/index.html">307</a></li></ul>
+    <h3 class="toc-section">§ 27. Повседневная жизнь в 1990-е гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/308/index.html">308</a></li><li><a class="toc-page toc-page--empty" href="pages/309/index.html">309</a></li><li><a class="toc-page toc-page--empty" href="pages/310/index.html">310</a></li><li><a class="toc-page toc-page--empty" href="pages/311/index.html">311</a></li><li><a class="toc-page toc-page--empty" href="pages/312/index.html">312</a></li></ul>
+    <h3 class="toc-section">§ 28. Россия и мир. Внешняя политика Российской Федерации в 1990-е гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/313/index.html">313</a></li><li><a class="toc-page toc-page--empty" href="pages/314/index.html">314</a></li><li><a class="toc-page toc-page--empty" href="pages/315/index.html">315</a></li><li><a class="toc-page toc-page--empty" href="pages/316/index.html">316</a></li><li><a class="toc-page toc-page--empty" href="pages/317/index.html">317</a></li><li><a class="toc-page toc-page--empty" href="pages/318/index.html">318</a></li><li><a class="toc-page toc-page--empty" href="pages/319/index.html">319</a></li><li><a class="toc-page toc-page--empty" href="pages/320/index.html">320</a></li><li><a class="toc-page toc-page--empty" href="pages/321/index.html">321</a></li><li><a class="toc-page toc-page--empty" href="pages/322/index.html">322</a></li><li><a class="toc-page toc-page--empty" href="pages/323/index.html">323</a></li><li><a class="toc-page toc-page--empty" href="pages/324/index.html">324</a></li></ul>
+    <h3 class="toc-section">§ 29. Политические вызовы и новые приоритеты внутренней политики России в начале XXI в.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/325/index.html">325</a></li><li><a class="toc-page toc-page--empty" href="pages/326/index.html">326</a></li><li><a class="toc-page toc-page--empty" href="pages/327/index.html">327</a></li><li><a class="toc-page toc-page--empty" href="pages/328/index.html">328</a></li><li><a class="toc-page toc-page--empty" href="pages/329/index.html">329</a></li><li><a class="toc-page toc-page--empty" href="pages/330/index.html">330</a></li><li><a class="toc-page toc-page--empty" href="pages/331/index.html">331</a></li><li><a class="toc-page toc-page--empty" href="pages/332/index.html">332</a></li><li><a class="toc-page toc-page--empty" href="pages/333/index.html">333</a></li><li><a class="toc-page toc-page--empty" href="pages/334/index.html">334</a></li></ul>
+    <h3 class="toc-section">§ 30. Россия в 2008—2011 гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/335/index.html">335</a></li><li><a class="toc-page toc-page--empty" href="pages/336/index.html">336</a></li><li><a class="toc-page toc-page--empty" href="pages/337/index.html">337</a></li><li><a class="toc-page toc-page--empty" href="pages/338/index.html">338</a></li><li><a class="toc-page toc-page--empty" href="pages/339/index.html">339</a></li></ul>
+    <h3 class="toc-section">§ 31. Социально-экономическое развитие России в начале XXI в. Приоритетные национальные проекты</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/340/index.html">340</a></li><li><a class="toc-page toc-page--empty" href="pages/341/index.html">341</a></li><li><a class="toc-page toc-page--empty" href="pages/342/index.html">342</a></li><li><a class="toc-page toc-page--empty" href="pages/343/index.html">343</a></li><li><a class="toc-page toc-page--empty" href="pages/344/index.html">344</a></li><li><a class="toc-page toc-page--empty" href="pages/345/index.html">345</a></li><li><a class="toc-page toc-page--empty" href="pages/346/index.html">346</a></li><li><a class="toc-page toc-page--empty" href="pages/347/index.html">347</a></li></ul>
+    <h3 class="toc-section">§ 32—33. Культура, наука, спорт и общественная жизнь в 1990-х — начале 2020-х гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/348/index.html">348</a></li><li><a class="toc-page toc-page--empty" href="pages/349/index.html">349</a></li><li><a class="toc-page toc-page--empty" href="pages/350/index.html">350</a></li><li><a class="toc-page toc-page--empty" href="pages/351/index.html">351</a></li><li><a class="toc-page toc-page--empty" href="pages/352/index.html">352</a></li><li><a class="toc-page toc-page--empty" href="pages/353/index.html">353</a></li><li><a class="toc-page toc-page--empty" href="pages/354/index.html">354</a></li><li><a class="toc-page toc-page--empty" href="pages/355/index.html">355</a></li><li><a class="toc-page toc-page--empty" href="pages/356/index.html">356</a></li><li><a class="toc-page toc-page--empty" href="pages/357/index.html">357</a></li><li><a class="toc-page toc-page--empty" href="pages/358/index.html">358</a></li><li><a class="toc-page toc-page--empty" href="pages/359/index.html">359</a></li><li><a class="toc-page toc-page--empty" href="pages/360/index.html">360</a></li><li><a class="toc-page toc-page--empty" href="pages/361/index.html">361</a></li><li><a class="toc-page toc-page--empty" href="pages/362/index.html">362</a></li><li><a class="toc-page toc-page--empty" href="pages/363/index.html">363</a></li><li><a class="toc-page toc-page--empty" href="pages/364/index.html">364</a></li><li><a class="toc-page toc-page--empty" href="pages/365/index.html">365</a></li><li><a class="toc-page toc-page--empty" href="pages/366/index.html">366</a></li><li><a class="toc-page toc-page--empty" href="pages/367/index.html">367</a></li><li><a class="toc-page toc-page--empty" href="pages/368/index.html">368</a></li><li><a class="toc-page toc-page--empty" href="pages/369/index.html">369</a></li><li><a class="toc-page toc-page--empty" href="pages/370/index.html">370</a></li><li><a class="toc-page toc-page--empty" href="pages/371/index.html">371</a></li></ul>
+    <h3 class="toc-section">§ 34—35. Внешняя политика в начале XXI в. Россия в современном мире</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/372/index.html">372</a></li><li><a class="toc-page toc-page--empty" href="pages/373/index.html">373</a></li><li><a class="toc-page toc-page--empty" href="pages/374/index.html">374</a></li><li><a class="toc-page toc-page--empty" href="pages/375/index.html">375</a></li><li><a class="toc-page toc-page--empty" href="pages/376/index.html">376</a></li><li><a class="toc-page toc-page--empty" href="pages/377/index.html">377</a></li><li><a class="toc-page toc-page--empty" href="pages/378/index.html">378</a></li><li><a class="toc-page toc-page--empty" href="pages/379/index.html">379</a></li><li><a class="toc-page toc-page--empty" href="pages/380/index.html">380</a></li><li><a class="toc-page toc-page--empty" href="pages/381/index.html">381</a></li></ul>
+    <h3 class="toc-section">§ 36. Россия в 2012 — начале 2020-х гг.</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/382/index.html">382</a></li><li><a class="toc-page toc-page--empty" href="pages/383/index.html">383</a></li><li><a class="toc-page toc-page--empty" href="pages/384/index.html">384</a></li><li><a class="toc-page toc-page--empty" href="pages/385/index.html">385</a></li><li><a class="toc-page toc-page--empty" href="pages/386/index.html">386</a></li><li><a class="toc-page toc-page--empty" href="pages/387/index.html">387</a></li><li><a class="toc-page toc-page--empty" href="pages/388/index.html">388</a></li><li><a class="toc-page toc-page--empty" href="pages/389/index.html">389</a></li></ul>
+    <h3 class="toc-section">§ 37. Россия сегодня. Специальная военная операция (СВО)</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/390/index.html">390</a></li><li><a class="toc-page toc-page--empty" href="pages/391/index.html">391</a></li><li><a class="toc-page toc-page--empty" href="pages/392/index.html">392</a></li><li><a class="toc-page toc-page--empty" href="pages/393/index.html">393</a></li><li><a class="toc-page toc-page--empty" href="pages/394/index.html">394</a></li><li><a class="toc-page toc-page--empty" href="pages/395/index.html">395</a></li><li><a class="toc-page toc-page--empty" href="pages/396/index.html">396</a></li><li><a class="toc-page toc-page--empty" href="pages/397/index.html">397</a></li><li><a class="toc-page toc-page--empty" href="pages/398/index.html">398</a></li><li><a class="toc-page toc-page--empty" href="pages/399/index.html">399</a></li><li><a class="toc-page toc-page--empty" href="pages/400/index.html">400</a></li><li><a class="toc-page toc-page--empty" href="pages/401/index.html">401</a></li><li><a class="toc-page toc-page--empty" href="pages/402/index.html">402</a></li><li><a class="toc-page toc-page--empty" href="pages/403/index.html">403</a></li><li><a class="toc-page toc-page--empty" href="pages/404/index.html">404</a></li><li><a class="toc-page toc-page--empty" href="pages/405/index.html">405</a></li><li><a class="toc-page toc-page--empty" href="pages/406/index.html">406</a></li><li><a class="toc-page toc-page--empty" href="pages/407/index.html">407</a></li><li><a class="toc-page toc-page--empty" href="pages/408/index.html">408</a></li><li><a class="toc-page toc-page--empty" href="pages/409/index.html">409</a></li><li><a class="toc-page toc-page--empty" href="pages/410/index.html">410</a></li><li><a class="toc-page toc-page--empty" href="pages/411/index.html">411</a></li><li><a class="toc-page toc-page--empty" href="pages/412/index.html">412</a></li><li><a class="toc-page toc-page--empty" href="pages/413/index.html">413</a></li><li><a class="toc-page toc-page--empty" href="pages/414/index.html">414</a></li><li><a class="toc-page toc-page--empty" href="pages/415/index.html">415</a></li><li><a class="toc-page toc-page--empty" href="pages/416/index.html">416</a></li><li><a class="toc-page toc-page--empty" href="pages/417/index.html">417</a></li><li><a class="toc-page toc-page--empty" href="pages/418/index.html">418</a></li></ul>
+    <h3 class="toc-section">Вопросы и задания к главе</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/419/index.html">419</a></li></ul>
+    <h2 class="toc-chapter">Приложения</h2>
+    <h3 class="toc-section">Хронология ключевых событий</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/420/index.html">420</a></li><li><a class="toc-page toc-page--empty" href="pages/421/index.html">421</a></li><li><a class="toc-page toc-page--empty" href="pages/422/index.html">422</a></li></ul>
+    <h3 class="toc-section">Словарь терминов</h3>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/423/index.html">423</a></li><li><a class="toc-page toc-page--empty" href="pages/424/index.html">424</a></li><li><a class="toc-page toc-page--empty" href="pages/425/index.html">425</a></li><li><a class="toc-page toc-page--empty" href="pages/426/index.html">426</a></li><li><a class="toc-page toc-page--empty" href="pages/427/index.html">427</a></li><li><a class="toc-page toc-page--empty" href="pages/428/index.html">428</a></li><li><a class="toc-page toc-page--empty" href="pages/429/index.html">429</a></li></ul>
+    <h2 class="toc-chapter">Указатель</h2>
+    <ul class="toc-pages"><li><a class="toc-page toc-page--empty" href="pages/430/index.html">430</a></li><li><a class="toc-page toc-page--empty" href="pages/431/index.html">431</a></li><li><a class="toc-page toc-page--empty" href="pages/432/index.html">432</a></li><li><a class="toc-page toc-page--empty" href="pages/433/index.html">433</a></li><li><a class="toc-page toc-page--empty" href="pages/434/index.html">434</a></li><li><a class="toc-page toc-page--empty" href="pages/435/index.html">435</a></li><li><a class="toc-page toc-page--empty" href="pages/436/index.html">436</a></li><li><a class="toc-page toc-page--empty" href="pages/437/index.html">437</a></li><li><a class="toc-page toc-page--empty" href="pages/438/index.html">438</a></li><li><a class="toc-page toc-page--empty" href="pages/439/index.html">439</a></li><li><a class="toc-page toc-page--empty" href="pages/440/index.html">440</a></li><li><a class="toc-page toc-page--empty" href="pages/441/index.html">441</a></li><li><a class="toc-page toc-page--empty" href="pages/442/index.html">442</a></li><li><a class="toc-page toc-page--empty" href="pages/443/index.html">443</a></li><li><a class="toc-page toc-page--empty" href="pages/444/index.html">444</a></li><li><a class="toc-page toc-page--empty" href="pages/445/index.html">445</a></li><li><a class="toc-page toc-page--empty" href="pages/446/index.html">446</a></li><li><a class="toc-page toc-page--empty" href="pages/447/index.html">447</a></li></ul>
+  </main>
 
-  <!-- Mobile navigation buttons -->
-  <div id="mobile-nav-buttons" class="mobile-nav-buttons">
-    <div id="mobile-prev-button" class="mobile-nav-button prev" onclick="prevPage()">‹</div>
-    <div id="mobile-next-button" class="mobile-nav-button next" onclick="nextPage()">›</div>
-  </div>
-
-
-  <script>
-    window.REDPEN_API_BASE = window.REDPEN_API_BASE || 'https://api.medinsky.net';
-    window.REDPEN_GOOGLE_CLIENT_ID = window.REDPEN_GOOGLE_CLIENT_ID || '679121872329-tl9fk0aq6i1rjf6jgdb1460p0pvn50md.apps.googleusercontent.com';
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="../js/layout.js"></script>
-  <script src="../js/comment-content.js"></script>
-  <script src="../js/annotations.js"></script>
-  <script src="../js/mobile.js"></script>
-  <!-- ?v= busts the browser cache: a stale main.js paired with the merged
-       annotations JSON would render drafts as if they were published. Bump on
-       every change to main.js's filtering contract. -->
-  <script src="../js/main.js?v=tags-1"></script>
-  <script src="../js/redpen-editor-panel.js"></script>
-  <script src="../js/redpen-auth.js"></script>
-  <script src="../js/redpen-editor-bootstrap.js"></script>
+  <script src="../js/legacy-page-redirect.js"></script>
 </body>
 </html>
