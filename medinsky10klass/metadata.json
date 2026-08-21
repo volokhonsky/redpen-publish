@@ -1,0 +1,2392 @@
+{
+  "id": "med10",
+  "title": "История России. 1914—1945 годы. 10 класс. Базовый уровень",
+  "icon": "cover.png",
+  "description": "Учебник по истории России для 10 класса. Освещает события 1914—1945 годов: Первая мировая война, революция и Гражданская война, СССР в 1920—1930-е гг., Великая Отечественная война.",
+  "authors": [
+    "В. Р. Мединский",
+    "А. В. Торкунов"
+  ],
+  "publisher": "Просвещение",
+  "publishedAt": "2023-01-01T00:00:00Z",
+  "updatedAt": "2026-08-21T00:00:00Z",
+  "specialPages": [
+    {
+      "id": "pageA1",
+      "name": "Обложка",
+      "physicalPage": 1
+    }
+  ],
+  "pageNumbering": {
+    "physicalStart": 1,
+    "logicalStart": 1,
+    "frontMatter": [
+      {
+        "file": "000",
+        "name": "Обложка"
+      },
+      {
+        "file": "001",
+        "name": "Титульный лист"
+      },
+      {
+        "file": "002",
+        "name": "Выходные данные"
+      }
+    ],
+    "printedStartFile": "003",
+    "printedStartNumber": 3
+  },
+  "totalPages": 497,
+  "chapters": [
+    {
+      "id": "intro",
+      "name": "Введение",
+      "startPage": 3,
+      "endPage": 4,
+      "sections": []
+    },
+    {
+      "id": "chapter_I",
+      "name": "Глава I. Россия в годы Первой мировой войны и Великой российской революции. 1914—1922 гг.",
+      "startPage": 5,
+      "endPage": 148,
+      "sections": [
+        {
+          "id": "1",
+          "name": "§ 1. Россия и мир накануне Первой мировой войны",
+          "startPage": 6,
+          "endPage": 14
+        },
+        {
+          "id": "2",
+          "name": "§ 2. Российская армия на фронтах Первой мировой войны",
+          "startPage": 15,
+          "endPage": 26
+        },
+        {
+          "id": "3",
+          "name": "§ 3. Власть, экономика и общество в годы Первой мировой войны. Нарастание революционных настроений",
+          "startPage": 27,
+          "endPage": 35
+        },
+        {
+          "id": "4",
+          "name": "§ 4. Великая российская революция: Февраль 1917 г.",
+          "startPage": 36,
+          "endPage": 50
+        },
+        {
+          "id": "5",
+          "name": "§ 5. Великая российская революция: Октябрь 1917 г.",
+          "startPage": 51,
+          "endPage": 63
+        },
+        {
+          "id": "6",
+          "name": "§ 6. Первые революционные преобразования большевиков",
+          "startPage": 64,
+          "endPage": 77
+        },
+        {
+          "id": "7",
+          "name": "§ 7. Экономическая политика советской власти. «Военный коммунизм»",
+          "startPage": 78,
+          "endPage": 86
+        },
+        {
+          "id": "8",
+          "name": "§ 8. Гражданская война: истоки и основные участники",
+          "startPage": 87,
+          "endPage": 96
+        },
+        {
+          "id": "9",
+          "name": "§ 9. На фронтах Гражданской войны",
+          "startPage": 97,
+          "endPage": 114
+        },
+        {
+          "id": "10",
+          "name": "§ 10. Революция и Гражданская война на национальных окраинах",
+          "startPage": 115,
+          "endPage": 124
+        },
+        {
+          "id": "11-12",
+          "name": "§ 11—12. Идеология и культура в годы Гражданской войны. Перемены в повседневной жизни и общественных настроениях",
+          "startPage": 125,
+          "endPage": 140
+        },
+        {
+          "id": "summary_I",
+          "name": "Итоги главы",
+          "startPage": 141,
+          "endPage": 141
+        },
+        {
+          "id": "questions_I",
+          "name": "Вопросы и задания к главе",
+          "startPage": 142,
+          "endPage": 143
+        },
+        {
+          "id": "topics_I",
+          "name": "Темы проектов",
+          "startPage": 143,
+          "endPage": 143
+        },
+        {
+          "id": "resources_I",
+          "name": "Ресурсы к главе",
+          "startPage": 143,
+          "endPage": 148
+        }
+      ]
+    },
+    {
+      "id": "chapter_II",
+      "name": "Глава II. Советский Союз в 1920—1930-е гг.",
+      "startPage": 149,
+      "endPage": 306,
+      "sections": [
+        {
+          "id": "13",
+          "name": "§ 13. Экономический и политический кризис начала 1920-х гг. Переход к нэпу",
+          "startPage": 150,
+          "endPage": 157
+        },
+        {
+          "id": "14",
+          "name": "§ 14. Экономическое и социальное развитие в годы нэпа",
+          "startPage": 158,
+          "endPage": 166
+        },
+        {
+          "id": "15",
+          "name": "§ 15. Образование СССР. Национальная политика в 1920-е гг.",
+          "startPage": 167,
+          "endPage": 177
+        },
+        {
+          "id": "16",
+          "name": "§ 16. Политическое развитие в 1920-е гг.",
+          "startPage": 178,
+          "endPage": 183
+        },
+        {
+          "id": "17",
+          "name": "§ 17. Международное положение и внешняя политика СССР в 1920-е гг.",
+          "startPage": 184,
+          "endPage": 193
+        },
+        {
+          "id": "18",
+          "name": "§ 18. Культурное пространство советского общества в 1920-е гг.",
+          "startPage": 194,
+          "endPage": 206
+        },
+        {
+          "id": "19",
+          "name": "§ 19. «Великий перелом». Индустриализация",
+          "startPage": 207,
+          "endPage": 220
+        },
+        {
+          "id": "20",
+          "name": "§ 20. Коллективизация сельского хозяйства",
+          "startPage": 221,
+          "endPage": 228
+        },
+        {
+          "id": "21",
+          "name": "§ 21. Политическая система и национальная политика СССР в 1930-е гг.",
+          "startPage": 229,
+          "endPage": 239
+        },
+        {
+          "id": "22-23",
+          "name": "§ 22—23. Культурное пространство советского общества в 1930-е гг.: создание «нового человека». Развитие науки, образования, здравоохранения",
+          "startPage": 240,
+          "endPage": 252
+        },
+        {
+          "id": "24",
+          "name": "§ 24. Советское искусство 1930-х гг.",
+          "startPage": 253,
+          "endPage": 262
+        },
+        {
+          "id": "25-26",
+          "name": "§ 25—26. Повседневная жизнь населения в 1930-е гг. Русское Зарубежье и его роль в развитии мировой культуры",
+          "startPage": 263,
+          "endPage": 272
+        },
+        {
+          "id": "27",
+          "name": "§ 27. СССР и мировое сообщество в 1929—1939 гг.",
+          "startPage": 273,
+          "endPage": 284
+        },
+        {
+          "id": "28",
+          "name": "§ 28. СССР накануне Великой Отечественной войны",
+          "startPage": 285,
+          "endPage": 295
+        },
+        {
+          "id": "summary_II",
+          "name": "Итоги главы",
+          "startPage": 296,
+          "endPage": 296
+        },
+        {
+          "id": "questions_II",
+          "name": "Вопросы и задания к главе",
+          "startPage": 297,
+          "endPage": 298
+        },
+        {
+          "id": "topics_II",
+          "name": "Темы проектов",
+          "startPage": 298,
+          "endPage": 298
+        },
+        {
+          "id": "resources_II",
+          "name": "Ресурсы к главе",
+          "startPage": 298,
+          "endPage": 306
+        }
+      ]
+    },
+    {
+      "id": "chapter_III",
+      "name": "Глава III. Великая Отечественная война. 1941—1945 гг.",
+      "startPage": 307,
+      "endPage": 481,
+      "sections": [
+        {
+          "id": "29",
+          "name": "§ 29. Начало Великой Отечественной войны",
+          "startPage": 308,
+          "endPage": 321
+        },
+        {
+          "id": "30",
+          "name": "§ 30. Битва за Москву и блокада Ленинграда",
+          "startPage": 322,
+          "endPage": 337
+        },
+        {
+          "id": "31",
+          "name": "§ 31. Фронт за линией фронта",
+          "startPage": 338,
+          "endPage": 353
+        },
+        {
+          "id": "32",
+          "name": "§ 32. Единство фронта и тыла",
+          "startPage": 354,
+          "endPage": 373
+        },
+        {
+          "id": "33",
+          "name": "§ 33. Сталинградская битва. Начало коренного перелома в ходе войны",
+          "startPage": 374,
+          "endPage": 389
+        },
+        {
+          "id": "34",
+          "name": "§ 34. Курская битва. Завершение коренного перелома",
+          "startPage": 390,
+          "endPage": 405
+        },
+        {
+          "id": "35",
+          "name": "§ 35. «Десять сталинских ударов» и изгнание врага с территории СССР",
+          "startPage": 406,
+          "endPage": 417
+        },
+        {
+          "id": "36",
+          "name": "§ 36. Наука и культура в годы войны",
+          "startPage": 418,
+          "endPage": 432
+        },
+        {
+          "id": "37-38",
+          "name": "§ 37—38. Освобождение народов Европы. Победа СССР в Великой Отечественной войне",
+          "startPage": 433,
+          "endPage": 452
+        },
+        {
+          "id": "39-40",
+          "name": "§ 39—40. Окончание Второй мировой войны. Итоги и уроки",
+          "startPage": 453,
+          "endPage": 471
+        },
+        {
+          "id": "summary_III",
+          "name": "Итоги главы",
+          "startPage": 472,
+          "endPage": 473
+        },
+        {
+          "id": "questions_III",
+          "name": "Вопросы и задания к главе",
+          "startPage": 474,
+          "endPage": 475
+        },
+        {
+          "id": "topics_III",
+          "name": "Темы проектов",
+          "startPage": 475,
+          "endPage": 475
+        },
+        {
+          "id": "resources_III",
+          "name": "Ресурсы к главе",
+          "startPage": 476,
+          "endPage": 481
+        }
+      ]
+    },
+    {
+      "name": "Приложения",
+      "startPage": 482,
+      "sections": [
+        {
+          "name": "Заключение",
+          "startPage": 482,
+          "endPage": 482
+        },
+        {
+          "name": "Словарь понятий и терминов",
+          "startPage": 483,
+          "endPage": 490
+        },
+        {
+          "name": "Основные события истории России первой половины XX в.",
+          "startPage": 491,
+          "endPage": 492
+        },
+        {
+          "name": "Советуем прочитать и посмотреть",
+          "startPage": 493,
+          "endPage": 493
+        },
+        {
+          "name": "Интернет-ресурсы",
+          "startPage": 494,
+          "endPage": 494
+        }
+      ],
+      "endPage": 494
+    },
+    {
+      "name": "Оглавление",
+      "startPage": 495,
+      "sections": []
+    }
+  ],
+  "tags": [
+    "история",
+    "СССР",
+    "учебник",
+    "10 класс"
+  ],
+  "pages": [
+    {
+      "file": "page_000",
+      "label": "A1",
+      "name": "Обложка"
+    },
+    {
+      "file": "page_001",
+      "label": "A2",
+      "name": "Титульный лист"
+    },
+    {
+      "file": "page_002",
+      "label": "A3",
+      "name": "Выходные данные"
+    },
+    {
+      "file": "page_003",
+      "label": "3"
+    },
+    {
+      "file": "page_004",
+      "label": "4"
+    },
+    {
+      "file": "page_005",
+      "label": "5"
+    },
+    {
+      "file": "page_006",
+      "label": "6"
+    },
+    {
+      "file": "page_007",
+      "label": "7"
+    },
+    {
+      "file": "page_008",
+      "label": "8"
+    },
+    {
+      "file": "page_009",
+      "label": "9"
+    },
+    {
+      "file": "page_010",
+      "label": "10"
+    },
+    {
+      "file": "page_011",
+      "label": "11"
+    },
+    {
+      "file": "page_012",
+      "label": "12"
+    },
+    {
+      "file": "page_013",
+      "label": "13"
+    },
+    {
+      "file": "page_014",
+      "label": "14"
+    },
+    {
+      "file": "page_015",
+      "label": "15"
+    },
+    {
+      "file": "page_016",
+      "label": "16"
+    },
+    {
+      "file": "page_017",
+      "label": "17"
+    },
+    {
+      "file": "page_018",
+      "label": "18"
+    },
+    {
+      "file": "page_019",
+      "label": "19"
+    },
+    {
+      "file": "page_020",
+      "label": "20"
+    },
+    {
+      "file": "page_021",
+      "label": "21"
+    },
+    {
+      "file": "page_022",
+      "label": "22"
+    },
+    {
+      "file": "page_023",
+      "label": "23"
+    },
+    {
+      "file": "page_024",
+      "label": "24"
+    },
+    {
+      "file": "page_025",
+      "label": "25"
+    },
+    {
+      "file": "page_026",
+      "label": "26"
+    },
+    {
+      "file": "page_027",
+      "label": "27"
+    },
+    {
+      "file": "page_028",
+      "label": "28"
+    },
+    {
+      "file": "page_029",
+      "label": "29"
+    },
+    {
+      "file": "page_030",
+      "label": "30"
+    },
+    {
+      "file": "page_031",
+      "label": "31"
+    },
+    {
+      "file": "page_032",
+      "label": "32"
+    },
+    {
+      "file": "page_033",
+      "label": "33"
+    },
+    {
+      "file": "page_034",
+      "label": "34"
+    },
+    {
+      "file": "page_035",
+      "label": "35"
+    },
+    {
+      "file": "page_036",
+      "label": "36"
+    },
+    {
+      "file": "page_037",
+      "label": "37"
+    },
+    {
+      "file": "page_038",
+      "label": "38"
+    },
+    {
+      "file": "page_039",
+      "label": "39"
+    },
+    {
+      "file": "page_040",
+      "label": "40"
+    },
+    {
+      "file": "page_041",
+      "label": "41"
+    },
+    {
+      "file": "page_042",
+      "label": "42"
+    },
+    {
+      "file": "page_043",
+      "label": "43"
+    },
+    {
+      "file": "page_044",
+      "label": "44"
+    },
+    {
+      "file": "page_045",
+      "label": "45"
+    },
+    {
+      "file": "page_046",
+      "label": "46"
+    },
+    {
+      "file": "page_047",
+      "label": "47"
+    },
+    {
+      "file": "page_048",
+      "label": "48"
+    },
+    {
+      "file": "page_049",
+      "label": "49"
+    },
+    {
+      "file": "page_050",
+      "label": "50"
+    },
+    {
+      "file": "page_051",
+      "label": "51"
+    },
+    {
+      "file": "page_052",
+      "label": "52"
+    },
+    {
+      "file": "page_053",
+      "label": "53"
+    },
+    {
+      "file": "page_054",
+      "label": "54"
+    },
+    {
+      "file": "page_055",
+      "label": "55"
+    },
+    {
+      "file": "page_056",
+      "label": "56"
+    },
+    {
+      "file": "page_057",
+      "label": "57"
+    },
+    {
+      "file": "page_058",
+      "label": "58"
+    },
+    {
+      "file": "page_059",
+      "label": "59"
+    },
+    {
+      "file": "page_060",
+      "label": "60"
+    },
+    {
+      "file": "page_061",
+      "label": "61"
+    },
+    {
+      "file": "page_062",
+      "label": "62"
+    },
+    {
+      "file": "page_063",
+      "label": "63"
+    },
+    {
+      "file": "page_064",
+      "label": "64"
+    },
+    {
+      "file": "page_065",
+      "label": "65"
+    },
+    {
+      "file": "page_066",
+      "label": "66"
+    },
+    {
+      "file": "page_067",
+      "label": "67"
+    },
+    {
+      "file": "page_068",
+      "label": "68"
+    },
+    {
+      "file": "page_069",
+      "label": "69"
+    },
+    {
+      "file": "page_070",
+      "label": "70"
+    },
+    {
+      "file": "page_071",
+      "label": "71"
+    },
+    {
+      "file": "page_072",
+      "label": "72"
+    },
+    {
+      "file": "page_073",
+      "label": "73"
+    },
+    {
+      "file": "page_074",
+      "label": "74"
+    },
+    {
+      "file": "page_075",
+      "label": "75"
+    },
+    {
+      "file": "page_076",
+      "label": "76"
+    },
+    {
+      "file": "page_077",
+      "label": "77"
+    },
+    {
+      "file": "page_078",
+      "label": "78"
+    },
+    {
+      "file": "page_079",
+      "label": "79"
+    },
+    {
+      "file": "page_080",
+      "label": "80"
+    },
+    {
+      "file": "page_081",
+      "label": "81"
+    },
+    {
+      "file": "page_082",
+      "label": "82"
+    },
+    {
+      "file": "page_083",
+      "label": "83"
+    },
+    {
+      "file": "page_084",
+      "label": "84"
+    },
+    {
+      "file": "page_085",
+      "label": "85"
+    },
+    {
+      "file": "page_086",
+      "label": "86"
+    },
+    {
+      "file": "page_087",
+      "label": "87"
+    },
+    {
+      "file": "page_088",
+      "label": "88"
+    },
+    {
+      "file": "page_089",
+      "label": "89"
+    },
+    {
+      "file": "page_090",
+      "label": "90"
+    },
+    {
+      "file": "page_091",
+      "label": "91"
+    },
+    {
+      "file": "page_092",
+      "label": "92"
+    },
+    {
+      "file": "page_093",
+      "label": "93"
+    },
+    {
+      "file": "page_094",
+      "label": "94"
+    },
+    {
+      "file": "page_095",
+      "label": "95"
+    },
+    {
+      "file": "page_096",
+      "label": "96"
+    },
+    {
+      "file": "page_097",
+      "label": "97"
+    },
+    {
+      "file": "page_098",
+      "label": "98"
+    },
+    {
+      "file": "page_099",
+      "label": "99"
+    },
+    {
+      "file": "page_100",
+      "label": "100"
+    },
+    {
+      "file": "page_101",
+      "label": "101"
+    },
+    {
+      "file": "page_102",
+      "label": "102"
+    },
+    {
+      "file": "page_103",
+      "label": "103"
+    },
+    {
+      "file": "page_104",
+      "label": "104"
+    },
+    {
+      "file": "page_105",
+      "label": "105"
+    },
+    {
+      "file": "page_106",
+      "label": "106"
+    },
+    {
+      "file": "page_107",
+      "label": "107"
+    },
+    {
+      "file": "page_108",
+      "label": "108"
+    },
+    {
+      "file": "page_109",
+      "label": "109"
+    },
+    {
+      "file": "page_110",
+      "label": "110"
+    },
+    {
+      "file": "page_111",
+      "label": "111"
+    },
+    {
+      "file": "page_112",
+      "label": "112"
+    },
+    {
+      "file": "page_113",
+      "label": "113"
+    },
+    {
+      "file": "page_114",
+      "label": "114"
+    },
+    {
+      "file": "page_115",
+      "label": "115"
+    },
+    {
+      "file": "page_116",
+      "label": "116"
+    },
+    {
+      "file": "page_117",
+      "label": "117"
+    },
+    {
+      "file": "page_118",
+      "label": "118"
+    },
+    {
+      "file": "page_119",
+      "label": "119"
+    },
+    {
+      "file": "page_120",
+      "label": "120"
+    },
+    {
+      "file": "page_121",
+      "label": "121"
+    },
+    {
+      "file": "page_122",
+      "label": "122"
+    },
+    {
+      "file": "page_123",
+      "label": "123"
+    },
+    {
+      "file": "page_124",
+      "label": "124"
+    },
+    {
+      "file": "page_125",
+      "label": "125"
+    },
+    {
+      "file": "page_126",
+      "label": "126"
+    },
+    {
+      "file": "page_127",
+      "label": "127"
+    },
+    {
+      "file": "page_128",
+      "label": "128"
+    },
+    {
+      "file": "page_129",
+      "label": "129"
+    },
+    {
+      "file": "page_130",
+      "label": "130"
+    },
+    {
+      "file": "page_131",
+      "label": "131"
+    },
+    {
+      "file": "page_132",
+      "label": "132"
+    },
+    {
+      "file": "page_133",
+      "label": "133"
+    },
+    {
+      "file": "page_134",
+      "label": "134"
+    },
+    {
+      "file": "page_135",
+      "label": "135"
+    },
+    {
+      "file": "page_136",
+      "label": "136"
+    },
+    {
+      "file": "page_137",
+      "label": "137"
+    },
+    {
+      "file": "page_138",
+      "label": "138"
+    },
+    {
+      "file": "page_139",
+      "label": "139"
+    },
+    {
+      "file": "page_140",
+      "label": "140"
+    },
+    {
+      "file": "page_141",
+      "label": "141"
+    },
+    {
+      "file": "page_142",
+      "label": "142"
+    },
+    {
+      "file": "page_143",
+      "label": "143"
+    },
+    {
+      "file": "page_144",
+      "label": "144"
+    },
+    {
+      "file": "page_145",
+      "label": "145"
+    },
+    {
+      "file": "page_146",
+      "label": "146"
+    },
+    {
+      "file": "page_147",
+      "label": "147"
+    },
+    {
+      "file": "page_148",
+      "label": "148"
+    },
+    {
+      "file": "page_149",
+      "label": "149"
+    },
+    {
+      "file": "page_150",
+      "label": "150"
+    },
+    {
+      "file": "page_151",
+      "label": "151"
+    },
+    {
+      "file": "page_152",
+      "label": "152"
+    },
+    {
+      "file": "page_153",
+      "label": "153"
+    },
+    {
+      "file": "page_154",
+      "label": "154"
+    },
+    {
+      "file": "page_155",
+      "label": "155"
+    },
+    {
+      "file": "page_156",
+      "label": "156"
+    },
+    {
+      "file": "page_157",
+      "label": "157"
+    },
+    {
+      "file": "page_158",
+      "label": "158"
+    },
+    {
+      "file": "page_159",
+      "label": "159"
+    },
+    {
+      "file": "page_160",
+      "label": "160"
+    },
+    {
+      "file": "page_161",
+      "label": "161"
+    },
+    {
+      "file": "page_162",
+      "label": "162"
+    },
+    {
+      "file": "page_163",
+      "label": "163"
+    },
+    {
+      "file": "page_164",
+      "label": "164"
+    },
+    {
+      "file": "page_165",
+      "label": "165"
+    },
+    {
+      "file": "page_166",
+      "label": "166"
+    },
+    {
+      "file": "page_167",
+      "label": "167"
+    },
+    {
+      "file": "page_168",
+      "label": "168"
+    },
+    {
+      "file": "page_169",
+      "label": "169"
+    },
+    {
+      "file": "page_170",
+      "label": "170"
+    },
+    {
+      "file": "page_171",
+      "label": "171"
+    },
+    {
+      "file": "page_172",
+      "label": "172"
+    },
+    {
+      "file": "page_173",
+      "label": "173"
+    },
+    {
+      "file": "page_174",
+      "label": "174"
+    },
+    {
+      "file": "page_175",
+      "label": "175"
+    },
+    {
+      "file": "page_176",
+      "label": "176"
+    },
+    {
+      "file": "page_177",
+      "label": "177"
+    },
+    {
+      "file": "page_178",
+      "label": "178"
+    },
+    {
+      "file": "page_179",
+      "label": "179"
+    },
+    {
+      "file": "page_180",
+      "label": "180"
+    },
+    {
+      "file": "page_181",
+      "label": "181"
+    },
+    {
+      "file": "page_182",
+      "label": "182"
+    },
+    {
+      "file": "page_183",
+      "label": "183"
+    },
+    {
+      "file": "page_184",
+      "label": "184"
+    },
+    {
+      "file": "page_185",
+      "label": "185"
+    },
+    {
+      "file": "page_186",
+      "label": "186"
+    },
+    {
+      "file": "page_187",
+      "label": "187"
+    },
+    {
+      "file": "page_188",
+      "label": "188"
+    },
+    {
+      "file": "page_189",
+      "label": "189"
+    },
+    {
+      "file": "page_190",
+      "label": "190"
+    },
+    {
+      "file": "page_191",
+      "label": "191"
+    },
+    {
+      "file": "page_192",
+      "label": "192"
+    },
+    {
+      "file": "page_193",
+      "label": "193"
+    },
+    {
+      "file": "page_194",
+      "label": "194"
+    },
+    {
+      "file": "page_195",
+      "label": "195"
+    },
+    {
+      "file": "page_196",
+      "label": "196"
+    },
+    {
+      "file": "page_197",
+      "label": "197"
+    },
+    {
+      "file": "page_198",
+      "label": "198"
+    },
+    {
+      "file": "page_199",
+      "label": "199"
+    },
+    {
+      "file": "page_200",
+      "label": "200"
+    },
+    {
+      "file": "page_201",
+      "label": "201"
+    },
+    {
+      "file": "page_202",
+      "label": "202"
+    },
+    {
+      "file": "page_203",
+      "label": "203"
+    },
+    {
+      "file": "page_204",
+      "label": "204"
+    },
+    {
+      "file": "page_205",
+      "label": "205"
+    },
+    {
+      "file": "page_206",
+      "label": "206"
+    },
+    {
+      "file": "page_207",
+      "label": "207"
+    },
+    {
+      "file": "page_208",
+      "label": "208"
+    },
+    {
+      "file": "page_209",
+      "label": "209"
+    },
+    {
+      "file": "page_210",
+      "label": "210"
+    },
+    {
+      "file": "page_211",
+      "label": "211"
+    },
+    {
+      "file": "page_212",
+      "label": "212"
+    },
+    {
+      "file": "page_213",
+      "label": "213"
+    },
+    {
+      "file": "page_214",
+      "label": "214"
+    },
+    {
+      "file": "page_215",
+      "label": "215"
+    },
+    {
+      "file": "page_216",
+      "label": "216"
+    },
+    {
+      "file": "page_217",
+      "label": "217"
+    },
+    {
+      "file": "page_218",
+      "label": "218"
+    },
+    {
+      "file": "page_219",
+      "label": "219"
+    },
+    {
+      "file": "page_220",
+      "label": "220"
+    },
+    {
+      "file": "page_221",
+      "label": "221"
+    },
+    {
+      "file": "page_222",
+      "label": "222"
+    },
+    {
+      "file": "page_223",
+      "label": "223"
+    },
+    {
+      "file": "page_224",
+      "label": "224"
+    },
+    {
+      "file": "page_225",
+      "label": "225"
+    },
+    {
+      "file": "page_226",
+      "label": "226"
+    },
+    {
+      "file": "page_227",
+      "label": "227"
+    },
+    {
+      "file": "page_228",
+      "label": "228"
+    },
+    {
+      "file": "page_229",
+      "label": "229"
+    },
+    {
+      "file": "page_230",
+      "label": "230"
+    },
+    {
+      "file": "page_231",
+      "label": "231"
+    },
+    {
+      "file": "page_232",
+      "label": "232"
+    },
+    {
+      "file": "page_233",
+      "label": "233"
+    },
+    {
+      "file": "page_234",
+      "label": "234"
+    },
+    {
+      "file": "page_235",
+      "label": "235"
+    },
+    {
+      "file": "page_236",
+      "label": "236"
+    },
+    {
+      "file": "page_237",
+      "label": "237"
+    },
+    {
+      "file": "page_238",
+      "label": "238"
+    },
+    {
+      "file": "page_239",
+      "label": "239"
+    },
+    {
+      "file": "page_240",
+      "label": "240"
+    },
+    {
+      "file": "page_241",
+      "label": "241"
+    },
+    {
+      "file": "page_242",
+      "label": "242"
+    },
+    {
+      "file": "page_243",
+      "label": "243"
+    },
+    {
+      "file": "page_244",
+      "label": "244"
+    },
+    {
+      "file": "page_245",
+      "label": "245"
+    },
+    {
+      "file": "page_246",
+      "label": "246"
+    },
+    {
+      "file": "page_247",
+      "label": "247"
+    },
+    {
+      "file": "page_248",
+      "label": "248"
+    },
+    {
+      "file": "page_249",
+      "label": "249"
+    },
+    {
+      "file": "page_250",
+      "label": "250"
+    },
+    {
+      "file": "page_251",
+      "label": "251"
+    },
+    {
+      "file": "page_252",
+      "label": "252"
+    },
+    {
+      "file": "page_253",
+      "label": "253"
+    },
+    {
+      "file": "page_254",
+      "label": "254"
+    },
+    {
+      "file": "page_255",
+      "label": "255"
+    },
+    {
+      "file": "page_256",
+      "label": "256"
+    },
+    {
+      "file": "page_257",
+      "label": "257"
+    },
+    {
+      "file": "page_258",
+      "label": "258"
+    },
+    {
+      "file": "page_259",
+      "label": "259"
+    },
+    {
+      "file": "page_260",
+      "label": "260"
+    },
+    {
+      "file": "page_261",
+      "label": "261"
+    },
+    {
+      "file": "page_262",
+      "label": "262"
+    },
+    {
+      "file": "page_263",
+      "label": "263"
+    },
+    {
+      "file": "page_264",
+      "label": "264"
+    },
+    {
+      "file": "page_265",
+      "label": "265"
+    },
+    {
+      "file": "page_266",
+      "label": "266"
+    },
+    {
+      "file": "page_267",
+      "label": "267"
+    },
+    {
+      "file": "page_268",
+      "label": "268"
+    },
+    {
+      "file": "page_269",
+      "label": "269"
+    },
+    {
+      "file": "page_270",
+      "label": "270"
+    },
+    {
+      "file": "page_271",
+      "label": "271"
+    },
+    {
+      "file": "page_272",
+      "label": "272"
+    },
+    {
+      "file": "page_273",
+      "label": "273"
+    },
+    {
+      "file": "page_274",
+      "label": "274"
+    },
+    {
+      "file": "page_275",
+      "label": "275"
+    },
+    {
+      "file": "page_276",
+      "label": "276"
+    },
+    {
+      "file": "page_277",
+      "label": "277"
+    },
+    {
+      "file": "page_278",
+      "label": "278"
+    },
+    {
+      "file": "page_279",
+      "label": "279"
+    },
+    {
+      "file": "page_280",
+      "label": "280"
+    },
+    {
+      "file": "page_281",
+      "label": "281"
+    },
+    {
+      "file": "page_282",
+      "label": "282"
+    },
+    {
+      "file": "page_283",
+      "label": "283"
+    },
+    {
+      "file": "page_284",
+      "label": "284"
+    },
+    {
+      "file": "page_285",
+      "label": "285"
+    },
+    {
+      "file": "page_286",
+      "label": "286"
+    },
+    {
+      "file": "page_287",
+      "label": "287"
+    },
+    {
+      "file": "page_288",
+      "label": "288"
+    },
+    {
+      "file": "page_289",
+      "label": "289"
+    },
+    {
+      "file": "page_290",
+      "label": "290"
+    },
+    {
+      "file": "page_291",
+      "label": "291"
+    },
+    {
+      "file": "page_292",
+      "label": "292"
+    },
+    {
+      "file": "page_293",
+      "label": "293"
+    },
+    {
+      "file": "page_294",
+      "label": "294"
+    },
+    {
+      "file": "page_295",
+      "label": "295"
+    },
+    {
+      "file": "page_296",
+      "label": "296"
+    },
+    {
+      "file": "page_297",
+      "label": "297"
+    },
+    {
+      "file": "page_298",
+      "label": "298"
+    },
+    {
+      "file": "page_299",
+      "label": "299"
+    },
+    {
+      "file": "page_300",
+      "label": "300"
+    },
+    {
+      "file": "page_301",
+      "label": "301"
+    },
+    {
+      "file": "page_302",
+      "label": "302"
+    },
+    {
+      "file": "page_303",
+      "label": "303"
+    },
+    {
+      "file": "page_304",
+      "label": "304"
+    },
+    {
+      "file": "page_305",
+      "label": "305"
+    },
+    {
+      "file": "page_306",
+      "label": "306"
+    },
+    {
+      "file": "page_307",
+      "label": "307"
+    },
+    {
+      "file": "page_308",
+      "label": "308"
+    },
+    {
+      "file": "page_309",
+      "label": "309"
+    },
+    {
+      "file": "page_310",
+      "label": "310"
+    },
+    {
+      "file": "page_311",
+      "label": "311"
+    },
+    {
+      "file": "page_312",
+      "label": "312"
+    },
+    {
+      "file": "page_313",
+      "label": "313"
+    },
+    {
+      "file": "page_314",
+      "label": "314"
+    },
+    {
+      "file": "page_315",
+      "label": "315"
+    },
+    {
+      "file": "page_316",
+      "label": "316"
+    },
+    {
+      "file": "page_317",
+      "label": "317"
+    },
+    {
+      "file": "page_318",
+      "label": "318"
+    },
+    {
+      "file": "page_319",
+      "label": "319"
+    },
+    {
+      "file": "page_320",
+      "label": "320"
+    },
+    {
+      "file": "page_321",
+      "label": "321"
+    },
+    {
+      "file": "page_322",
+      "label": "322"
+    },
+    {
+      "file": "page_323",
+      "label": "323"
+    },
+    {
+      "file": "page_324",
+      "label": "324"
+    },
+    {
+      "file": "page_325",
+      "label": "325"
+    },
+    {
+      "file": "page_326",
+      "label": "326"
+    },
+    {
+      "file": "page_327",
+      "label": "327"
+    },
+    {
+      "file": "page_328",
+      "label": "328"
+    },
+    {
+      "file": "page_329",
+      "label": "329"
+    },
+    {
+      "file": "page_330",
+      "label": "330"
+    },
+    {
+      "file": "page_331",
+      "label": "331"
+    },
+    {
+      "file": "page_332",
+      "label": "332"
+    },
+    {
+      "file": "page_333",
+      "label": "333"
+    },
+    {
+      "file": "page_334",
+      "label": "334"
+    },
+    {
+      "file": "page_335",
+      "label": "335"
+    },
+    {
+      "file": "page_336",
+      "label": "336"
+    },
+    {
+      "file": "page_337",
+      "label": "337"
+    },
+    {
+      "file": "page_338",
+      "label": "338"
+    },
+    {
+      "file": "page_339",
+      "label": "339"
+    },
+    {
+      "file": "page_340",
+      "label": "340"
+    },
+    {
+      "file": "page_341",
+      "label": "341"
+    },
+    {
+      "file": "page_342",
+      "label": "342"
+    },
+    {
+      "file": "page_343",
+      "label": "343"
+    },
+    {
+      "file": "page_344",
+      "label": "344"
+    },
+    {
+      "file": "page_345",
+      "label": "345"
+    },
+    {
+      "file": "page_346",
+      "label": "346"
+    },
+    {
+      "file": "page_347",
+      "label": "347"
+    },
+    {
+      "file": "page_348",
+      "label": "348"
+    },
+    {
+      "file": "page_349",
+      "label": "349"
+    },
+    {
+      "file": "page_350",
+      "label": "350"
+    },
+    {
+      "file": "page_351",
+      "label": "351"
+    },
+    {
+      "file": "page_352",
+      "label": "352"
+    },
+    {
+      "file": "page_353",
+      "label": "353"
+    },
+    {
+      "file": "page_354",
+      "label": "354"
+    },
+    {
+      "file": "page_355",
+      "label": "355"
+    },
+    {
+      "file": "page_356",
+      "label": "356"
+    },
+    {
+      "file": "page_357",
+      "label": "357"
+    },
+    {
+      "file": "page_358",
+      "label": "358"
+    },
+    {
+      "file": "page_359",
+      "label": "359"
+    },
+    {
+      "file": "page_360",
+      "label": "360"
+    },
+    {
+      "file": "page_361",
+      "label": "361"
+    },
+    {
+      "file": "page_362",
+      "label": "362"
+    },
+    {
+      "file": "page_363",
+      "label": "363"
+    },
+    {
+      "file": "page_364",
+      "label": "364"
+    },
+    {
+      "file": "page_365",
+      "label": "365"
+    },
+    {
+      "file": "page_366",
+      "label": "366"
+    },
+    {
+      "file": "page_367",
+      "label": "367"
+    },
+    {
+      "file": "page_368",
+      "label": "368"
+    },
+    {
+      "file": "page_369",
+      "label": "369"
+    },
+    {
+      "file": "page_370",
+      "label": "370"
+    },
+    {
+      "file": "page_371",
+      "label": "371"
+    },
+    {
+      "file": "page_372",
+      "label": "372"
+    },
+    {
+      "file": "page_373",
+      "label": "373"
+    },
+    {
+      "file": "page_374",
+      "label": "374"
+    },
+    {
+      "file": "page_375",
+      "label": "375"
+    },
+    {
+      "file": "page_376",
+      "label": "376"
+    },
+    {
+      "file": "page_377",
+      "label": "377"
+    },
+    {
+      "file": "page_378",
+      "label": "378"
+    },
+    {
+      "file": "page_379",
+      "label": "379"
+    },
+    {
+      "file": "page_380",
+      "label": "380"
+    },
+    {
+      "file": "page_381",
+      "label": "381"
+    },
+    {
+      "file": "page_382",
+      "label": "382"
+    },
+    {
+      "file": "page_383",
+      "label": "383"
+    },
+    {
+      "file": "page_384",
+      "label": "384"
+    },
+    {
+      "file": "page_385",
+      "label": "385"
+    },
+    {
+      "file": "page_386",
+      "label": "386"
+    },
+    {
+      "file": "page_387",
+      "label": "387"
+    },
+    {
+      "file": "page_388",
+      "label": "388"
+    },
+    {
+      "file": "page_389",
+      "label": "389"
+    },
+    {
+      "file": "page_390",
+      "label": "390"
+    },
+    {
+      "file": "page_391",
+      "label": "391"
+    },
+    {
+      "file": "page_392",
+      "label": "392"
+    },
+    {
+      "file": "page_393",
+      "label": "393"
+    },
+    {
+      "file": "page_394",
+      "label": "394"
+    },
+    {
+      "file": "page_395",
+      "label": "395"
+    },
+    {
+      "file": "page_396",
+      "label": "396"
+    },
+    {
+      "file": "page_397",
+      "label": "397"
+    },
+    {
+      "file": "page_398",
+      "label": "398"
+    },
+    {
+      "file": "page_399",
+      "label": "399"
+    },
+    {
+      "file": "page_400",
+      "label": "400"
+    },
+    {
+      "file": "page_401",
+      "label": "401"
+    },
+    {
+      "file": "page_402",
+      "label": "402"
+    },
+    {
+      "file": "page_403",
+      "label": "403"
+    },
+    {
+      "file": "page_404",
+      "label": "404"
+    },
+    {
+      "file": "page_405",
+      "label": "405"
+    },
+    {
+      "file": "page_406",
+      "label": "406"
+    },
+    {
+      "file": "page_407",
+      "label": "407"
+    },
+    {
+      "file": "page_408",
+      "label": "408"
+    },
+    {
+      "file": "page_409",
+      "label": "409"
+    },
+    {
+      "file": "page_410",
+      "label": "410"
+    },
+    {
+      "file": "page_411",
+      "label": "411"
+    },
+    {
+      "file": "page_412",
+      "label": "412"
+    },
+    {
+      "file": "page_413",
+      "label": "413"
+    },
+    {
+      "file": "page_414",
+      "label": "414"
+    },
+    {
+      "file": "page_415",
+      "label": "415"
+    },
+    {
+      "file": "page_416",
+      "label": "416"
+    },
+    {
+      "file": "page_417",
+      "label": "417"
+    },
+    {
+      "file": "page_418",
+      "label": "418"
+    },
+    {
+      "file": "page_419",
+      "label": "419"
+    },
+    {
+      "file": "page_420",
+      "label": "420"
+    },
+    {
+      "file": "page_421",
+      "label": "421"
+    },
+    {
+      "file": "page_422",
+      "label": "422"
+    },
+    {
+      "file": "page_423",
+      "label": "423"
+    },
+    {
+      "file": "page_424",
+      "label": "424"
+    },
+    {
+      "file": "page_425",
+      "label": "425"
+    },
+    {
+      "file": "page_426",
+      "label": "426"
+    },
+    {
+      "file": "page_427",
+      "label": "427"
+    },
+    {
+      "file": "page_428",
+      "label": "428"
+    },
+    {
+      "file": "page_429",
+      "label": "429"
+    },
+    {
+      "file": "page_430",
+      "label": "430"
+    },
+    {
+      "file": "page_431",
+      "label": "431"
+    },
+    {
+      "file": "page_432",
+      "label": "432"
+    },
+    {
+      "file": "page_433",
+      "label": "433"
+    },
+    {
+      "file": "page_434",
+      "label": "434"
+    },
+    {
+      "file": "page_435",
+      "label": "435"
+    },
+    {
+      "file": "page_436",
+      "label": "436"
+    },
+    {
+      "file": "page_437",
+      "label": "437"
+    },
+    {
+      "file": "page_438",
+      "label": "438"
+    },
+    {
+      "file": "page_439",
+      "label": "439"
+    },
+    {
+      "file": "page_440",
+      "label": "440"
+    },
+    {
+      "file": "page_441",
+      "label": "441"
+    },
+    {
+      "file": "page_442",
+      "label": "442"
+    },
+    {
+      "file": "page_443",
+      "label": "443"
+    },
+    {
+      "file": "page_444",
+      "label": "444"
+    },
+    {
+      "file": "page_445",
+      "label": "445"
+    },
+    {
+      "file": "page_446",
+      "label": "446"
+    },
+    {
+      "file": "page_447",
+      "label": "447"
+    },
+    {
+      "file": "page_448",
+      "label": "448"
+    },
+    {
+      "file": "page_449",
+      "label": "449"
+    },
+    {
+      "file": "page_450",
+      "label": "450"
+    },
+    {
+      "file": "page_451",
+      "label": "451"
+    },
+    {
+      "file": "page_452",
+      "label": "452"
+    },
+    {
+      "file": "page_453",
+      "label": "453"
+    },
+    {
+      "file": "page_454",
+      "label": "454"
+    },
+    {
+      "file": "page_455",
+      "label": "455"
+    },
+    {
+      "file": "page_456",
+      "label": "456"
+    },
+    {
+      "file": "page_457",
+      "label": "457"
+    },
+    {
+      "file": "page_458",
+      "label": "458"
+    },
+    {
+      "file": "page_459",
+      "label": "459"
+    },
+    {
+      "file": "page_460",
+      "label": "460"
+    },
+    {
+      "file": "page_461",
+      "label": "461"
+    },
+    {
+      "file": "page_462",
+      "label": "462"
+    },
+    {
+      "file": "page_463",
+      "label": "463"
+    },
+    {
+      "file": "page_464",
+      "label": "464"
+    },
+    {
+      "file": "page_465",
+      "label": "465"
+    },
+    {
+      "file": "page_466",
+      "label": "466"
+    },
+    {
+      "file": "page_467",
+      "label": "467"
+    },
+    {
+      "file": "page_468",
+      "label": "468"
+    },
+    {
+      "file": "page_469",
+      "label": "469"
+    },
+    {
+      "file": "page_470",
+      "label": "470"
+    },
+    {
+      "file": "page_471",
+      "label": "471"
+    },
+    {
+      "file": "page_472",
+      "label": "472"
+    },
+    {
+      "file": "page_473",
+      "label": "473"
+    },
+    {
+      "file": "page_474",
+      "label": "474"
+    },
+    {
+      "file": "page_475",
+      "label": "475"
+    },
+    {
+      "file": "page_476",
+      "label": "476"
+    },
+    {
+      "file": "page_477",
+      "label": "477"
+    },
+    {
+      "file": "page_478",
+      "label": "478"
+    },
+    {
+      "file": "page_479",
+      "label": "479"
+    },
+    {
+      "file": "page_480",
+      "label": "480"
+    },
+    {
+      "file": "page_481",
+      "label": "481"
+    },
+    {
+      "file": "page_482",
+      "label": "482"
+    },
+    {
+      "file": "page_483",
+      "label": "483"
+    },
+    {
+      "file": "page_484",
+      "label": "484"
+    },
+    {
+      "file": "page_485",
+      "label": "485"
+    },
+    {
+      "file": "page_486",
+      "label": "486"
+    },
+    {
+      "file": "page_487",
+      "label": "487"
+    },
+    {
+      "file": "page_488",
+      "label": "488"
+    },
+    {
+      "file": "page_489",
+      "label": "489"
+    },
+    {
+      "file": "page_490",
+      "label": "490"
+    },
+    {
+      "file": "page_491",
+      "label": "491"
+    },
+    {
+      "file": "page_492",
+      "label": "492"
+    },
+    {
+      "file": "page_493",
+      "label": "493"
+    },
+    {
+      "file": "page_494",
+      "label": "494"
+    },
+    {
+      "file": "page_495",
+      "label": "495"
+    },
+    {
+      "file": "page_496",
+      "label": "496"
+    }
+  ]
+}
