@@ -2,3 +2,5 @@
 *.swp
 *~
 .DS_Store
+.last_fingerprint
+.sync.lock
