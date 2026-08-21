@@ -7,6 +7,7 @@
       400,
       915
     ],
+    "category": "other",
     "tags": [
       "confidence:high",
       "fact-error",
@@ -21,11 +22,13 @@
       400,
       520
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "euphemism",
       "omission",
-      "tc-annexation-euphemism"
+      "tc-annexation-euphemism",
+      "cat:language"
     ]
   },
   {
@@ -36,10 +39,12 @@
       500,
       410
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   }
 ]

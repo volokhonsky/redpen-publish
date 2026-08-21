@@ -8,12 +8,14 @@
       250
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
       "double-standard",
-      "tc-reform-as-powergrab"
+      "tc-reform-as-powergrab",
+      "cat:apparatus"
     ]
   },
   {
@@ -25,11 +27,13 @@
       405
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -41,12 +45,14 @@
       640
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
       "omission",
-      "tc-censorship-unnamed"
+      "tc-censorship-unnamed",
+      "cat:language"
     ]
   },
   {
@@ -58,12 +64,14 @@
       705
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
       "omission",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -75,11 +83,13 @@
       780
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   },
   {
@@ -91,11 +101,13 @@
       870
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "loaded-question",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   },
   {
@@ -107,11 +119,13 @@
       1035
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   }
 ]

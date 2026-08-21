@@ -7,10 +7,12 @@
       480,
       535
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "double-standard",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -21,10 +23,12 @@
       500,
       605
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "contested-as-settled",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -35,11 +39,13 @@
       430,
       1120
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:medium",
       "loaded-question",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:apparatus"
     ]
   }
 ]

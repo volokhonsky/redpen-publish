@@ -8,12 +8,14 @@
       275
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "omission",
-      "tc-cheerful-summary"
+      "tc-cheerful-summary",
+      "cat:apparatus"
     ]
   },
   {
@@ -25,10 +27,12 @@
       685
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -40,10 +44,12 @@
       840
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "contradiction"
+      "contradiction",
+      "cat:apparatus"
     ]
   },
   {
@@ -55,10 +61,12 @@
       1020
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -70,11 +78,13 @@
       1050
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

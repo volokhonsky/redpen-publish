@@ -8,12 +8,14 @@
       875
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "omission",
-      "tc-thaw-no-ending"
+      "tc-thaw-no-ending",
+      "cat:omission"
     ]
   },
   {
@@ -25,12 +27,14 @@
       185
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
       "source-selection",
-      "tc-thaw-no-ending"
+      "tc-thaw-no-ending",
+      "cat:evidence"
     ]
   },
   {
@@ -42,12 +46,14 @@
       292
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "dubious-number",
       "omission",
-      "tc-moscow-as-country"
+      "tc-moscow-as-country",
+      "cat:evidence"
     ]
   },
   {
@@ -59,11 +65,13 @@
       660
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "framing"
+      "framing",
+      "cat:language"
     ]
   },
   {
@@ -75,10 +83,12 @@
       1090
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   }
 ]

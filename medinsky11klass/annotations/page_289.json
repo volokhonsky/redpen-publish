@@ -8,11 +8,13 @@
       365
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "false-cause",
-      "tc-west-economic-scapegoat"
+      "tc-west-economic-scapegoat",
+      "cat:sides"
     ]
   },
   {
@@ -24,11 +26,13 @@
       640
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -40,6 +44,7 @@
       470
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"
@@ -54,11 +59,13 @@
       565
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-democratization-as-collapse"
+      "tc-democratization-as-collapse",
+      "cat:sides"
     ]
   }
 ]

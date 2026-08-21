@@ -8,12 +8,14 @@
       658
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
       "omission",
-      "overclaim"
+      "overclaim",
+      "cat:sides"
     ]
   },
   {
@@ -25,11 +27,13 @@
       933
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -41,11 +45,13 @@
       983
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "framing"
+      "framing",
+      "cat:apparatus"
     ]
   },
   {
@@ -57,12 +63,14 @@
       885
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "double-standard",
       "euphemism",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   },
   {
@@ -74,12 +82,14 @@
       815
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
       "source-selection",
-      "tc-cheerful-summary"
+      "tc-cheerful-summary",
+      "cat:apparatus"
     ]
   }
 ]

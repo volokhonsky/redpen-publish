@@ -8,11 +8,13 @@
       190
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "dubious-number",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -24,11 +26,13 @@
       300
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "tc-joke-instead-of-analysis"
+      "tc-joke-instead-of-analysis",
+      "cat:language"
     ]
   },
   {
@@ -40,10 +44,12 @@
       415
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "contradiction"
+      "contradiction",
+      "cat:apparatus"
     ]
   },
   {
@@ -55,12 +61,14 @@
       555
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "loaded-question",
       "source-selection",
-      "tc-only-friendly-witnesses"
+      "tc-only-friendly-witnesses",
+      "cat:apparatus"
     ]
   },
   {
@@ -72,11 +80,13 @@
       765
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "tc-cheerful-summary"
+      "tc-cheerful-summary",
+      "cat:apparatus"
     ]
   },
   {
@@ -88,11 +98,13 @@
       860
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

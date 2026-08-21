@@ -8,11 +8,13 @@
       255
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -24,12 +26,14 @@
       615
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
       "omission",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -41,11 +45,13 @@
       1075
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
       "framing",
-      "tc-cheerful-summary"
+      "tc-cheerful-summary",
+      "cat:apparatus"
     ]
   }
 ]

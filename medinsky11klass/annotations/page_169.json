@@ -8,11 +8,13 @@
       190
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "tc-despite-not-because"
+      "tc-despite-not-because",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,11 +26,13 @@
       290
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -40,11 +44,13 @@
       360
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:sides"
     ]
   },
   {
@@ -56,11 +62,13 @@
       605
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
       "omission",
-      "tc-censorship-unnamed"
+      "tc-censorship-unnamed",
+      "cat:omission"
     ]
   },
   {
@@ -72,10 +80,12 @@
       1060
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

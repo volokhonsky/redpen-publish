@@ -8,12 +8,14 @@
       830
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
       "overclaim",
-      "tc-antisemitism-hidden"
+      "tc-antisemitism-hidden",
+      "cat:apparatus"
     ]
   },
   {
@@ -25,11 +27,13 @@
       650
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "omission"
+      "omission",
+      "cat:evidence"
     ]
   },
   {
@@ -41,11 +45,13 @@
       720
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "overclaim",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -57,12 +63,14 @@
       900
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "dubious-number",
       "framing",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -74,11 +82,13 @@
       1130
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
       "context",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

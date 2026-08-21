@@ -7,10 +7,12 @@
       400,
       208
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "framing",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -21,11 +23,13 @@
       250,
       905
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "framing",
       "source-selection",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -36,9 +40,11 @@
       660,
       833
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   }
 ]

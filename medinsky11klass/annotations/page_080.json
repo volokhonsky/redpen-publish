@@ -7,9 +7,11 @@
       400,
       490
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -20,9 +22,11 @@
       400,
       200
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

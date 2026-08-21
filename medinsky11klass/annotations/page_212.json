@@ -8,11 +8,13 @@
       468
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,10 +26,12 @@
       540
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -39,11 +43,13 @@
       300
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:evidence"
     ]
   },
   {
@@ -55,11 +61,13 @@
       240
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "tc-joke-instead-of-analysis"
+      "tc-joke-instead-of-analysis",
+      "cat:language"
     ]
   },
   {
@@ -71,11 +79,13 @@
       660
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -87,11 +97,13 @@
       945
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "tc-record-not-result",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   }
 ]

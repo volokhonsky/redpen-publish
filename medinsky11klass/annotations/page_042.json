@@ -7,10 +7,12 @@
       700,
       545
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "contested-as-settled",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -21,10 +23,12 @@
       530,
       480
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "framing",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

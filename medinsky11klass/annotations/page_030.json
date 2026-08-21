@@ -7,12 +7,14 @@
       430,
       215
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "false-cause",
       "false-symmetry",
       "tc-usa-origin",
-      "tc-whatabout"
+      "tc-whatabout",
+      "cat:sides"
     ]
   },
   {
@@ -23,10 +25,12 @@
       430,
       662
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "euphemism",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -37,10 +41,12 @@
       400,
       935
     ],
+    "category": "omission",
     "tags": [
       "confidence:medium",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

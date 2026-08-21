@@ -8,11 +8,13 @@
       350
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -24,12 +26,14 @@
       490
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
       "omission",
-      "tc-invited-intervention"
+      "tc-invited-intervention",
+      "cat:sides"
     ]
   },
   {
@@ -41,11 +45,13 @@
       690
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-one-sided-ledger"
+      "tc-one-sided-ledger",
+      "cat:evidence"
     ]
   },
   {
@@ -57,10 +63,12 @@
       755
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

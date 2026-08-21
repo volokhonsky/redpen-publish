@@ -8,11 +8,13 @@
       268
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "context",
-      "contradiction"
+      "contradiction",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,11 +26,13 @@
       520
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "overclaim"
+      "overclaim",
+      "cat:evidence"
     ]
   },
   {
@@ -40,11 +44,13 @@
       550
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "context",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -56,11 +62,13 @@
       990
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
       "omission",
-      "tc-victim-hero"
+      "tc-victim-hero",
+      "cat:omission"
     ]
   }
 ]

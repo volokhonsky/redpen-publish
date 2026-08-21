@@ -8,12 +8,14 @@
       228
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "omission",
-      "tc-cheerful-summary"
+      "tc-cheerful-summary",
+      "cat:apparatus"
     ]
   },
   {
@@ -25,12 +27,14 @@
       430
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "omission",
-      "tc-joke-instead-of-analysis"
+      "tc-joke-instead-of-analysis",
+      "cat:language"
     ]
   },
   {
@@ -42,11 +46,13 @@
       608
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -58,10 +64,12 @@
       713
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -73,12 +81,14 @@
       880
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
       "source-selection",
-      "tc-cheerful-summary"
+      "tc-cheerful-summary",
+      "cat:apparatus"
     ]
   },
   {
@@ -90,10 +100,12 @@
       1010
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

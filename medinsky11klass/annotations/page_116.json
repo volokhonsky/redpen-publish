@@ -8,13 +8,15 @@
       372
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
       "framing",
       "omission",
-      "tc-censorship-unnamed"
+      "tc-censorship-unnamed",
+      "cat:language"
     ]
   },
   {
@@ -26,12 +28,14 @@
       745
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
       "omission",
-      "tc-permission-as-abundance"
+      "tc-permission-as-abundance",
+      "cat:language"
     ]
   },
   {
@@ -43,12 +47,14 @@
       565
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "context",
       "omission",
-      "tc-censorship-unnamed"
+      "tc-censorship-unnamed",
+      "cat:omission"
     ]
   },
   {
@@ -60,12 +66,14 @@
       1015
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "context",
       "omission",
-      "tc-permission-as-abundance"
+      "tc-permission-as-abundance",
+      "cat:language"
     ]
   },
   {
@@ -77,11 +85,13 @@
       632
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "loaded-question",
-      "tc-censorship-unnamed"
+      "tc-censorship-unnamed",
+      "cat:apparatus"
     ]
   }
 ]

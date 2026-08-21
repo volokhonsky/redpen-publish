@@ -6,7 +6,8 @@
     "coords": [
       300,
       862
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "patrio",
@@ -15,6 +16,7 @@
     "coords": [
       650,
       850
-    ]
+    ],
+    "category": "other"
   }
 ]

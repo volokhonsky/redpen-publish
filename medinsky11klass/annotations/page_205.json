@@ -8,11 +8,13 @@
       860
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-sanitized-chekist"
+      "tc-sanitized-chekist",
+      "cat:omission"
     ]
   },
   {
@@ -24,11 +26,13 @@
       300
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -40,11 +44,13 @@
       365
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "contested-as-settled",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

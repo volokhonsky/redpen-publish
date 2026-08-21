@@ -8,11 +8,13 @@
       170
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -24,10 +26,12 @@
       320
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
-      "tc-west-broken-promises"
+      "tc-west-broken-promises",
+      "cat:sides"
     ]
   },
   {
@@ -39,10 +43,12 @@
       700
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-author-vouches"
+      "tc-author-vouches",
+      "cat:evidence"
     ]
   },
   {
@@ -54,10 +60,12 @@
       850
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-author-vouches"
+      "tc-author-vouches",
+      "cat:evidence"
     ]
   },
   {
@@ -69,10 +77,12 @@
       1080
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

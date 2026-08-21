@@ -7,11 +7,13 @@
       400,
       300
     ],
+    "category": "today",
     "tags": [
       "anachronism",
       "confidence:high",
       "framing",
-      "tc-modern-grudge"
+      "tc-modern-grudge",
+      "cat:today"
     ]
   },
   {
@@ -22,10 +24,12 @@
       400,
       150
     ],
+    "category": "omission",
     "tags": [
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -36,10 +40,12 @@
       400,
       620
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "dubious-number",
-      "overclaim"
+      "overclaim",
+      "cat:evidence"
     ]
   }
 ]

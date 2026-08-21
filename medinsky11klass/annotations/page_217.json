@@ -8,11 +8,13 @@
       665
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-crisis-without-mechanism"
+      "tc-crisis-without-mechanism",
+      "cat:sides"
     ]
   },
   {
@@ -24,11 +26,13 @@
       1008
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "context",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -40,11 +44,13 @@
       205
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "loaded-question",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:apparatus"
     ]
   },
   {
@@ -56,11 +62,13 @@
       480
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -72,11 +80,13 @@
       845
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "tc-passive-voice",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -88,11 +98,13 @@
       1085
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:medium",
       "context",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   }
 ]

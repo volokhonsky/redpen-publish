@@ -7,11 +7,13 @@
       430,
       235
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:medium",
       "false-symmetry",
       "loaded-question",
-      "tc-whatabout"
+      "tc-whatabout",
+      "cat:apparatus"
     ]
   }
 ]

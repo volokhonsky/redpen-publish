@@ -8,6 +8,7 @@
       220
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -23,6 +24,7 @@
       380
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:medium",
@@ -38,11 +40,13 @@
       630
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -54,11 +58,13 @@
       800
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "dubious-number",
-      "omission"
+      "omission",
+      "cat:evidence"
     ]
   },
   {
@@ -70,11 +76,13 @@
       1030
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "dubious-number",
-      "omission"
+      "omission",
+      "cat:evidence"
     ]
   }
 ]

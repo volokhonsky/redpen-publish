@@ -7,10 +7,12 @@
       400,
       45
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -21,9 +23,11 @@
       400,
       165
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -34,10 +38,12 @@
       400,
       265
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "context",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   }
 ]

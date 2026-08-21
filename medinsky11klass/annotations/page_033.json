@@ -7,10 +7,12 @@
       430,
       835
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "omission",
-      "overclaim"
+      "overclaim",
+      "cat:evidence"
     ]
   },
   {
@@ -21,11 +23,13 @@
       430,
       985
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "contradiction",
       "euphemism",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:apparatus"
     ]
   },
   {
@@ -36,6 +40,7 @@
       700,
       300
     ],
+    "category": "other",
     "tags": [
       "confidence:high",
       "fact-error"
@@ -49,10 +54,12 @@
       400,
       1105
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "framing",
-      "tc-leader-science"
+      "tc-leader-science",
+      "cat:evidence"
     ]
   }
 ]

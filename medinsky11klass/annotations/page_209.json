@@ -8,12 +8,14 @@
       950
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "loaded-question",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:apparatus"
     ]
   },
   {
@@ -25,11 +27,13 @@
       320
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   }
 ]

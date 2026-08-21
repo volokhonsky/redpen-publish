@@ -8,10 +8,12 @@
       300
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "dubious-number"
+      "dubious-number",
+      "cat:evidence"
     ]
   },
   {
@@ -23,10 +25,12 @@
       870
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-annexation-euphemism"
+      "tc-annexation-euphemism",
+      "cat:language"
     ]
   },
   {
@@ -38,10 +42,12 @@
       990
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
-      "contradiction"
+      "contradiction",
+      "cat:apparatus"
     ]
   },
   {
@@ -53,9 +59,11 @@
       700
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

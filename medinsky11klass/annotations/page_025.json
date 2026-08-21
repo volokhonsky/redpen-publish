@@ -7,10 +7,12 @@
       450,
       220
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "false-cause",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -21,10 +23,12 @@
       500,
       310
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -35,11 +39,13 @@
       400,
       420
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "euphemism",
       "omission",
-      "tc-antisemitism-hidden"
+      "tc-antisemitism-hidden",
+      "cat:language"
     ]
   },
   {
@@ -50,10 +56,12 @@
       450,
       620
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "contested-as-settled",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -64,11 +72,13 @@
       300,
       1050
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "omission",
       "source-selection",
-      "tc-antisemitism-hidden"
+      "tc-antisemitism-hidden",
+      "cat:evidence"
     ]
   }
 ]

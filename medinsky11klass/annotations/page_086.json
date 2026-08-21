@@ -7,10 +7,12 @@
       330,
       1030
     ],
+    "category": "omission",
     "tags": [
       "confidence:high",
       "omission",
-      "tc-victim-hero"
+      "tc-victim-hero",
+      "cat:omission"
     ]
   },
   {
@@ -21,10 +23,12 @@
       300,
       300
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "omission",
-      "tc-leader-science"
+      "tc-leader-science",
+      "cat:evidence"
     ]
   }
 ]

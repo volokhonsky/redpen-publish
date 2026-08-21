@@ -8,10 +8,12 @@
       680
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
-      "double-standard"
+      "double-standard",
+      "cat:sides"
     ]
   },
   {
@@ -23,6 +25,7 @@
       900
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"
@@ -37,6 +40,7 @@
       140
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"

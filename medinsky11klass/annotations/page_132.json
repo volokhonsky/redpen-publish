@@ -8,11 +8,13 @@
       168
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "overclaim"
+      "overclaim",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,10 +26,12 @@
       240
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -39,12 +43,14 @@
       490
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "omission",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -56,11 +62,13 @@
       800
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -72,10 +80,12 @@
       900
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

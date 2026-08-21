@@ -8,10 +8,12 @@
       260
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -23,10 +25,12 @@
       800
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:medium",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -38,6 +42,7 @@
       570
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",

@@ -6,7 +6,8 @@
     "coords": [
       400,
       400
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page9-2",
@@ -15,7 +16,8 @@
     "coords": [
       500,
       620
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-p008-1",
@@ -26,10 +28,12 @@
       405
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "dubious-number"
+      "dubious-number",
+      "cat:evidence"
     ]
   },
   {
@@ -41,11 +45,13 @@
       745
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-one-sided-ledger"
+      "tc-one-sided-ledger",
+      "cat:evidence"
     ]
   },
   {
@@ -57,11 +63,13 @@
       1070
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "context",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

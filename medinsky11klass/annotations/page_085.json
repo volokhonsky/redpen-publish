@@ -7,10 +7,12 @@
       300,
       500
     ],
+    "category": "omission",
     "tags": [
       "confidence:high",
       "omission",
-      "tc-hidden-disasters"
+      "tc-hidden-disasters",
+      "cat:omission"
     ]
   },
   {
@@ -21,9 +23,11 @@
       250,
       175
     ],
+    "category": "today",
     "tags": [
       "anachronism",
-      "confidence:high"
+      "confidence:high",
+      "cat:today"
     ]
   },
   {
@@ -34,10 +38,12 @@
       300,
       660
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "contradiction",
-      "overclaim"
+      "overclaim",
+      "cat:apparatus"
     ]
   }
 ]

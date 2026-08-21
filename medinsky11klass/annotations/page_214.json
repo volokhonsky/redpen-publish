@@ -8,11 +8,13 @@
       900
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "overclaim",
-      "tc-record-not-result"
+      "tc-record-not-result",
+      "cat:evidence"
     ]
   },
   {
@@ -24,12 +26,14 @@
       1062
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
       "tc-crisis-without-mechanism",
-      "tc-record-not-result"
+      "tc-record-not-result",
+      "cat:sides"
     ]
   },
   {
@@ -41,11 +45,13 @@
       390
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -57,11 +63,13 @@
       600
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "context",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -73,11 +81,13 @@
       760
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-despite-not-because"
+      "tc-despite-not-because",
+      "cat:language"
     ]
   },
   {
@@ -89,11 +99,13 @@
       305
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "framing",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

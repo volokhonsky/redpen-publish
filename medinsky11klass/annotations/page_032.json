@@ -7,11 +7,13 @@
       680,
       470
     ],
+    "category": "today",
     "tags": [
       "anachronism",
       "confidence:low",
       "source-selection",
-      "tc-modern-grudge"
+      "tc-modern-grudge",
+      "cat:today"
     ]
   }
 ]

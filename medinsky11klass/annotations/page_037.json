@@ -7,9 +7,11 @@
       400,
       640
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

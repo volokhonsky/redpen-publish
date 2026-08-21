@@ -8,10 +8,12 @@
       510
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-anonymous-superlative"
+      "tc-anonymous-superlative",
+      "cat:evidence"
     ]
   },
   {
@@ -23,6 +25,7 @@
       150
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -38,9 +41,11 @@
       560
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
-      "tc-strangeness-as-explanation"
+      "tc-strangeness-as-explanation",
+      "cat:language"
     ]
   },
   {
@@ -52,6 +57,7 @@
       400
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"

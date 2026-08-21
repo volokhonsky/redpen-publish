@@ -8,10 +8,12 @@
       155
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-key-concept-unexplained"
+      "tc-key-concept-unexplained",
+      "cat:omission"
     ]
   },
   {
@@ -23,10 +25,12 @@
       430
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
-      "tc-reform-as-powergrab"
+      "tc-reform-as-powergrab",
+      "cat:sides"
     ]
   },
   {
@@ -38,10 +42,12 @@
       500
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -53,10 +59,12 @@
       970
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

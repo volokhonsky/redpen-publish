@@ -8,11 +8,13 @@
       520
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-west-economic-scapegoat"
+      "tc-west-economic-scapegoat",
+      "cat:sides"
     ]
   },
   {
@@ -24,6 +26,7 @@
       480
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"
@@ -38,11 +41,13 @@
       975
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "context",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

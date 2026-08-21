@@ -8,6 +8,7 @@
       450
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:medium",
@@ -23,10 +24,12 @@
       180
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -38,11 +41,13 @@
       870
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "context",
-      "false-cause"
+      "false-cause",
+      "cat:sides"
     ]
   },
   {
@@ -54,11 +59,13 @@
       340
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-democratization-as-collapse"
+      "tc-democratization-as-collapse",
+      "cat:sides"
     ]
   }
 ]

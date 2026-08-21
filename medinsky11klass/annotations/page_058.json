@@ -7,10 +7,12 @@
       480,
       480
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "context",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -21,9 +23,11 @@
       400,
       1010
     ],
+    "category": "evidence",
     "tags": [
       "confidence:low",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -34,9 +38,11 @@
       480,
       270
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:medium",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   }
 ]

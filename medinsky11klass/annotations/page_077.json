@@ -7,9 +7,11 @@
       400,
       1095
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   },
   {
@@ -20,10 +22,12 @@
       400,
       530
     ],
+    "category": "language",
     "tags": [
       "confidence:medium",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   }
 ]

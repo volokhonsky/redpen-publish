@@ -8,9 +8,11 @@
       195
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -22,9 +24,11 @@
       380
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "dubious-number"
+      "dubious-number",
+      "cat:evidence"
     ]
   },
   {
@@ -36,10 +40,12 @@
       500
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "dubious-number"
+      "dubious-number",
+      "cat:evidence"
     ]
   }
 ]

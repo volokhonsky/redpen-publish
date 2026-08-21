@@ -7,11 +7,13 @@
       480,
       200
     ],
+    "category": "today",
     "tags": [
       "anachronism",
       "confidence:high",
       "false-symmetry",
-      "tc-defensive-bloc"
+      "tc-defensive-bloc",
+      "cat:today"
     ]
   },
   {
@@ -22,11 +24,13 @@
       480,
       430
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "framing",
       "omission",
-      "overclaim"
+      "overclaim",
+      "cat:evidence"
     ]
   },
   {
@@ -37,10 +41,12 @@
       480,
       600
     ],
+    "category": "sides",
     "tags": [
       "confidence:medium",
       "double-standard",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   }
 ]

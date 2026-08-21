@@ -8,6 +8,7 @@
       780
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"
@@ -22,9 +23,11 @@
       550
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   }
 ]

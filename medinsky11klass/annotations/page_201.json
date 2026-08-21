@@ -8,11 +8,13 @@
       420
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-invited-intervention"
+      "tc-invited-intervention",
+      "cat:sides"
     ]
   },
   {
@@ -24,11 +26,13 @@
       950
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:evidence"
     ]
   }
 ]

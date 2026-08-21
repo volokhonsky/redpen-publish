@@ -8,12 +8,14 @@
       898
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "omission",
-      "tc-cheerful-summary"
+      "tc-cheerful-summary",
+      "cat:apparatus"
     ]
   },
   {
@@ -25,10 +27,12 @@
       765
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -40,11 +44,13 @@
       480
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "context",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -56,10 +62,12 @@
       187
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

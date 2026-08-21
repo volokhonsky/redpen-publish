@@ -8,11 +8,13 @@
       252
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-cheerful-summary"
+      "tc-cheerful-summary",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,12 +26,14 @@
       955
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
       "source-selection",
-      "tc-crisis-without-mechanism"
+      "tc-crisis-without-mechanism",
+      "cat:sides"
     ]
   },
   {
@@ -41,11 +45,13 @@
       952
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "tc-cheerful-summary",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -57,11 +63,13 @@
       437
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -73,11 +81,13 @@
       763
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-key-concept-unexplained"
+      "tc-key-concept-unexplained",
+      "cat:omission"
     ]
   }
 ]

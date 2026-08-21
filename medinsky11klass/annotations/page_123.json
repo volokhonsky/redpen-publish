@@ -8,11 +8,13 @@
       398
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,12 +26,14 @@
       790
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "omission",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -41,6 +45,7 @@
       1000
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -56,11 +61,13 @@
       240
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -72,11 +79,13 @@
       690
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   }
 ]

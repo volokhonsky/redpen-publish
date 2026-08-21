@@ -8,11 +8,13 @@
       292
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "tc-cheerful-summary",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,12 +26,14 @@
       790
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "anachronism",
       "confidence:high",
       "loaded-question",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:today"
     ]
   },
   {
@@ -41,11 +45,13 @@
       487
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-only-friendly-witnesses"
+      "tc-only-friendly-witnesses",
+      "cat:evidence"
     ]
   },
   {
@@ -57,11 +63,13 @@
       425
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "context",
-      "tc-key-concept-unexplained"
+      "tc-key-concept-unexplained",
+      "cat:omission"
     ]
   },
   {
@@ -73,11 +81,13 @@
       1030
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "context",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   }
 ]

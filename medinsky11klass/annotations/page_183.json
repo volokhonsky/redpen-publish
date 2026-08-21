@@ -8,11 +8,13 @@
       500
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "anachronism",
       "confidence:high",
-      "contradiction"
+      "contradiction",
+      "cat:today"
     ]
   },
   {
@@ -24,13 +26,15 @@
       610
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "anachronism",
       "confidence:high",
       "contradiction",
       "framing",
-      "tc-modern-authority"
+      "tc-modern-authority",
+      "cat:today"
     ]
   },
   {
@@ -42,11 +46,13 @@
       900
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "source-selection",
-      "tc-thaw-no-ending"
+      "tc-thaw-no-ending",
+      "cat:evidence"
     ]
   }
 ]

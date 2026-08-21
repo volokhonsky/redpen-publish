@@ -8,10 +8,12 @@
       530
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -23,10 +25,12 @@
       510
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:low",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   },
   {
@@ -38,11 +42,13 @@
       1080
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

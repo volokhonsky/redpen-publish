@@ -7,11 +7,13 @@
       420,
       700
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "contested-as-settled",
       "double-standard",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -22,10 +24,12 @@
       300,
       815
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "false-cause",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   },
   {
@@ -36,10 +40,12 @@
       280,
       1055
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "framing",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

@@ -8,11 +8,13 @@
       250
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "tc-reform-as-powergrab"
+      "tc-reform-as-powergrab",
+      "cat:sides"
     ]
   },
   {
@@ -24,6 +26,7 @@
       550
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
@@ -31,7 +34,8 @@
       "double-standard",
       "false-cause",
       "framing",
-      "tc-democratization-as-collapse"
+      "tc-democratization-as-collapse",
+      "cat:sides"
     ]
   },
   {
@@ -43,10 +47,12 @@
       900
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "task-without-material"
+      "task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -58,10 +64,12 @@
       880
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   }
 ]

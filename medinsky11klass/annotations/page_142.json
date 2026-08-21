@@ -8,11 +8,13 @@
       215
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-only-friendly-witnesses"
+      "tc-only-friendly-witnesses",
+      "cat:evidence"
     ]
   },
   {
@@ -24,11 +26,13 @@
       300
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "framing"
+      "framing",
+      "cat:apparatus"
     ]
   },
   {
@@ -40,10 +44,12 @@
       555
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -55,10 +61,12 @@
       675
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -70,10 +78,12 @@
       930
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -85,11 +95,13 @@
       1035
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "fact-error"
+      "fact-error",
+      "cat:apparatus"
     ]
   }
 ]

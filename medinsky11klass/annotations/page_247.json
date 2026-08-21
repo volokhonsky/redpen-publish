@@ -8,12 +8,14 @@
       560
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "fact-error",
       "framing",
-      "tc-reunification-annexation"
+      "tc-reunification-annexation",
+      "cat:sides"
     ]
   },
   {
@@ -25,11 +27,13 @@
       615
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "contested-as-settled",
-      "tc-west-broken-promises"
+      "tc-west-broken-promises",
+      "cat:sides"
     ]
   },
   {
@@ -41,11 +45,13 @@
       465
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "anachronism",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:today"
     ]
   },
   {
@@ -57,10 +63,12 @@
       390
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -72,10 +80,12 @@
       850
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
-      "contradiction"
+      "contradiction",
+      "cat:apparatus"
     ]
   },
   {
@@ -87,10 +97,12 @@
       1040
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

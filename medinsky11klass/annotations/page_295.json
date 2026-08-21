@@ -8,6 +8,7 @@
       420
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -23,11 +24,13 @@
       650
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-single-source-conflict"
+      "tc-single-source-conflict",
+      "cat:evidence"
     ]
   },
   {
@@ -39,10 +42,12 @@
       300
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -54,6 +59,7 @@
       1030
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:medium",

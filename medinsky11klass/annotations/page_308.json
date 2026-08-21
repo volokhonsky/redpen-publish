@@ -8,10 +8,12 @@
       730
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -23,10 +25,12 @@
       735
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -38,11 +42,13 @@
       1030
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "confidence:medium",
       "framing",
-      "tc-nineties-as-foil"
+      "tc-nineties-as-foil",
+      "cat:today"
     ]
   },
   {
@@ -54,11 +60,13 @@
       400
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "confidence:medium",
       "framing",
-      "tc-nineties-as-foil"
+      "tc-nineties-as-foil",
+      "cat:today"
     ]
   }
 ]

@@ -8,12 +8,14 @@
       615
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "omission",
-      "tc-benefit-through-employer"
+      "tc-benefit-through-employer",
+      "cat:evidence"
     ]
   },
   {
@@ -25,10 +27,12 @@
       692
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   },
   {
@@ -40,11 +44,13 @@
       440
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -56,10 +62,12 @@
       295
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   },
   {
@@ -71,11 +79,13 @@
       865
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -87,11 +97,13 @@
       1130
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   }
 ]

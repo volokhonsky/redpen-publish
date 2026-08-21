@@ -7,11 +7,13 @@
       480,
       630
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "double-standard",
       "framing",
-      "tc-defensive-bloc"
+      "tc-defensive-bloc",
+      "cat:sides"
     ]
   },
   {
@@ -22,10 +24,12 @@
       300,
       445
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "framing",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -36,10 +40,12 @@
       480,
       875
     ],
+    "category": "sides",
     "tags": [
       "confidence:medium",
       "double-standard",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   }
 ]

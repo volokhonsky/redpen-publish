@@ -8,11 +8,13 @@
       220
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "framing"
+      "framing",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,10 +26,12 @@
       605
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -39,6 +43,7 @@
       665
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -54,11 +59,13 @@
       1090
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-blame-the-consumer"
+      "tc-blame-the-consumer",
+      "cat:sides"
     ]
   },
   {
@@ -70,11 +77,13 @@
       460
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
       "contradiction",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   }
 ]

@@ -8,10 +8,12 @@
       195
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -23,9 +25,11 @@
       270
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   },
   {
@@ -37,11 +41,13 @@
       400
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -53,10 +59,12 @@
       755
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "framing",
-      "tc-nineties-as-foil"
+      "tc-nineties-as-foil",
+      "cat:today"
     ]
   }
 ]

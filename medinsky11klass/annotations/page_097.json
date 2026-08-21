@@ -8,11 +8,13 @@
       158
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "anachronism",
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:today"
     ]
   },
   {
@@ -24,12 +26,14 @@
       398
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
       "framing",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -41,12 +45,14 @@
       690
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
       "false-cause",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:sides"
     ]
   },
   {
@@ -58,11 +64,13 @@
       795
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -74,11 +82,13 @@
       935
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   }
 ]

@@ -8,11 +8,13 @@
       472
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-import-as-cooperation"
+      "tc-import-as-cooperation",
+      "cat:language"
     ]
   },
   {
@@ -24,11 +26,13 @@
       612
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -40,11 +44,13 @@
       682
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:medium",
       "omission",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -56,11 +62,13 @@
       900
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   },
   {
@@ -72,11 +80,13 @@
       1080
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "false-cause"
+      "false-cause",
+      "cat:sides"
     ]
   }
 ]

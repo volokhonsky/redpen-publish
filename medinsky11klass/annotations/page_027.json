@@ -7,11 +7,13 @@
       500,
       830
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "loaded-question",
       "omission",
-      "tc-antisemitism-hidden"
+      "tc-antisemitism-hidden",
+      "cat:apparatus"
     ]
   },
   {
@@ -22,9 +24,11 @@
       500,
       1050
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

@@ -7,11 +7,13 @@
       400,
       550
     ],
+    "category": "today",
     "tags": [
       "confidence:high",
       "false-cause",
       "framing",
-      "tc-modern-grudge"
+      "tc-modern-grudge",
+      "cat:today"
     ]
   },
   {
@@ -22,10 +24,12 @@
       400,
       800
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -36,10 +40,12 @@
       400,
       615
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "contested-as-settled",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -50,9 +56,11 @@
       400,
       275
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   }
 ]

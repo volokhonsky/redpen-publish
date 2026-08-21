@@ -8,11 +8,13 @@
       350
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "fact-error",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -24,10 +26,12 @@
       650
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "dubious-number"
+      "dubious-number",
+      "cat:evidence"
     ]
   },
   {
@@ -39,10 +43,12 @@
       840
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -54,6 +60,7 @@
       950
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:medium",

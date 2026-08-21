@@ -8,12 +8,14 @@
       220
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "confidence:high",
       "fact-error",
       "overclaim",
-      "tc-nineties-as-foil"
+      "tc-nineties-as-foil",
+      "cat:today"
     ]
   },
   {
@@ -25,10 +27,12 @@
       470
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -40,6 +44,7 @@
       600
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -55,10 +60,12 @@
       930
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:low",
-      "dubious-number"
+      "dubious-number",
+      "cat:evidence"
     ]
   }
 ]

@@ -8,11 +8,13 @@
       610
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "false-cause",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   },
   {
@@ -24,11 +26,13 @@
       810
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-thaw-no-ending"
+      "tc-thaw-no-ending",
+      "cat:omission"
     ]
   },
   {
@@ -40,10 +44,12 @@
       1090
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -55,11 +61,13 @@
       1120
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-censorship-unnamed"
+      "tc-censorship-unnamed",
+      "cat:omission"
     ]
   },
   {
@@ -71,10 +79,12 @@
       930
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:medium",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   }
 ]

@@ -7,11 +7,13 @@
       480,
       520
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "framing",
       "omission",
-      "tc-red-army-invisible"
+      "tc-red-army-invisible",
+      "cat:sides"
     ]
   },
   {
@@ -22,10 +24,12 @@
       480,
       800
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:medium",
       "framing",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   }
 ]

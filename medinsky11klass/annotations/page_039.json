@@ -7,11 +7,13 @@
       430,
       660
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "context",
       "loaded-question",
-      "source-selection"
+      "source-selection",
+      "cat:apparatus"
     ]
   },
   {
@@ -22,10 +24,12 @@
       520,
       165
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "framing",
-      "overclaim"
+      "overclaim",
+      "cat:evidence"
     ]
   },
   {
@@ -36,9 +40,11 @@
       430,
       205
     ],
+    "category": "sides",
     "tags": [
       "confidence:medium",
-      "false-cause"
+      "false-cause",
+      "cat:sides"
     ]
   }
 ]

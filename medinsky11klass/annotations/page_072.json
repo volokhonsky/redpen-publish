@@ -7,10 +7,12 @@
       245,
       470
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:evidence"
     ]
   },
   {
@@ -21,9 +23,11 @@
       270,
       1000
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -34,10 +38,12 @@
       700,
       920
     ],
+    "category": "omission",
     "tags": [
       "confidence:medium",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

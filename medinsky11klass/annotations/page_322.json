@@ -8,10 +8,12 @@
       830
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -23,10 +25,12 @@
       900
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:low",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -38,10 +42,12 @@
       1010
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:low",
-      "dubious-number"
+      "dubious-number",
+      "cat:evidence"
     ]
   },
   {
@@ -53,10 +59,12 @@
       1080
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "contested-as-settled"
+      "contested-as-settled",
+      "cat:evidence"
     ]
   }
 ]

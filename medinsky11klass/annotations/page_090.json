@@ -7,10 +7,12 @@
       250,
       150
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:evidence"
     ]
   }
 ]

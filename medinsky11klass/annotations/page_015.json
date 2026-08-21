@@ -8,11 +8,13 @@
       520
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -24,11 +26,13 @@
       390
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "false-cause",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   },
   {
@@ -40,11 +44,13 @@
       690
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-hidden-disasters"
+      "tc-hidden-disasters",
+      "cat:omission"
     ]
   },
   {
@@ -56,11 +62,13 @@
       875
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "double-standard",
-      "euphemism"
+      "euphemism",
+      "cat:sides"
     ]
   },
   {
@@ -72,12 +80,14 @@
       990
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "context",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:evidence"
     ]
   }
 ]

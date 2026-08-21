@@ -8,11 +8,13 @@
       270
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-cheerful-summary"
+      "tc-cheerful-summary",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,11 +26,13 @@
       855
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-permission-as-abundance"
+      "tc-permission-as-abundance",
+      "cat:language"
     ]
   },
   {
@@ -40,6 +44,7 @@
       920
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:medium",

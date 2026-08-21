@@ -8,10 +8,12 @@
       400
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -23,11 +25,13 @@
       720
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "double-standard"
+      "double-standard",
+      "cat:apparatus"
     ]
   },
   {
@@ -39,11 +43,13 @@
       795
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   }
 ]

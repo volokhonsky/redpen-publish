@@ -8,11 +8,13 @@
       290
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "double-standard",
-      "tc-one-sided-ledger"
+      "tc-one-sided-ledger",
+      "cat:sides"
     ]
   },
   {
@@ -24,10 +26,12 @@
       578
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -39,11 +43,13 @@
       657
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "euphemism"
+      "euphemism",
+      "cat:apparatus"
     ]
   },
   {
@@ -55,10 +61,12 @@
       778
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -70,11 +78,13 @@
       872
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "tc-red-army-invisible"
+      "tc-red-army-invisible",
+      "cat:sides"
     ]
   },
   {
@@ -86,11 +96,13 @@
       1120
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "overclaim"
+      "overclaim",
+      "cat:apparatus"
     ]
   }
 ]

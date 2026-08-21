@@ -7,10 +7,12 @@
       300,
       80
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "omission",
-      "overclaim"
+      "overclaim",
+      "cat:evidence"
     ]
   },
   {
@@ -21,9 +23,11 @@
       400,
       345
     ],
+    "category": "omission",
     "tags": [
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -34,10 +38,12 @@
       300,
       1010
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:evidence"
     ]
   }
 ]

@@ -8,11 +8,13 @@
       800
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "false-cause",
-      "tc-west-economic-scapegoat"
+      "tc-west-economic-scapegoat",
+      "cat:sides"
     ]
   },
   {
@@ -24,6 +26,7 @@
       960
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"
@@ -38,11 +41,13 @@
       525
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   }
 ]

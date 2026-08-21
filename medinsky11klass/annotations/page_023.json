@@ -7,10 +7,12 @@
       630,
       380
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "context",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   },
   {
@@ -21,9 +23,11 @@
       400,
       720
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   },
   {
@@ -34,10 +38,12 @@
       450,
       900
     ],
+    "category": "language",
     "tags": [
       "confidence:medium",
       "euphemism",
-      "framing"
+      "framing",
+      "cat:language"
     ]
   }
 ]

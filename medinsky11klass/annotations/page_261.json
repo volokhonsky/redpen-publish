@@ -8,9 +8,11 @@
       200
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -22,6 +24,7 @@
       285
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"

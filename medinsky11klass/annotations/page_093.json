@@ -7,11 +7,13 @@
       300,
       350
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "omission",
       "source-selection",
-      "tc-foreign-praise"
+      "tc-foreign-praise",
+      "cat:evidence"
     ]
   },
   {
@@ -22,9 +24,11 @@
       300,
       570
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:medium",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   }
 ]

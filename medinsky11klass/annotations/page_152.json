@@ -8,11 +8,13 @@
       285
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,11 +26,13 @@
       390
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-only-friendly-witnesses"
+      "tc-only-friendly-witnesses",
+      "cat:evidence"
     ]
   },
   {
@@ -40,11 +44,13 @@
       678
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "omission"
+      "omission",
+      "cat:evidence"
     ]
   },
   {
@@ -56,11 +62,13 @@
       955
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "euphemism"
+      "euphemism",
+      "cat:apparatus"
     ]
   }
 ]

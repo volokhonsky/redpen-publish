@@ -8,11 +8,13 @@
       1000
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -24,12 +26,14 @@
       400
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-symmetry",
       "framing",
-      "tc-whatabout"
+      "tc-whatabout",
+      "cat:sides"
     ]
   },
   {
@@ -41,10 +45,12 @@
       630
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
-      "false-cause"
+      "false-cause",
+      "cat:sides"
     ]
   },
   {
@@ -56,11 +62,13 @@
       745
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

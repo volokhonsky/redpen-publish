@@ -8,10 +8,12 @@
       150
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -23,10 +25,12 @@
       660
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-antisemitism-hidden"
+      "tc-antisemitism-hidden",
+      "cat:omission"
     ]
   },
   {
@@ -38,10 +42,12 @@
       850
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -53,6 +59,7 @@
       1100
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"

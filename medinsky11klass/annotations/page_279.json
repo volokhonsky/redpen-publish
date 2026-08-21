@@ -8,11 +8,13 @@
       1075
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-flattering-portrait"
+      "tc-flattering-portrait",
+      "cat:omission"
     ]
   },
   {
@@ -24,11 +26,13 @@
       1120
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-flattering-portrait"
+      "tc-flattering-portrait",
+      "cat:omission"
     ]
   },
   {
@@ -40,6 +44,7 @@
       590
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"
@@ -54,11 +59,13 @@
       185
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-nineties-as-foil"
+      "tc-nineties-as-foil",
+      "cat:today"
     ]
   }
 ]

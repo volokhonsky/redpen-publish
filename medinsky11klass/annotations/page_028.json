@@ -7,10 +7,12 @@
       450,
       380
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:medium",
       "loaded-question",
-      "source-selection"
+      "source-selection",
+      "cat:apparatus"
     ]
   },
   {
@@ -21,6 +23,7 @@
       500,
       640
     ],
+    "category": "other",
     "tags": [
       "confidence:high",
       "context"

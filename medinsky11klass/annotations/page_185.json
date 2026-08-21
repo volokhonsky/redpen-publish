@@ -8,11 +8,13 @@
       300
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -24,12 +26,14 @@
       470
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "omission",
-      "tc-annexation-euphemism"
+      "tc-annexation-euphemism",
+      "cat:language"
     ]
   },
   {
@@ -41,11 +45,13 @@
       385
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -57,11 +63,13 @@
       890
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "overclaim"
+      "overclaim",
+      "cat:evidence"
     ]
   },
   {
@@ -73,11 +81,13 @@
       1040
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:evidence"
     ]
   }
 ]

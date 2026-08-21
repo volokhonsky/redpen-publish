@@ -8,10 +8,12 @@
       130
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "passive-voice",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -23,6 +25,7 @@
       950
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"
@@ -37,6 +40,7 @@
       1130
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"

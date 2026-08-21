@@ -8,11 +8,13 @@
       380
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-only-friendly-witnesses"
+      "tc-only-friendly-witnesses",
+      "cat:evidence"
     ]
   },
   {
@@ -24,10 +26,12 @@
       600
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "contested-as-settled"
+      "contested-as-settled",
+      "cat:evidence"
     ]
   },
   {
@@ -39,10 +43,12 @@
       940
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -54,10 +60,12 @@
       250
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
-      "tc-key-concept-unexplained"
+      "tc-key-concept-unexplained",
+      "cat:omission"
     ]
   }
 ]

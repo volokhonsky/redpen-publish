@@ -8,11 +8,13 @@
       930
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -24,11 +26,13 @@
       1008
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "framing"
+      "framing",
+      "cat:language"
     ]
   },
   {
@@ -40,11 +44,13 @@
       645
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -56,10 +62,12 @@
       748
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -71,11 +79,13 @@
       258
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "tc-passive-voice",
-      "tc-record-not-result"
+      "tc-record-not-result",
+      "cat:language"
     ]
   },
   {
@@ -87,11 +97,13 @@
       1085
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "tc-blame-the-consumer"
+      "tc-blame-the-consumer",
+      "cat:sides"
     ]
   }
 ]

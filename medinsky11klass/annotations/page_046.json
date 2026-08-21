@@ -7,11 +7,13 @@
       450,
       515
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "contested-as-settled",
       "double-standard",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -22,10 +24,12 @@
       430,
       600
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "dubious-number",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -36,9 +40,11 @@
       400,
       1045
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -49,9 +55,11 @@
       650,
       255
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

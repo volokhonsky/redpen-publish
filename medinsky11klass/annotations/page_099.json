@@ -8,11 +8,13 @@
       252
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,10 +26,12 @@
       612
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -39,6 +43,7 @@
       792
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -54,12 +59,14 @@
       888
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
       "false-cause",
-      "tc-destalinization-blamed"
+      "tc-destalinization-blamed",
+      "cat:apparatus"
     ]
   }
 ]

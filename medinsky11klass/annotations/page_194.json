@@ -8,11 +8,13 @@
       600
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-one-sided-ledger"
+      "tc-one-sided-ledger",
+      "cat:evidence"
     ]
   },
   {
@@ -24,11 +26,13 @@
       510
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "context",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -40,10 +44,12 @@
       730
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

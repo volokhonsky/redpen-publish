@@ -8,11 +8,13 @@
       168
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "tc-record-not-result"
+      "tc-record-not-result",
+      "cat:evidence"
     ]
   },
   {
@@ -24,11 +26,13 @@
       285
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-one-sided-ledger"
+      "tc-one-sided-ledger",
+      "cat:evidence"
     ]
   },
   {
@@ -40,11 +44,13 @@
       375
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-victim-hero"
+      "tc-victim-hero",
+      "cat:omission"
     ]
   },
   {
@@ -56,11 +62,13 @@
       632
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-victim-hero"
+      "tc-victim-hero",
+      "cat:omission"
     ]
   },
   {
@@ -72,12 +80,14 @@
       963
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "overclaim",
       "tc-anonymous-superlative",
-      "tc-foreign-praise"
+      "tc-foreign-praise",
+      "cat:evidence"
     ]
   }
 ]

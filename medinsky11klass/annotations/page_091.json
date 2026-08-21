@@ -7,11 +7,13 @@
       300,
       900
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "framing",
       "overclaim",
-      "tc-foreign-praise"
+      "tc-foreign-praise",
+      "cat:evidence"
     ]
   },
   {
@@ -22,10 +24,12 @@
       300,
       490
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "source-selection",
-      "tc-foreign-praise"
+      "tc-foreign-praise",
+      "cat:evidence"
     ]
   }
 ]

@@ -8,11 +8,13 @@
       442
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-victim-hero"
+      "tc-victim-hero",
+      "cat:omission"
     ]
   },
   {
@@ -24,12 +26,14 @@
       540
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
       "framing",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -41,11 +45,13 @@
       745
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "loaded-question",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   },
   {
@@ -57,10 +63,12 @@
       892
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

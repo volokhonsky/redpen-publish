@@ -8,11 +8,13 @@
       237
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -24,11 +26,13 @@
       330
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   },
   {
@@ -40,11 +44,13 @@
       507
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "context",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -56,11 +62,13 @@
       690
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
       "fact-error",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -72,11 +80,13 @@
       845
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-record-not-result"
+      "tc-record-not-result",
+      "cat:omission"
     ]
   },
   {
@@ -88,11 +98,13 @@
       975
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-victim-hero"
+      "tc-victim-hero",
+      "cat:omission"
     ]
   },
   {
@@ -104,11 +116,13 @@
       1080
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

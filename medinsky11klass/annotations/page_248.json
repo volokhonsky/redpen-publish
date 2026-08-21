@@ -8,12 +8,14 @@
       210
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
       "framing",
-      "tc-reunification-annexation"
+      "tc-reunification-annexation",
+      "cat:apparatus"
     ]
   },
   {
@@ -25,11 +27,13 @@
       1080
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
       "contested-as-settled",
-      "contradiction"
+      "contradiction",
+      "cat:apparatus"
     ]
   },
   {
@@ -41,10 +45,12 @@
       430
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

@@ -8,11 +8,13 @@
       30
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-thaw-no-ending"
+      "tc-thaw-no-ending",
+      "cat:omission"
     ]
   },
   {
@@ -24,10 +26,12 @@
       190
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -39,6 +43,7 @@
       90
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"
@@ -53,10 +58,12 @@
       340
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

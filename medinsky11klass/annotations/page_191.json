@@ -8,10 +8,12 @@
       230
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -23,12 +25,14 @@
       450
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "loaded-question",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:apparatus"
     ]
   },
   {
@@ -40,11 +44,13 @@
       740
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-only-friendly-witnesses"
+      "tc-only-friendly-witnesses",
+      "cat:evidence"
     ]
   },
   {
@@ -56,11 +62,13 @@
       285
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "framing"
+      "framing",
+      "cat:apparatus"
     ]
   }
 ]

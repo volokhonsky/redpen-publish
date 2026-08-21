@@ -8,11 +8,13 @@
       440
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "context",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -24,11 +26,13 @@
       300
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "false-cause",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   }
 ]

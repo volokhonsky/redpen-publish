@@ -7,11 +7,13 @@
       480,
       480
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "false-cause",
       "framing",
-      "omission"
+      "omission",
+      "cat:sides"
     ]
   },
   {
@@ -22,11 +24,13 @@
       480,
       915
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "double-standard",
       "framing",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -37,10 +41,12 @@
       480,
       830
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "contested-as-settled",
-      "omission"
+      "omission",
+      "cat:evidence"
     ]
   }
 ]

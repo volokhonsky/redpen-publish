@@ -8,11 +8,13 @@
       650
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-single-source-conflict"
+      "tc-single-source-conflict",
+      "cat:evidence"
     ]
   },
   {
@@ -24,10 +26,12 @@
       270
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -39,6 +43,7 @@
       1060
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:low",
@@ -54,10 +59,12 @@
       850
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

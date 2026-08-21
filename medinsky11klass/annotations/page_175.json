@@ -8,11 +8,13 @@
       250
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "tc-cheerful-summary",
-      "tc-despite-not-because"
+      "tc-despite-not-because",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,11 +26,13 @@
       328
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "tc-cheerful-summary"
+      "tc-cheerful-summary",
+      "cat:apparatus"
     ]
   },
   {
@@ -40,10 +44,12 @@
       625
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -55,11 +61,13 @@
       703
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "loaded-question",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -71,11 +79,13 @@
       972
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "tc-agitprop-as-source",
-      "tc-record-not-result"
+      "tc-record-not-result",
+      "cat:evidence"
     ]
   }
 ]

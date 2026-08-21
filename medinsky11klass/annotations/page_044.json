@@ -7,10 +7,12 @@
       500,
       915
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "contradiction",
-      "framing"
+      "framing",
+      "cat:apparatus"
     ]
   },
   {
@@ -21,10 +23,12 @@
       500,
       555
     ],
+    "category": "sides",
     "tags": [
       "confidence:medium",
       "framing",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -35,10 +39,12 @@
       450,
       1075
     ],
+    "category": "sides",
     "tags": [
       "confidence:medium",
       "double-standard",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   }
 ]

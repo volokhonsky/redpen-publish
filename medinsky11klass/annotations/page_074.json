@@ -7,10 +7,12 @@
       700,
       1050
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "omission",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -21,9 +23,11 @@
       700,
       1090
     ],
+    "category": "today",
     "tags": [
       "anachronism",
-      "confidence:medium"
+      "confidence:medium",
+      "cat:today"
     ]
   },
   {
@@ -34,10 +38,12 @@
       400,
       280
     ],
+    "category": "omission",
     "tags": [
       "confidence:high",
       "context",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

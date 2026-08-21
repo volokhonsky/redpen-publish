@@ -8,11 +8,13 @@
       240
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "tc-foreign-praise"
+      "tc-foreign-praise",
+      "cat:evidence"
     ]
   },
   {
@@ -24,6 +26,7 @@
       340
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -39,10 +42,12 @@
       660
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -54,11 +59,13 @@
       825
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -70,11 +77,13 @@
       930
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-moscow-as-country"
+      "tc-moscow-as-country",
+      "cat:evidence"
     ]
   },
   {
@@ -86,11 +95,13 @@
       1045
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-benefit-through-employer"
+      "tc-benefit-through-employer",
+      "cat:evidence"
     ]
   },
   {
@@ -102,11 +113,13 @@
       768
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-censorship-unnamed"
+      "tc-censorship-unnamed",
+      "cat:omission"
     ]
   }
 ]

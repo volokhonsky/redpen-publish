@@ -8,12 +8,14 @@
       550
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
       "framing",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -25,11 +27,13 @@
       615
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "contested-as-settled",
-      "omission"
+      "omission",
+      "cat:evidence"
     ]
   },
   {
@@ -41,11 +45,13 @@
       780
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "double-standard",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   },
   {
@@ -57,11 +63,13 @@
       1120
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   }
 ]

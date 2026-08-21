@@ -8,11 +8,13 @@
       255
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -24,11 +26,13 @@
       930
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -40,11 +44,13 @@
       1140
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   },
   {
@@ -56,11 +62,13 @@
       1055
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "dubious-number",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -72,10 +80,12 @@
       600
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "anachronism",
-      "confidence:medium"
+      "confidence:medium",
+      "cat:today"
     ]
   }
 ]

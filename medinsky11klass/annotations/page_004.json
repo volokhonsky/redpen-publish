@@ -6,7 +6,8 @@
     "coords": [
       450,
       430
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-i004-1",
@@ -17,6 +18,7 @@
       195
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -32,11 +34,13 @@
       276
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   },
   {
@@ -48,11 +52,13 @@
       357
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "contested-as-settled",
-      "tc-annexation-euphemism"
+      "tc-annexation-euphemism",
+      "cat:language"
     ]
   },
   {
@@ -64,9 +70,11 @@
       492
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

@@ -6,7 +6,8 @@
     "coords": [
       500,
       150
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-p029-1",
@@ -16,12 +17,14 @@
       450,
       275
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "false-cause",
       "false-symmetry",
       "tc-usa-origin",
-      "tc-whatabout"
+      "tc-whatabout",
+      "cat:sides"
     ]
   },
   {
@@ -32,10 +35,12 @@
       690,
       905
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "double-standard",
-      "tc-whatabout"
+      "tc-whatabout",
+      "cat:sides"
     ]
   },
   {
@@ -46,11 +51,13 @@
       680,
       640
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "omission",
       "source-selection",
-      "tc-famine-1946"
+      "tc-famine-1946",
+      "cat:evidence"
     ]
   }
 ]

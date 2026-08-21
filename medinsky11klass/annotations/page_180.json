@@ -8,11 +8,13 @@
       510
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "tc-import-as-cooperation",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:language"
     ]
   },
   {
@@ -24,11 +26,13 @@
       630
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -40,11 +44,13 @@
       1010
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:medium",
       "euphemism",
-      "tc-censorship-unnamed"
+      "tc-censorship-unnamed",
+      "cat:language"
     ]
   },
   {
@@ -56,11 +62,13 @@
       1140
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "tc-censorship-unnamed"
+      "tc-censorship-unnamed",
+      "cat:apparatus"
     ]
   },
   {
@@ -72,11 +80,13 @@
       790
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "tc-blame-the-consumer",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   }
 ]

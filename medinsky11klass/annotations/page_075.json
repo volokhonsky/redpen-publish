@@ -7,11 +7,13 @@
       400,
       165
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "contradiction",
       "dubious-number",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:apparatus"
     ]
   },
   {
@@ -22,10 +24,12 @@
       400,
       620
     ],
+    "category": "omission",
     "tags": [
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -36,10 +40,12 @@
       650,
       900
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:evidence"
     ]
   }
 ]

@@ -7,10 +7,12 @@
       400,
       600
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "euphemism",
-      "fact-error"
+      "fact-error",
+      "cat:language"
     ]
   },
   {
@@ -21,9 +23,11 @@
       400,
       665
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   },
   {
@@ -34,10 +38,12 @@
       400,
       420
     ],
+    "category": "sides",
     "tags": [
       "confidence:medium",
       "framing",
-      "tc-reform-as-powergrab"
+      "tc-reform-as-powergrab",
+      "cat:sides"
     ]
   }
 ]

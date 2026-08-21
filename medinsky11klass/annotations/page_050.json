@@ -7,11 +7,13 @@
       480,
       645
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "false-cause",
       "omission",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -22,11 +24,13 @@
       480,
       815
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "double-standard",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:sides"
     ]
   },
   {
@@ -37,10 +41,12 @@
       660,
       250
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "contradiction",
-      "framing"
+      "framing",
+      "cat:apparatus"
     ]
   }
 ]

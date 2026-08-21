@@ -8,12 +8,14 @@
       265
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
       "tc-censorship-unnamed",
-      "tc-despite-not-because"
+      "tc-despite-not-because",
+      "cat:language"
     ]
   },
   {
@@ -25,10 +27,12 @@
       340
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-moscow-as-country"
+      "tc-moscow-as-country",
+      "cat:evidence"
     ]
   },
   {
@@ -40,11 +44,13 @@
       515
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   },
   {
@@ -56,10 +62,12 @@
       1000
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -71,10 +79,12 @@
       1085
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   }
 ]

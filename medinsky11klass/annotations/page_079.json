@@ -7,10 +7,12 @@
       400,
       60
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "contradiction",
-      "false-cause"
+      "false-cause",
+      "cat:apparatus"
     ]
   },
   {
@@ -21,9 +23,11 @@
       400,
       850
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

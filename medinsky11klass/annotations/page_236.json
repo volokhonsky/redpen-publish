@@ -8,11 +8,13 @@
       430
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "framing"
+      "framing",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,11 +26,13 @@
       665
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "contested-as-settled",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -40,6 +44,7 @@
       975
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -55,6 +60,7 @@
       1090
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:medium",

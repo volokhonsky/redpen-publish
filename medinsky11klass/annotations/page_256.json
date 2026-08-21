@@ -8,10 +8,12 @@
       190
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -23,11 +25,13 @@
       680
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "contested-as-settled",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -39,10 +43,12 @@
       660
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -54,9 +60,11 @@
       230
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

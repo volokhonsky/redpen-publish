@@ -8,10 +8,12 @@
       1010
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -23,9 +25,11 @@
       950
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -37,9 +41,11 @@
       800
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
-      "tc-key-concept-unexplained"
+      "tc-key-concept-unexplained",
+      "cat:omission"
     ]
   }
 ]

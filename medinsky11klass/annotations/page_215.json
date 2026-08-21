@@ -8,12 +8,14 @@
       185
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "contested-as-settled",
       "euphemism",
-      "tc-despite-not-because"
+      "tc-despite-not-because",
+      "cat:language"
     ]
   },
   {
@@ -25,11 +27,13 @@
       400
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-record-not-result"
+      "tc-record-not-result",
+      "cat:omission"
     ]
   },
   {
@@ -41,11 +45,13 @@
       690
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -57,6 +63,7 @@
       945
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -72,10 +79,12 @@
       795
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   }
 ]

@@ -8,11 +8,13 @@
       272
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:sides"
     ]
   },
   {
@@ -24,12 +26,14 @@
       502
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "omission",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -41,11 +45,13 @@
       848
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "loaded-question",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:apparatus"
     ]
   },
   {
@@ -57,11 +63,13 @@
       1052
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

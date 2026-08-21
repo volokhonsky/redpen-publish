@@ -8,12 +8,14 @@
       200
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
       "omission",
-      "tc-thaw-no-ending"
+      "tc-thaw-no-ending",
+      "cat:language"
     ]
   },
   {
@@ -25,11 +27,13 @@
       235
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -41,11 +45,13 @@
       300
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-censorship-unnamed"
+      "tc-censorship-unnamed",
+      "cat:omission"
     ]
   },
   {
@@ -57,10 +63,12 @@
       495
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -72,11 +80,13 @@
       890
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -88,11 +98,13 @@
       1015
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "tc-censorship-unnamed",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   }
 ]

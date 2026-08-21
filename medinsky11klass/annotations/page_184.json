@@ -8,11 +8,13 @@
       990
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-symmetry",
-      "tc-whatabout"
+      "tc-whatabout",
+      "cat:sides"
     ]
   },
   {
@@ -24,11 +26,13 @@
       1000
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -40,11 +44,13 @@
       480
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:evidence"
     ]
   },
   {
@@ -56,11 +62,13 @@
       950
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
       "omission",
-      "tc-antisemitism-hidden"
+      "tc-antisemitism-hidden",
+      "cat:omission"
     ]
   }
 ]

@@ -8,11 +8,13 @@
       465
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -24,11 +26,13 @@
       540
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:apparatus"
     ]
   },
   {
@@ -40,10 +44,12 @@
       600
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
-      "false-cause"
+      "false-cause",
+      "cat:sides"
     ]
   },
   {
@@ -55,12 +61,14 @@
       705
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
       "omission",
-      "tc-import-as-cooperation"
+      "tc-import-as-cooperation",
+      "cat:language"
     ]
   },
   {
@@ -72,11 +80,13 @@
       940
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "tc-import-as-cooperation"
+      "tc-import-as-cooperation",
+      "cat:language"
     ]
   }
 ]

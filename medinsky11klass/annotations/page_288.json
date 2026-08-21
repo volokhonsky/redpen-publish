@@ -8,10 +8,12 @@
       110
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -23,9 +25,11 @@
       660
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "dubious-number"
+      "dubious-number",
+      "cat:evidence"
     ]
   },
   {
@@ -37,10 +41,12 @@
       840
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

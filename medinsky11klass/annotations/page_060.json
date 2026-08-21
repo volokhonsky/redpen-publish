@@ -7,10 +7,12 @@
       650,
       355
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "omission",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -21,9 +23,11 @@
       400,
       650
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -34,10 +38,12 @@
       400,
       545
     ],
+    "category": "omission",
     "tags": [
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

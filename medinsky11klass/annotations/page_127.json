@@ -8,11 +8,13 @@
       757
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "anachronism",
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:today"
     ]
   },
   {
@@ -24,11 +26,13 @@
       850
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "contested-as-settled",
-      "fact-error"
+      "fact-error",
+      "cat:evidence"
     ]
   },
   {
@@ -40,11 +44,13 @@
       925
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -56,10 +62,12 @@
       1027
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
-      "false-cause"
+      "false-cause",
+      "cat:sides"
     ]
   },
   {
@@ -71,12 +79,14 @@
       1102
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
       "omission",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -88,10 +98,12 @@
       418
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   }
 ]

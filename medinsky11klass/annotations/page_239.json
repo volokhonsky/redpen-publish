@@ -8,12 +8,14 @@
       580
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
       "framing",
-      "tc-democratization-as-collapse"
+      "tc-democratization-as-collapse",
+      "cat:sides"
     ]
   },
   {
@@ -25,11 +27,13 @@
       810
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-reform-labeled-radical"
+      "tc-reform-labeled-radical",
+      "cat:sides"
     ]
   },
   {
@@ -41,10 +45,12 @@
       200
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
-      "contradiction"
+      "contradiction",
+      "cat:apparatus"
     ]
   },
   {
@@ -56,6 +62,7 @@
       900
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:medium",

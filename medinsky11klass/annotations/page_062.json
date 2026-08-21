@@ -7,10 +7,12 @@
       700,
       320
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "contradiction",
-      "source-selection"
+      "source-selection",
+      "cat:apparatus"
     ]
   },
   {
@@ -21,6 +23,7 @@
       400,
       790
     ],
+    "category": "other",
     "tags": [
       "confidence:high",
       "context"

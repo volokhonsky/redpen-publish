@@ -7,10 +7,12 @@
       400,
       650
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "dubious-number",
-      "overclaim"
+      "overclaim",
+      "cat:evidence"
     ]
   }
 ]

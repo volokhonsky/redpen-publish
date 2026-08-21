@@ -6,7 +6,8 @@
     "coords": [
       450,
       965
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-i003-1",
@@ -17,11 +18,13 @@
       249
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-famine-1946"
+      "tc-famine-1946",
+      "cat:omission"
     ]
   },
   {
@@ -33,9 +36,11 @@
       357
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -47,11 +52,13 @@
       627
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -63,11 +70,13 @@
       789
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-democratization-as-collapse"
+      "tc-democratization-as-collapse",
+      "cat:sides"
     ]
   },
   {
@@ -79,11 +88,13 @@
       951
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-nineties-as-foil"
+      "tc-nineties-as-foil",
+      "cat:today"
     ]
   }
 ]

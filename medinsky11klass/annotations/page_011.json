@@ -8,11 +8,13 @@
       630
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "false-cause",
-      "omission"
+      "omission",
+      "cat:sides"
     ]
   },
   {
@@ -24,11 +26,13 @@
       700
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "dubious-number",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -40,10 +44,12 @@
       380
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -55,11 +61,13 @@
       200
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-showcase-photo"
+      "tc-showcase-photo",
+      "cat:evidence"
     ]
   }
 ]

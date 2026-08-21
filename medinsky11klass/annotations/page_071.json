@@ -7,10 +7,12 @@
       400,
       190
     ],
+    "category": "sides",
     "tags": [
       "confidence:medium",
       "false-symmetry",
-      "source-selection"
+      "source-selection",
+      "cat:sides"
     ]
   },
   {
@@ -21,6 +23,7 @@
       400,
       80
     ],
+    "category": "other",
     "tags": [
       "confidence:high",
       "context"

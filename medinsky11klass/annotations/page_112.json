@@ -8,10 +8,12 @@
       315
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -23,6 +25,7 @@
       245
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -39,11 +42,13 @@
       480
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "framing",
-      "tc-foreign-praise"
+      "tc-foreign-praise",
+      "cat:evidence"
     ]
   },
   {
@@ -55,10 +60,12 @@
       695
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
-      "false-cause"
+      "false-cause",
+      "cat:sides"
     ]
   },
   {
@@ -70,6 +77,7 @@
       1015
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",

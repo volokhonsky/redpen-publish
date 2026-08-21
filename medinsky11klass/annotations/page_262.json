@@ -8,10 +8,12 @@
       420
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   },
   {
@@ -23,10 +25,12 @@
       340
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
-      "tc-reform-as-powergrab"
+      "tc-reform-as-powergrab",
+      "cat:sides"
     ]
   },
   {
@@ -38,6 +42,7 @@
       900
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"

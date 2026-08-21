@@ -7,10 +7,12 @@
       400,
       1080
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "dubious-number",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -21,10 +23,12 @@
       400,
       690
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "euphemism",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -35,9 +39,11 @@
       400,
       830
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -48,9 +54,11 @@
       400,
       645
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

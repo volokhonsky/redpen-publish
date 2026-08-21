@@ -8,11 +8,13 @@
       215
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "context",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -24,12 +26,14 @@
       620
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "overclaim",
-      "tc-record-not-result"
+      "tc-record-not-result",
+      "cat:evidence"
     ]
   },
   {
@@ -41,11 +45,13 @@
       690
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-hidden-disasters"
+      "tc-hidden-disasters",
+      "cat:omission"
     ]
   },
   {
@@ -57,11 +63,13 @@
       755
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "fact-error",
-      "tc-record-not-result"
+      "tc-record-not-result",
+      "cat:omission"
     ]
   },
   {
@@ -73,11 +81,13 @@
       880
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "tc-record-not-result"
+      "tc-record-not-result",
+      "cat:language"
     ]
   },
   {
@@ -89,6 +99,7 @@
       990
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",

@@ -8,11 +8,13 @@
       140
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,9 +26,11 @@
       170
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
-      "tc-strangeness-as-explanation"
+      "tc-strangeness-as-explanation",
+      "cat:language"
     ]
   },
   {
@@ -38,9 +42,11 @@
       500
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

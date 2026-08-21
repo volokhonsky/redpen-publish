@@ -8,11 +8,13 @@
       370
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -24,9 +26,11 @@
       430
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "dubious-number"
+      "dubious-number",
+      "cat:evidence"
     ]
   },
   {
@@ -38,11 +42,13 @@
       260
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-flattering-portrait"
+      "tc-flattering-portrait",
+      "cat:omission"
     ]
   },
   {
@@ -54,6 +60,7 @@
       650
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"
@@ -68,11 +75,13 @@
       870
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-nineties-as-foil"
+      "tc-nineties-as-foil",
+      "cat:today"
     ]
   }
 ]

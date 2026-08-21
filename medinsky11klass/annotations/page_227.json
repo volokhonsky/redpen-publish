@@ -8,10 +8,12 @@
       300
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "tc-foreign-praise"
+      "tc-foreign-praise",
+      "cat:evidence"
     ]
   },
   {
@@ -23,11 +25,13 @@
       640
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "double-standard",
-      "framing"
+      "framing",
+      "cat:sides"
     ]
   },
   {
@@ -39,6 +43,7 @@
       950
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"
@@ -53,10 +58,12 @@
       480
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

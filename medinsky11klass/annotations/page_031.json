@@ -7,10 +7,12 @@
       250,
       180
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "context",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -21,10 +23,12 @@
       330,
       1000
     ],
+    "category": "omission",
     "tags": [
       "confidence:high",
       "framing",
-      "tc-famine-1946"
+      "tc-famine-1946",
+      "cat:omission"
     ]
   }
 ]

@@ -7,10 +7,12 @@
       500,
       215
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "framing",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -21,9 +23,11 @@
       640,
       515
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -34,10 +38,12 @@
       720,
       810
     ],
+    "category": "language",
     "tags": [
       "confidence:medium",
       "euphemism",
-      "framing"
+      "framing",
+      "cat:language"
     ]
   },
   {
@@ -48,11 +54,13 @@
       250,
       850
     ],
+    "category": "omission",
     "tags": [
       "confidence:high",
       "framing",
       "omission",
-      "tc-antisemitism-hidden"
+      "tc-antisemitism-hidden",
+      "cat:omission"
     ]
   }
 ]

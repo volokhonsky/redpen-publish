@@ -7,10 +7,12 @@
       300,
       800
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "source-selection",
-      "tc-foreign-praise"
+      "tc-foreign-praise",
+      "cat:evidence"
     ]
   },
   {
@@ -21,11 +23,13 @@
       300,
       410
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "loaded-question",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:apparatus"
     ]
   }
 ]

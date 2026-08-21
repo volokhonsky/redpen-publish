@@ -8,10 +8,12 @@
       270
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -23,11 +25,13 @@
       670
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -39,11 +43,13 @@
       718
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -55,11 +61,13 @@
       1040
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "omission"
+      "omission",
+      "cat:sides"
     ]
   },
   {
@@ -71,10 +79,12 @@
       1115
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   }
 ]

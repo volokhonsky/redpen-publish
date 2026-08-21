@@ -8,11 +8,13 @@
       380
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "omission"
+      "omission",
+      "cat:evidence"
     ]
   },
   {
@@ -24,11 +26,13 @@
       900
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "omission"
+      "omission",
+      "cat:evidence"
     ]
   },
   {
@@ -40,6 +44,7 @@
       850
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -55,10 +60,12 @@
       715
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -70,10 +77,12 @@
       470
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:medium",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   }
 ]

@@ -8,10 +8,12 @@
       180
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "contested-as-settled"
+      "contested-as-settled",
+      "cat:evidence"
     ]
   },
   {
@@ -23,11 +25,13 @@
       470
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -39,10 +43,12 @@
       830
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -54,6 +60,7 @@
       890
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:low",

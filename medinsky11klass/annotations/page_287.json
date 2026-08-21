@@ -8,10 +8,12 @@
       145
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -23,6 +25,7 @@
       30
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"

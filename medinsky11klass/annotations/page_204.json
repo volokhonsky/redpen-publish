@@ -6,7 +6,8 @@
     "coords": [
       650,
       440
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page205-2",
@@ -15,7 +16,8 @@
     "coords": [
       150,
       520
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page205-3",
@@ -24,7 +26,8 @@
     "coords": [
       150,
       750
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "srv-import-98677145",
@@ -33,7 +36,8 @@
     "coords": [
       150,
       670
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page205-4",
@@ -42,7 +46,8 @@
     "coords": [
       650,
       890
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-p204-1",
@@ -53,6 +58,7 @@
       300
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:medium",

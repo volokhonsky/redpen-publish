@@ -8,12 +8,14 @@
       650
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
       "overclaim",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -25,12 +27,14 @@
       870
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "source-selection",
-      "tc-famine-1946"
+      "tc-famine-1946",
+      "cat:evidence"
     ]
   },
   {
@@ -42,11 +46,13 @@
       515
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-famine-1946"
+      "tc-famine-1946",
+      "cat:omission"
     ]
   },
   {
@@ -58,10 +64,12 @@
       165
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

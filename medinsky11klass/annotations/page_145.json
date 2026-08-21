@@ -8,11 +8,13 @@
       180
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "euphemism"
+      "euphemism",
+      "cat:apparatus"
     ]
   },
   {
@@ -24,11 +26,13 @@
       555
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "double-standard",
-      "dubious-number"
+      "dubious-number",
+      "cat:sides"
     ]
   },
   {
@@ -40,12 +44,14 @@
       685
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "double-standard",
       "framing",
-      "tc-blame-the-consumer"
+      "tc-blame-the-consumer",
+      "cat:sides"
     ]
   },
   {
@@ -57,10 +63,12 @@
       805
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
-      "false-cause"
+      "false-cause",
+      "cat:sides"
     ]
   },
   {
@@ -72,11 +80,13 @@
       890
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   }
 ]

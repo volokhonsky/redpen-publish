@@ -8,12 +8,14 @@
       262
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
       "loaded-question",
-      "tc-cheerful-summary"
+      "tc-cheerful-summary",
+      "cat:apparatus"
     ]
   },
   {
@@ -25,11 +27,13 @@
       660
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-hidden-disasters"
+      "tc-hidden-disasters",
+      "cat:omission"
     ]
   },
   {
@@ -41,11 +45,13 @@
       645
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-hidden-disasters"
+      "tc-hidden-disasters",
+      "cat:omission"
     ]
   },
   {
@@ -57,10 +63,12 @@
       768
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -72,11 +80,13 @@
       895
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -88,6 +98,7 @@
       1012
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",

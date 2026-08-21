@@ -7,11 +7,13 @@
       450,
       775
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "false-cause",
       "omission",
-      "tc-red-army-invisible"
+      "tc-red-army-invisible",
+      "cat:sides"
     ]
   },
   {
@@ -22,10 +24,12 @@
       430,
       650
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -36,11 +40,13 @@
       700,
       350
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "contested-as-settled",
       "framing",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

@@ -8,11 +8,13 @@
       735
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
       "contested-as-settled",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -24,10 +26,12 @@
       180
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -39,11 +43,13 @@
       700
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "framing",
-      "tc-foreign-praise-inverted"
+      "tc-foreign-praise-inverted",
+      "cat:sides"
     ]
   },
   {
@@ -55,6 +61,7 @@
       530
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:medium",

@@ -8,9 +8,11 @@
       180
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -22,10 +24,12 @@
       395
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -37,10 +41,12 @@
       830
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -52,9 +58,11 @@
       1100
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "overclaim"
+      "overclaim",
+      "cat:evidence"
     ]
   }
 ]

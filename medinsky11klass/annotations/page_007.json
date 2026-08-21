@@ -6,7 +6,8 @@
     "coords": [
       650,
       200
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page8-2",
@@ -15,7 +16,8 @@
     "coords": [
       400,
       350
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page8-3",
@@ -24,7 +26,8 @@
     "coords": [
       500,
       480
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page8-4",
@@ -33,7 +36,8 @@
     "coords": [
       300,
       500
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page8-5",
@@ -42,7 +46,8 @@
     "coords": [
       400,
       950
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page8-6",
@@ -51,7 +56,8 @@
     "coords": [
       500,
       1000
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-p007-1",
@@ -62,11 +68,13 @@
       915
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   }
 ]

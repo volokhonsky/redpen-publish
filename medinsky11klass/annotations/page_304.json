@@ -8,10 +8,12 @@
       160
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:high",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -23,11 +25,13 @@
       365
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-single-source-conflict"
+      "tc-single-source-conflict",
+      "cat:evidence"
     ]
   },
   {
@@ -39,6 +43,7 @@
       950
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -54,11 +59,13 @@
       1090
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-modern-authority"
+      "tc-modern-authority",
+      "cat:today"
     ]
   },
   {
@@ -70,6 +77,7 @@
       600
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",

@@ -7,11 +7,13 @@
       300,
       555
     ],
+    "category": "sides",
     "tags": [
       "confidence:high",
       "false-cause",
       "omission",
-      "tc-leader-science"
+      "tc-leader-science",
+      "cat:sides"
     ]
   },
   {
@@ -22,10 +24,12 @@
       300,
       400
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "contradiction",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   },
   {
@@ -36,9 +40,11 @@
       300,
       630
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:medium",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   }
 ]

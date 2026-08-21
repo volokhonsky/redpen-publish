@@ -7,9 +7,11 @@
       400,
       200
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -20,11 +22,13 @@
       400,
       390
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "framing",
       "loaded-question",
-      "tc-reform-as-powergrab"
+      "tc-reform-as-powergrab",
+      "cat:apparatus"
     ]
   }
 ]

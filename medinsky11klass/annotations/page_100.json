@@ -8,10 +8,12 @@
       392
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -23,11 +25,13 @@
       545
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -39,11 +43,13 @@
       812
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "framing"
+      "framing",
+      "cat:language"
     ]
   },
   {
@@ -55,11 +61,13 @@
       1088
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "loaded-question",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   }
 ]

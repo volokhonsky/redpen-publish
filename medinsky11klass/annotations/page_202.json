@@ -6,7 +6,8 @@
     "coords": [
       650,
       750
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page203-2",
@@ -15,7 +16,8 @@
     "coords": [
       150,
       180
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-p202-1",
@@ -26,12 +28,14 @@
       470
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "anachronism",
       "confidence:high",
       "framing",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:today"
     ]
   }
 ]

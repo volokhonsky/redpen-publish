@@ -8,11 +8,13 @@
       630
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "false-cause",
-      "tc-west-economic-scapegoat"
+      "tc-west-economic-scapegoat",
+      "cat:sides"
     ]
   },
   {
@@ -24,6 +26,7 @@
       780
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"

@@ -7,11 +7,13 @@
       450,
       360
     ],
+    "category": "sides",
     "tags": [
       "confidence:medium",
       "euphemism",
       "framing",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -22,10 +24,12 @@
       500,
       190
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "euphemism",
-      "framing"
+      "framing",
+      "cat:language"
     ]
   },
   {
@@ -36,10 +40,12 @@
       450,
       1055
     ],
+    "category": "sides",
     "tags": [
       "confidence:medium",
       "framing",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   }
 ]

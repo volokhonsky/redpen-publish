@@ -7,10 +7,12 @@
       450,
       215
     ],
+    "category": "omission",
     "tags": [
       "confidence:high",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -21,9 +23,11 @@
       450,
       430
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -34,9 +38,11 @@
       400,
       500
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
-      "dubious-number"
+      "dubious-number",
+      "cat:evidence"
     ]
   },
   {
@@ -47,10 +53,12 @@
       500,
       720
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "context",
-      "euphemism"
+      "euphemism",
+      "cat:language"
     ]
   }
 ]

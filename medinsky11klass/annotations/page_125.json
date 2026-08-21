@@ -8,11 +8,13 @@
       752
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "overclaim"
+      "overclaim",
+      "cat:evidence"
     ]
   },
   {
@@ -24,11 +26,13 @@
       876
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:medium",
       "euphemism",
-      "overclaim"
+      "overclaim",
+      "cat:language"
     ]
   },
   {
@@ -40,11 +44,13 @@
       1090
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "overclaim"
+      "overclaim",
+      "cat:evidence"
     ]
   },
   {
@@ -56,11 +62,13 @@
       606
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-author-vouches"
+      "tc-author-vouches",
+      "cat:evidence"
     ]
   },
   {
@@ -72,11 +80,13 @@
       370
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "framing"
+      "framing",
+      "cat:language"
     ]
   }
 ]

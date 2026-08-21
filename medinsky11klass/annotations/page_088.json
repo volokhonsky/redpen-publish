@@ -7,10 +7,12 @@
       250,
       470
     ],
+    "category": "omission",
     "tags": [
       "confidence:medium",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -21,6 +23,7 @@
       300,
       285
     ],
+    "category": "other",
     "tags": [
       "confidence:high",
       "context",

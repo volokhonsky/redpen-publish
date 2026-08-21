@@ -8,11 +8,13 @@
       248
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "overclaim"
+      "overclaim",
+      "cat:evidence"
     ]
   },
   {
@@ -24,11 +26,13 @@
       432
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-benefit-through-employer"
+      "tc-benefit-through-employer",
+      "cat:evidence"
     ]
   },
   {
@@ -40,11 +44,13 @@
       620
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-blame-the-consumer"
+      "tc-blame-the-consumer",
+      "cat:sides"
     ]
   },
   {
@@ -56,11 +62,13 @@
       1062
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -72,11 +80,13 @@
       1120
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "loaded-question",
-      "tc-blame-the-consumer"
+      "tc-blame-the-consumer",
+      "cat:apparatus"
     ]
   }
 ]

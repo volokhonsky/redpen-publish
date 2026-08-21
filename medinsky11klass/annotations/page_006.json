@@ -6,7 +6,8 @@
     "coords": [
       650,
       220
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page7-2",
@@ -15,7 +16,8 @@
     "coords": [
       300,
       650
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page7-3",
@@ -24,7 +26,8 @@
     "coords": [
       650,
       950
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-p006-1",
@@ -35,6 +38,7 @@
       890
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:high",
@@ -51,11 +55,13 @@
       470
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -67,12 +73,14 @@
       255
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "loaded-question",
       "omission",
-      "tc-famine-1946"
+      "tc-famine-1946",
+      "cat:apparatus"
     ]
   },
   {
@@ -84,10 +92,12 @@
       650
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -99,9 +109,11 @@
       935
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -113,9 +125,11 @@
       655
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

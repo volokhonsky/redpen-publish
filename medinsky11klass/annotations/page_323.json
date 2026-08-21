@@ -8,10 +8,12 @@
       120
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "contested-as-settled"
+      "contested-as-settled",
+      "cat:evidence"
     ]
   },
   {
@@ -23,10 +25,12 @@
       205
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
-      "contested-as-settled"
+      "contested-as-settled",
+      "cat:evidence"
     ]
   },
   {
@@ -38,10 +42,12 @@
       680
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -53,10 +59,12 @@
       1085
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   }
 ]

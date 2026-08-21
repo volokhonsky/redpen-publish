@@ -8,11 +8,13 @@
       280
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-reluctant-aggressor"
+      "tc-reluctant-aggressor",
+      "cat:sides"
     ]
   },
   {
@@ -24,11 +26,13 @@
       585
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-usa-origin"
+      "tc-usa-origin",
+      "cat:sides"
     ]
   },
   {
@@ -40,11 +44,13 @@
       660
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   },
   {
@@ -56,12 +62,14 @@
       1010
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "fact-error",
       "omission",
-      "tc-reluctant-aggressor"
+      "tc-reluctant-aggressor",
+      "cat:sides"
     ]
   }
 ]

@@ -8,11 +8,13 @@
       690
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "tc-reform-as-powergrab"
+      "tc-reform-as-powergrab",
+      "cat:sides"
     ]
   },
   {
@@ -24,10 +26,12 @@
       430
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
-      "false-cause"
+      "false-cause",
+      "cat:sides"
     ]
   },
   {
@@ -39,10 +43,12 @@
       570
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "contradiction"
+      "contradiction",
+      "cat:apparatus"
     ]
   },
   {
@@ -54,6 +60,7 @@
       1000
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "confidence:medium",

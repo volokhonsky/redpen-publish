@@ -8,11 +8,13 @@
       165
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "dubious-number",
-      "omission"
+      "omission",
+      "cat:evidence"
     ]
   },
   {
@@ -24,9 +26,11 @@
       280
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "dubious-number"
+      "dubious-number",
+      "cat:evidence"
     ]
   },
   {
@@ -38,11 +42,13 @@
       660
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "false-cause",
-      "tc-west-economic-scapegoat"
+      "tc-west-economic-scapegoat",
+      "cat:sides"
     ]
   }
 ]

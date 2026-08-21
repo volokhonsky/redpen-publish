@@ -6,7 +6,8 @@
     "coords": [
       500,
       650
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page10-2",
@@ -15,7 +16,8 @@
     "coords": [
       500,
       800
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-p009-1",
@@ -26,11 +28,13 @@
       700
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "false-cause"
+      "false-cause",
+      "cat:sides"
     ]
   },
   {
@@ -42,11 +46,13 @@
       515
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-anonymous-superlative"
+      "tc-anonymous-superlative",
+      "cat:evidence"
     ]
   }
 ]

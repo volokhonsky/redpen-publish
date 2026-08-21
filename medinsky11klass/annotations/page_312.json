@@ -8,10 +8,12 @@
       320
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-task-without-material"
+      "tc-task-without-material",
+      "cat:apparatus"
     ]
   },
   {
@@ -23,11 +25,13 @@
       460
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:medium",
       "euphemism",
-      "framing"
+      "framing",
+      "cat:language"
     ]
   },
   {
@@ -39,11 +43,13 @@
       685
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:medium",
       "framing",
-      "tc-blame-the-consumer"
+      "tc-blame-the-consumer",
+      "cat:sides"
     ]
   },
   {
@@ -55,11 +61,13 @@
       240
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:medium",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   }
 ]

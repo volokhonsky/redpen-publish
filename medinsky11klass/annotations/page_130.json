@@ -8,12 +8,14 @@
       300
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
       "source-selection",
-      "tc-one-sided-ledger"
+      "tc-one-sided-ledger",
+      "cat:evidence"
     ]
   },
   {
@@ -25,11 +27,13 @@
       574
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-defensive-bloc"
+      "tc-defensive-bloc",
+      "cat:sides"
     ]
   },
   {
@@ -41,11 +45,13 @@
       694
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "false-cause",
-      "tc-destalinization-blamed"
+      "tc-destalinization-blamed",
+      "cat:sides"
     ]
   },
   {
@@ -57,11 +63,13 @@
       913
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "contested-as-settled",
-      "tc-author-vouches"
+      "tc-author-vouches",
+      "cat:evidence"
     ]
   },
   {
@@ -73,12 +81,14 @@
       950
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
       "fact-error",
-      "tc-red-army-invisible"
+      "tc-red-army-invisible",
+      "cat:sides"
     ]
   },
   {
@@ -90,11 +100,13 @@
       1040
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "omission",
-      "tc-destalinization-blamed"
+      "tc-destalinization-blamed",
+      "cat:sides"
     ]
   }
 ]

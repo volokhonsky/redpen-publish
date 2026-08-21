@@ -6,7 +6,8 @@
     "coords": [
       450,
       920
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-i005-1",
@@ -17,11 +18,13 @@
       790
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "confidence:high",
       "framing",
-      "tc-modern-authority"
+      "tc-modern-authority",
+      "cat:today"
     ]
   },
   {
@@ -33,11 +36,13 @@
       910
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "confidence:high",
       "contested-as-settled",
-      "tc-modern-authority"
+      "tc-modern-authority",
+      "cat:today"
     ]
   },
   {
@@ -49,9 +54,11 @@
       680
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   }
 ]

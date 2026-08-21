@@ -8,10 +8,12 @@
       595
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:low",
-      "dubious-number"
+      "dubious-number",
+      "cat:evidence"
     ]
   },
   {
@@ -23,10 +25,12 @@
       645
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:low",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -38,10 +42,12 @@
       760
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:medium",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   },
   {
@@ -53,11 +59,13 @@
       890
     ],
     "draft": true,
+    "category": "sides",
     "tags": [
       "draft",
       "confidence:high",
       "double-standard",
-      "tc-selective-aggression-label"
+      "tc-selective-aggression-label",
+      "cat:sides"
     ]
   }
 ]

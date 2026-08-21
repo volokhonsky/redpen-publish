@@ -8,12 +8,14 @@
       670
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "fact-error",
       "loaded-question",
-      "tc-reunification-annexation"
+      "tc-reunification-annexation",
+      "cat:apparatus"
     ]
   },
   {
@@ -25,10 +27,12 @@
       350
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
-      "tc-cheerful-summary"
+      "tc-cheerful-summary",
+      "cat:apparatus"
     ]
   },
   {
@@ -40,10 +44,12 @@
       800
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:medium",
-      "contradiction"
+      "contradiction",
+      "cat:apparatus"
     ]
   }
 ]

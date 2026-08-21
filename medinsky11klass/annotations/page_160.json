@@ -8,11 +8,13 @@
       300
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "overclaim",
-      "tc-record-not-result"
+      "tc-record-not-result",
+      "cat:evidence"
     ]
   },
   {
@@ -24,11 +26,13 @@
       470
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "loaded-question",
-      "omission"
+      "omission",
+      "cat:apparatus"
     ]
   },
   {
@@ -40,11 +44,13 @@
       690
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "framing"
+      "framing",
+      "cat:language"
     ]
   },
   {
@@ -56,11 +62,13 @@
       890
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "anachronism",
       "confidence:high",
-      "false-cause"
+      "false-cause",
+      "cat:today"
     ]
   },
   {
@@ -72,11 +80,13 @@
       1040
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-official-stats"
+      "tc-official-stats",
+      "cat:evidence"
     ]
   },
   {
@@ -88,11 +98,13 @@
       1120
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
       "confidence:high",
       "source-selection",
-      "tc-constitution-as-evidence"
+      "tc-constitution-as-evidence",
+      "cat:evidence"
     ]
   }
 ]

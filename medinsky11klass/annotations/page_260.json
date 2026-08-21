@@ -8,9 +8,11 @@
       1010
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
-      "tc-modern-grudge"
+      "tc-modern-grudge",
+      "cat:today"
     ]
   },
   {
@@ -22,6 +24,7 @@
       1135
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"

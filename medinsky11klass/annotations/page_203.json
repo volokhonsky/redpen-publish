@@ -6,7 +6,8 @@
     "coords": [
       150,
       200
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page204-2",
@@ -15,7 +16,8 @@
     "coords": [
       650,
       330
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page204-3",
@@ -24,7 +26,8 @@
     "coords": [
       250,
       600
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page204-4",
@@ -33,7 +36,8 @@
     "coords": [
       650,
       680
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-page204-5",
@@ -42,7 +46,8 @@
     "coords": [
       650,
       1050
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-p203-1",
@@ -53,12 +58,14 @@
       585
     ],
     "draft": true,
+    "category": "today",
     "tags": [
       "draft",
       "anachronism",
       "confidence:high",
       "framing",
-      "tc-modern-grudge"
+      "tc-modern-grudge",
+      "cat:today"
     ]
   }
 ]

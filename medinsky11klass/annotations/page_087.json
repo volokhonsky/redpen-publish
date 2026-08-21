@@ -7,10 +7,12 @@
       300,
       380
     ],
+    "category": "omission",
     "tags": [
       "confidence:medium",
       "framing",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -21,10 +23,12 @@
       250,
       1030
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "source-selection",
-      "tc-hidden-disasters"
+      "tc-hidden-disasters",
+      "cat:evidence"
     ]
   }
 ]

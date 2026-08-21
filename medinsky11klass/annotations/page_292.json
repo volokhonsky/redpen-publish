@@ -8,9 +8,11 @@
       520
     ],
     "draft": true,
+    "category": "evidence",
     "tags": [
       "draft",
-      "source-selection"
+      "source-selection",
+      "cat:evidence"
     ]
   },
   {
@@ -22,6 +24,7 @@
       1030
     ],
     "draft": true,
+    "category": "other",
     "tags": [
       "draft",
       "context"

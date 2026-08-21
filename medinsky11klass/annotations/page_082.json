@@ -7,10 +7,12 @@
       210,
       500
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:evidence"
     ]
   },
   {
@@ -21,10 +23,12 @@
       520,
       210
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:medium",
       "framing",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   },
   {
@@ -35,9 +39,11 @@
       700,
       900
     ],
+    "category": "evidence",
     "tags": [
       "confidence:high",
-      "framing"
+      "framing",
+      "cat:evidence"
     ]
   }
 ]

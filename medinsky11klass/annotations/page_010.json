@@ -6,7 +6,8 @@
     "coords": [
       450,
       500
-    ]
+    ],
+    "category": "other"
   },
   {
     "id": "ann-p010-1",
@@ -17,10 +18,12 @@
       490
     ],
     "draft": true,
+    "category": "omission",
     "tags": [
       "draft",
       "confidence:medium",
-      "omission"
+      "omission",
+      "cat:omission"
     ]
   },
   {
@@ -32,11 +35,13 @@
       560
     ],
     "draft": true,
+    "category": "apparatus",
     "tags": [
       "draft",
       "confidence:high",
       "contradiction",
-      "framing"
+      "framing",
+      "cat:apparatus"
     ]
   },
   {
@@ -48,11 +53,13 @@
       800
     ],
     "draft": true,
+    "category": "language",
     "tags": [
       "draft",
       "confidence:high",
       "euphemism",
-      "omission"
+      "omission",
+      "cat:language"
     ]
   }
 ]

@@ -7,6 +7,7 @@
       480,
       760
     ],
+    "category": "other",
     "tags": [
       "confidence:high",
       "fact-error"
@@ -20,11 +21,13 @@
       300,
       370
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
       "loaded-question",
       "omission",
-      "source-selection"
+      "source-selection",
+      "cat:apparatus"
     ]
   },
   {
@@ -35,10 +38,12 @@
       740,
       1050
     ],
+    "category": "evidence",
     "tags": [
       "confidence:medium",
       "source-selection",
-      "tc-agitprop-as-source"
+      "tc-agitprop-as-source",
+      "cat:evidence"
     ]
   }
 ]

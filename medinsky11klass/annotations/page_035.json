@@ -7,10 +7,12 @@
       400,
       700
     ],
+    "category": "language",
     "tags": [
       "confidence:high",
       "euphemism",
-      "tc-passive-voice"
+      "tc-passive-voice",
+      "cat:language"
     ]
   },
   {
@@ -21,9 +23,11 @@
       400,
       1000
     ],
+    "category": "apparatus",
     "tags": [
       "confidence:high",
-      "loaded-question"
+      "loaded-question",
+      "cat:apparatus"
     ]
   }
 ]
