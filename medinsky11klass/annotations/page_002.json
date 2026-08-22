@@ -17,6 +17,9 @@
       650,
       850
     ],
-    "category": "other"
+    "category": "today",
+    "tags": [
+      "cat:today"
+    ]
   }
 ]

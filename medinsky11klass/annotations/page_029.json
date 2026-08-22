@@ -7,7 +7,10 @@
       500,
       150
     ],
-    "category": "other"
+    "category": "apparatus",
+    "tags": [
+      "cat:apparatus"
+    ]
   },
   {
     "id": "ann-p029-1",

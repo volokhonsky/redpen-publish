@@ -17,7 +17,10 @@
       650,
       330
     ],
-    "category": "other"
+    "category": "sides",
+    "tags": [
+      "cat:sides"
+    ]
   },
   {
     "id": "ann-page204-3",
@@ -27,7 +30,10 @@
       250,
       600
     ],
-    "category": "other"
+    "category": "omission",
+    "tags": [
+      "cat:omission"
+    ]
   },
   {
     "id": "ann-page204-4",
@@ -37,7 +43,10 @@
       650,
       680
     ],
-    "category": "other"
+    "category": "evidence",
+    "tags": [
+      "cat:evidence"
+    ]
   },
   {
     "id": "ann-page204-5",
@@ -47,7 +56,10 @@
       650,
       1050
     ],
-    "category": "other"
+    "category": "omission",
+    "tags": [
+      "cat:omission"
+    ]
   },
   {
     "id": "ann-p203-1",

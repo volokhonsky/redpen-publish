@@ -7,7 +7,10 @@
       450,
       500
     ],
-    "category": "other"
+    "category": "omission",
+    "tags": [
+      "cat:omission"
+    ]
   },
   {
     "id": "ann-p010-1",

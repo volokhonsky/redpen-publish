@@ -7,7 +7,10 @@
       650,
       220
     ],
-    "category": "other"
+    "category": "apparatus",
+    "tags": [
+      "cat:apparatus"
+    ]
   },
   {
     "id": "ann-page7-2",
@@ -17,7 +20,10 @@
       300,
       650
     ],
-    "category": "other"
+    "category": "omission",
+    "tags": [
+      "cat:omission"
+    ]
   },
   {
     "id": "ann-page7-3",
@@ -27,7 +33,10 @@
       650,
       950
     ],
-    "category": "other"
+    "category": "evidence",
+    "tags": [
+      "cat:evidence"
+    ]
   },
   {
     "id": "ann-p006-1",
