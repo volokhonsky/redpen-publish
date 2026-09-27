@@ -56,13 +56,15 @@
           "id": "1",
           "name": "§ 1. Восстановление и развитие экономики и социальной сферы",
           "startPage": 6,
-          "endPage": 20
+          "endPage": 20,
+          "hasPage": true
         },
         {
           "id": "2",
           "name": "§ 2. Политическая система в послевоенные годы",
           "startPage": 21,
-          "endPage": 28
+          "endPage": 28,
+          "hasPage": true
         },
         {
           "id": "3",
