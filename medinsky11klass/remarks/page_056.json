@@ -7,12 +7,15 @@
       480,
       520
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:high",
       "framing",
       "omission",
       "tc-red-army-invisible",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -24,11 +27,14 @@
       480,
       800
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
       "loaded-question",
+      "was-published",
       "cat:apparatus"
     ]
   }

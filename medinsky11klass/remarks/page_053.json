@@ -7,11 +7,14 @@
       480,
       535
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:high",
       "double-standard",
       "tc-usa-origin",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -23,11 +26,14 @@
       500,
       605
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "contested-as-settled",
       "framing",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -39,12 +45,15 @@
       430,
       1120
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:medium",
       "loaded-question",
       "source-selection",
       "tc-agitprop-as-source",
+      "was-published",
       "cat:apparatus"
     ]
   }

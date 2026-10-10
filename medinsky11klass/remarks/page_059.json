@@ -7,10 +7,13 @@
       250,
       660
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
+      "was-published",
       "cat:omission"
     ]
   },
@@ -22,11 +25,14 @@
       200,
       900
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
       "source-selection",
+      "was-published",
       "cat:evidence"
     ]
   }

@@ -7,11 +7,14 @@
       300,
       185
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
       "tc-victim-hero",
+      "was-published",
       "cat:omission"
     ]
   },
@@ -23,11 +26,14 @@
       300,
       55
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
       "tc-hidden-disasters",
+      "was-published",
       "cat:omission"
     ]
   },
@@ -39,10 +45,13 @@
       350,
       405
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
+      "was-published",
       "cat:omission"
     ]
   }

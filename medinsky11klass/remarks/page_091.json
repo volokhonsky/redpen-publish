@@ -7,12 +7,15 @@
       300,
       900
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "framing",
       "overclaim",
       "tc-foreign-praise",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -24,11 +27,14 @@
       300,
       490
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "source-selection",
       "tc-foreign-praise",
+      "was-published",
       "cat:evidence"
     ]
   }

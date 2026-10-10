@@ -7,11 +7,14 @@
       400,
       650
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "dubious-number",
       "overclaim",
+      "was-published",
       "cat:evidence"
     ]
   }

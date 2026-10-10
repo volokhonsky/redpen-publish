@@ -7,12 +7,15 @@
       480,
       630
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:high",
       "double-standard",
       "framing",
       "tc-defensive-bloc",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -24,11 +27,14 @@
       300,
       445
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:high",
       "framing",
       "loaded-question",
+      "was-published",
       "cat:apparatus"
     ]
   },
@@ -40,11 +46,14 @@
       480,
       875
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:medium",
       "double-standard",
       "framing",
+      "was-published",
       "cat:sides"
     ]
   }

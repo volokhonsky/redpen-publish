@@ -7,12 +7,15 @@
       450,
       360
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:medium",
       "euphemism",
       "framing",
       "tc-usa-origin",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -24,11 +27,14 @@
       500,
       190
     ],
+    "draft": true,
     "category": "language",
     "tags": [
+      "draft",
       "confidence:high",
       "euphemism",
       "framing",
+      "was-published",
       "cat:language"
     ]
   },
@@ -40,11 +46,14 @@
       450,
       1055
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
       "tc-usa-origin",
+      "was-published",
       "cat:sides"
     ]
   }

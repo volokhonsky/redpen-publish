@@ -7,11 +7,14 @@
       700,
       430
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
       "source-selection",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -23,10 +26,13 @@
       400,
       730
     ],
+    "draft": true,
     "category": "other",
     "tags": [
+      "draft",
       "confidence:high",
-      "context"
+      "context",
+      "was-published"
     ]
   },
   {
@@ -37,11 +43,14 @@
       400,
       1000
     ],
+    "draft": true,
     "category": "language",
     "tags": [
+      "draft",
       "confidence:medium",
       "euphemism",
       "framing",
+      "was-published",
       "cat:language"
     ]
   }

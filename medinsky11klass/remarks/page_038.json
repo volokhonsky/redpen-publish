@@ -7,11 +7,14 @@
       400,
       208
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:high",
       "framing",
       "loaded-question",
+      "was-published",
       "cat:apparatus"
     ]
   },
@@ -23,12 +26,15 @@
       250,
       905
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:high",
       "framing",
       "source-selection",
       "tc-usa-origin",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -40,10 +46,13 @@
       660,
       833
     ],
+    "draft": true,
     "category": "language",
     "tags": [
+      "draft",
       "confidence:high",
       "euphemism",
+      "was-published",
       "cat:language"
     ]
   }

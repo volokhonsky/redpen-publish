@@ -7,11 +7,14 @@
       250,
       470
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
       "omission",
+      "was-published",
       "cat:omission"
     ]
   },
@@ -23,11 +26,14 @@
       300,
       285
     ],
+    "draft": true,
     "category": "other",
     "tags": [
+      "draft",
       "confidence:high",
       "context",
-      "framing"
+      "framing",
+      "was-published"
     ]
   }
 ]

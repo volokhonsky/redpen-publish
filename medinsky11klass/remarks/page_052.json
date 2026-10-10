@@ -7,12 +7,15 @@
       480,
       200
     ],
+    "draft": true,
     "category": "today",
     "tags": [
+      "draft",
       "anachronism",
       "confidence:high",
       "false-symmetry",
       "tc-defensive-bloc",
+      "was-published",
       "cat:today"
     ]
   },
@@ -24,12 +27,15 @@
       480,
       430
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "framing",
       "omission",
       "overclaim",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -41,11 +47,14 @@
       480,
       600
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:medium",
       "double-standard",
       "framing",
+      "was-published",
       "cat:sides"
     ]
   }

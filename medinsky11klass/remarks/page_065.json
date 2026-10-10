@@ -7,10 +7,13 @@
       400,
       60
     ],
+    "draft": true,
     "category": "other",
     "tags": [
+      "draft",
       "confidence:high",
-      "context"
+      "context",
+      "was-published"
     ]
   },
   {
@@ -21,10 +24,13 @@
       400,
       270
     ],
+    "draft": true,
     "category": "other",
     "tags": [
+      "draft",
       "confidence:medium",
-      "context"
+      "context",
+      "was-published"
     ]
   }
 ]

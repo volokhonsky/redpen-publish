@@ -7,11 +7,14 @@
       150,
       405
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "dubious-number",
       "tc-official-stats",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -23,11 +26,14 @@
       350,
       230
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
       "tc-leader-science",
+      "was-published",
       "cat:evidence"
     ]
   }

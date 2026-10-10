@@ -7,10 +7,13 @@
       400,
       1095
     ],
+    "draft": true,
     "category": "language",
     "tags": [
+      "draft",
       "confidence:high",
       "euphemism",
+      "was-published",
       "cat:language"
     ]
   },
@@ -22,11 +25,14 @@
       400,
       530
     ],
+    "draft": true,
     "category": "language",
     "tags": [
+      "draft",
       "confidence:medium",
       "euphemism",
       "omission",
+      "was-published",
       "cat:language"
     ]
   }

@@ -7,10 +7,13 @@
       400,
       200
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "framing",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -22,12 +25,15 @@
       400,
       390
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:high",
       "framing",
       "loaded-question",
       "tc-reform-as-powergrab",
+      "was-published",
       "cat:apparatus"
     ]
   }

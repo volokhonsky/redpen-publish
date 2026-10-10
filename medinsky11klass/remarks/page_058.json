@@ -7,11 +7,14 @@
       480,
       480
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "context",
       "source-selection",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -23,10 +26,13 @@
       400,
       1010
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:low",
       "source-selection",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -38,10 +44,13 @@
       480,
       270
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:medium",
       "loaded-question",
+      "was-published",
       "cat:apparatus"
     ]
   }

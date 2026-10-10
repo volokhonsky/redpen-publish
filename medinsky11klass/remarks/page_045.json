@@ -7,12 +7,15 @@
       420,
       700
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:high",
       "contested-as-settled",
       "double-standard",
       "tc-usa-origin",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -24,11 +27,14 @@
       300,
       815
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:high",
       "false-cause",
       "framing",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -40,11 +46,14 @@
       280,
       1055
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
       "source-selection",
+      "was-published",
       "cat:evidence"
     ]
   }

@@ -7,11 +7,14 @@
       300,
       380
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
       "omission",
+      "was-published",
       "cat:omission"
     ]
   },
@@ -23,11 +26,14 @@
       250,
       1030
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "source-selection",
       "tc-hidden-disasters",
+      "was-published",
       "cat:evidence"
     ]
   }

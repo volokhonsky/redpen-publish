@@ -7,11 +7,14 @@
       300,
       80
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
       "overclaim",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -23,10 +26,13 @@
       400,
       345
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
+      "was-published",
       "cat:omission"
     ]
   },
@@ -38,11 +44,14 @@
       300,
       1010
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "source-selection",
       "tc-agitprop-as-source",
+      "was-published",
       "cat:evidence"
     ]
   }

@@ -7,12 +7,15 @@
       420,
       710
     ],
+    "draft": true,
     "category": "language",
     "tags": [
+      "draft",
       "confidence:high",
       "euphemism",
       "framing",
       "omission",
+      "was-published",
       "cat:language"
     ]
   },
@@ -24,12 +27,15 @@
       450,
       970
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:high",
       "double-standard",
       "euphemism",
       "omission",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -41,11 +47,14 @@
       430,
       1110
     ],
+    "draft": true,
     "category": "language",
     "tags": [
+      "draft",
       "confidence:medium",
       "euphemism",
       "framing",
+      "was-published",
       "cat:language"
     ]
   },
@@ -57,10 +66,13 @@
       340,
       240
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "source-selection",
+      "was-published",
       "cat:evidence"
     ]
   }

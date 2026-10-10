@@ -7,12 +7,15 @@
       430,
       660
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:high",
       "context",
       "loaded-question",
       "source-selection",
+      "was-published",
       "cat:apparatus"
     ]
   },
@@ -24,11 +27,14 @@
       520,
       165
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
       "overclaim",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -40,10 +46,13 @@
       430,
       205
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:medium",
       "false-cause",
+      "was-published",
       "cat:sides"
     ]
   }

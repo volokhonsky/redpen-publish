@@ -7,12 +7,15 @@
       480,
       645
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:high",
       "false-cause",
       "omission",
       "tc-usa-origin",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -24,12 +27,15 @@
       480,
       815
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:high",
       "double-standard",
       "euphemism",
       "omission",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -41,11 +47,14 @@
       660,
       250
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:high",
       "contradiction",
       "framing",
+      "was-published",
       "cat:apparatus"
     ]
   }

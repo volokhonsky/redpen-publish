@@ -7,11 +7,14 @@
       480,
       290
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:high",
       "false-cause",
       "framing",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -23,11 +26,14 @@
       480,
       500
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "contested-as-settled",
       "framing",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -39,12 +45,15 @@
       480,
       1075
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:medium",
       "double-standard",
       "dubious-number",
       "source-selection",
+      "was-published",
       "cat:sides"
     ]
   }

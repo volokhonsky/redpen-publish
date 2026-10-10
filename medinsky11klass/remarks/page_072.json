@@ -7,11 +7,14 @@
       245,
       470
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "source-selection",
       "tc-agitprop-as-source",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -23,10 +26,13 @@
       270,
       1000
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "framing",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -38,11 +44,14 @@
       700,
       920
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
       "omission",
+      "was-published",
       "cat:omission"
     ]
   }

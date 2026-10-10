@@ -7,12 +7,15 @@
       400,
       165
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:high",
       "contradiction",
       "dubious-number",
       "tc-official-stats",
+      "was-published",
       "cat:apparatus"
     ]
   },
@@ -24,11 +27,14 @@
       400,
       620
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:high",
       "framing",
       "omission",
+      "was-published",
       "cat:omission"
     ]
   },
@@ -40,11 +46,14 @@
       650,
       900
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "source-selection",
       "tc-agitprop-as-source",
+      "was-published",
       "cat:evidence"
     ]
   }

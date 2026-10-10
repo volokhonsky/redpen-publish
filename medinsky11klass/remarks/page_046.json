@@ -7,12 +7,15 @@
       450,
       515
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:high",
       "contested-as-settled",
       "double-standard",
       "tc-usa-origin",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -24,11 +27,14 @@
       430,
       600
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "dubious-number",
       "source-selection",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -40,10 +46,13 @@
       400,
       1045
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:high",
       "loaded-question",
+      "was-published",
       "cat:apparatus"
     ]
   },
@@ -55,10 +64,13 @@
       650,
       255
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "source-selection",
+      "was-published",
       "cat:evidence"
     ]
   }

@@ -7,12 +7,15 @@
       500,
       415
     ],
+    "draft": true,
     "category": "today",
     "tags": [
+      "draft",
       "anachronism",
       "confidence:high",
       "framing",
       "tc-modern-grudge",
+      "was-published",
       "cat:today"
     ]
   },
@@ -24,11 +27,14 @@
       700,
       300
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
       "omission",
+      "was-published",
       "cat:omission"
     ]
   },
@@ -40,10 +46,13 @@
       430,
       545
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
+      "was-published",
       "cat:evidence"
     ]
   }

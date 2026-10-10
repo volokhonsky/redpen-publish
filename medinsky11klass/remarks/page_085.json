@@ -7,11 +7,14 @@
       300,
       500
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
       "tc-hidden-disasters",
+      "was-published",
       "cat:omission"
     ]
   },
@@ -23,10 +26,13 @@
       250,
       175
     ],
+    "draft": true,
     "category": "today",
     "tags": [
+      "draft",
       "anachronism",
       "confidence:high",
+      "was-published",
       "cat:today"
     ]
   },
@@ -38,11 +44,14 @@
       300,
       660
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:high",
       "contradiction",
       "overclaim",
+      "was-published",
       "cat:apparatus"
     ]
   }

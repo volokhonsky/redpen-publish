@@ -7,11 +7,14 @@
       400,
       915
     ],
+    "draft": true,
     "category": "other",
     "tags": [
+      "draft",
       "confidence:high",
       "fact-error",
-      "framing"
+      "framing",
+      "was-published"
     ]
   },
   {
@@ -22,12 +25,15 @@
       400,
       520
     ],
+    "draft": true,
     "category": "language",
     "tags": [
+      "draft",
       "confidence:high",
       "euphemism",
       "omission",
       "tc-annexation-euphemism",
+      "was-published",
       "cat:language"
     ]
   },
@@ -39,11 +45,14 @@
       500,
       410
     ],
+    "draft": true,
     "category": "language",
     "tags": [
+      "draft",
       "confidence:high",
       "euphemism",
       "omission",
+      "was-published",
       "cat:language"
     ]
   }

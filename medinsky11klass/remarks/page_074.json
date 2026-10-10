@@ -7,11 +7,14 @@
       700,
       1050
     ],
+    "draft": true,
     "category": "language",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
       "tc-passive-voice",
+      "was-published",
       "cat:language"
     ]
   },
@@ -23,10 +26,13 @@
       700,
       1090
     ],
+    "draft": true,
     "category": "today",
     "tags": [
+      "draft",
       "anachronism",
       "confidence:medium",
+      "was-published",
       "cat:today"
     ]
   },
@@ -38,11 +44,14 @@
       400,
       280
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:high",
       "context",
       "omission",
+      "was-published",
       "cat:omission"
     ]
   }

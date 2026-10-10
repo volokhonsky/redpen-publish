@@ -7,12 +7,15 @@
       300,
       350
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
       "source-selection",
       "tc-foreign-praise",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -24,10 +27,13 @@
       300,
       570
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:medium",
       "loaded-question",
+      "was-published",
       "cat:apparatus"
     ]
   }

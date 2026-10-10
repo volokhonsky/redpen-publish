@@ -7,10 +7,13 @@
       480,
       760
     ],
+    "draft": true,
     "category": "other",
     "tags": [
+      "draft",
       "confidence:high",
-      "fact-error"
+      "fact-error",
+      "was-published"
     ]
   },
   {
@@ -21,12 +24,15 @@
       300,
       370
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:high",
       "loaded-question",
       "omission",
       "source-selection",
+      "was-published",
       "cat:apparatus"
     ]
   },
@@ -38,11 +44,14 @@
       740,
       1050
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "source-selection",
       "tc-agitprop-as-source",
+      "was-published",
       "cat:evidence"
     ]
   }

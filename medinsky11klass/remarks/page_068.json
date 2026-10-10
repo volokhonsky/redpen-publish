@@ -7,10 +7,13 @@
       400,
       320
     ],
+    "draft": true,
     "category": "other",
     "tags": [
+      "draft",
       "confidence:high",
-      "context"
+      "context",
+      "was-published"
     ]
   },
   {
@@ -21,10 +24,13 @@
       400,
       250
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
+      "was-published",
       "cat:evidence"
     ]
   }

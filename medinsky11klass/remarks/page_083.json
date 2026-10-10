@@ -7,12 +7,15 @@
       300,
       555
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:high",
       "false-cause",
       "omission",
       "tc-leader-science",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -24,11 +27,14 @@
       300,
       400
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:high",
       "contradiction",
       "omission",
+      "was-published",
       "cat:apparatus"
     ]
   },
@@ -40,10 +46,13 @@
       300,
       630
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:medium",
       "loaded-question",
+      "was-published",
       "cat:apparatus"
     ]
   }

@@ -7,11 +7,14 @@
       700,
       545
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "contested-as-settled",
       "framing",
+      "was-published",
       "cat:evidence"
     ]
   },
@@ -23,11 +26,14 @@
       530,
       480
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
       "source-selection",
+      "was-published",
       "cat:evidence"
     ]
   }

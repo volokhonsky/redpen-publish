@@ -7,11 +7,14 @@
       330,
       1030
     ],
+    "draft": true,
     "category": "omission",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
       "tc-victim-hero",
+      "was-published",
       "cat:omission"
     ]
   },
@@ -23,11 +26,14 @@
       300,
       300
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "omission",
       "tc-leader-science",
+      "was-published",
       "cat:evidence"
     ]
   }

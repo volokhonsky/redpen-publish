@@ -7,11 +7,14 @@
       250,
       150
     ],
+    "draft": true,
     "category": "evidence",
     "tags": [
+      "draft",
       "confidence:high",
       "source-selection",
       "tc-agitprop-as-source",
+      "was-published",
       "cat:evidence"
     ]
   }

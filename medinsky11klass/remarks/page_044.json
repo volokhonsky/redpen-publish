@@ -7,11 +7,14 @@
       500,
       915
     ],
+    "draft": true,
     "category": "apparatus",
     "tags": [
+      "draft",
       "confidence:high",
       "contradiction",
       "framing",
+      "was-published",
       "cat:apparatus"
     ]
   },
@@ -23,11 +26,14 @@
       500,
       555
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
       "tc-usa-origin",
+      "was-published",
       "cat:sides"
     ]
   },
@@ -39,11 +45,14 @@
       450,
       1075
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:medium",
       "double-standard",
       "framing",
+      "was-published",
       "cat:sides"
     ]
   }

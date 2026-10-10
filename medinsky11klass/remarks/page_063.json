@@ -7,11 +7,14 @@
       400,
       600
     ],
+    "draft": true,
     "category": "language",
     "tags": [
+      "draft",
       "confidence:high",
       "euphemism",
       "fact-error",
+      "was-published",
       "cat:language"
     ]
   },
@@ -23,10 +26,13 @@
       400,
       665
     ],
+    "draft": true,
     "category": "language",
     "tags": [
+      "draft",
       "confidence:high",
       "euphemism",
+      "was-published",
       "cat:language"
     ]
   },
@@ -38,11 +44,14 @@
       400,
       420
     ],
+    "draft": true,
     "category": "sides",
     "tags": [
+      "draft",
       "confidence:medium",
       "framing",
       "tc-reform-as-powergrab",
+      "was-published",
       "cat:sides"
     ]
   }
